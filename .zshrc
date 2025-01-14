@@ -47,3 +47,12 @@ export TERM=xterm-256color
 export TERM='xterm-256color'
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/home/permito/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<

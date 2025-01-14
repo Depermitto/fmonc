@@ -40,3 +40,18 @@ export HISTFILESIZE=10000
 
 
 export PATH=/home/permito/.cargo/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/permito/.dotnet/tools:/var/lib/snapd/snap/bin:/home/permito/go/bin:/home/permito/.local/bin
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/home/permito/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/home/permito/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<
