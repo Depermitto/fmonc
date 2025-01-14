@@ -142,7 +142,8 @@ handle_key() {
             }
         ;;
         d | y)
-            cleanup
+			printf '\e[%dB' "${#options[@]}" # move cursor down to display content correctly
+			move_cursor_on_cleanup=false
             for ((i = 0; i < "${#selected[@]}"; i++)); {
                 [[ "${selected[$i]}" == true ]] && {
                     perform_action "${options[$i]}"
@@ -155,14 +156,17 @@ handle_key() {
 
 cleanup() {
     printf '\e[?25h' # show cursor
-    printf '\e[%dB' "${#options[@]}" # move exactly ${#options[@]} lines up to render the next "frame" on top
+	[[ $move_cursor_on_cleanup == true ]] && {
+		printf '\e[%dB' "${#options[@]}"
+	}
 }
 
 main() {
     printf '\e[?25l' # hide cursor
-    trap 'cleanup' EXIT
-    
-    cursor=0
+	trap 'cleanup' EXIT
+	move_cursor_on_cleanup=true
+
+	cursor=0
     options=("zshrc" "bashrc" "fish" "dnfconf" "pacmanconf" "flathub" "ssh_askpass")
     for ((i = 0; i < "${#options[@]}"; i++)); { selected+=(false); }
     
