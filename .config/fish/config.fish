@@ -6,6 +6,17 @@ set -U fish_greeting ""
 
 # Functions
 
+which apt 2> /dev/null | grep -q .
+set is_apt $status
+
+which nala 2> /dev/null | grep -q .
+set is_nala $status
+
+which pacman 2> /dev/null | grep -q .
+set is_pacman $status
+
+which dnf 2> /dev/null | grep -q .
+set is_dnf $status
 
 function run
     argparse --name=run 'h/help' -- $argv
@@ -23,13 +34,47 @@ function run
     end
 end
 
+function isearch
+    if test $is_apt -eq 0
+        sudo apt list --installed | grep $argv
+    else if test $is_dnf -eq 0
+        sudo dnf list | grep $argv
+    else if test $is_pacman -eq 0
+        yay -Qsq $argv
+    end
+end
+
+function autoremove
+    if test $is_apt -eq 0
+        if test $is_nala -eq 0
+            sudo nala autoremove
+        else
+            sudo apt autoremove
+        end
+    else if test $is_dnf -eq 0
+        sudo dnf autoremove
+    else if test $is_pacman -eq 0
+        yay -R (yay -Qdtq)
+    end
+end
+
+function update
+    if test $is_apt -eq 0
+        if test $is_nala -eq 0
+            sudo nala upgrade; flatpak update; sudo snap refresh
+        else
+            sudo apt update && sudo apt upgrade; flatpak update; sudo snap refresh
+        end
+    else if test $is_dnf -eq 0
+        sudo dnf update; flatpak update
+    else if test $is_pacman -eq 0
+        yay; flatpak update
+    end
+end
 
 # Custom aliases
 alias ls='exa'
 alias la='exa -al'
-#alias ls='ls --color=auto'
-#alias lh='ls -lAh --color=auto'
-#alias la='ls -A --color=auto'
 alias grep='rg'
 alias e='exit'
 alias ':q'='exit'
@@ -40,12 +85,7 @@ alias gs='git status'
 alias p='pkill'
 alias v='vim'
 alias n='nvim'
-alias yaf='yay; flatpak update; sudo snap refresh'
-alias stcli='speedtest-cli'
-alias autorm='yay -R $(yay -Qdtq)'
-alias autoremove='autorm'
 alias diskhealth='k4dirstat'
-alias search='pacman -Qsq'
 alias pss='ps -e | grep'
 alias zzz='systemctl suspend'
 alias 6zz='shutdown now'
@@ -53,10 +93,8 @@ alias 6zz='shutdown now'
 # Config shortcuts
 alias vimrc='nvim ~/.vimrc'
 alias nvimrc='nvim ~/.config/nvim/init.vim'
-alias swayrc='nvim ~/.config/sway/config'
 alias bashrc='nvim ~/.bashrc'
 alias fishrc='nvim ~/.config/fish/config.fish'
-alias qtile='nvim ~/.config/qtile/config.py'
 alias logout='pkill -KILL -u $(whoami)'
 alias sourcefish='source ~/.config/fish/config.fish'
 
