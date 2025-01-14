@@ -5,7 +5,7 @@
     "spacing": 6,
     "fixed-center": true,
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/window", "sway/mode", "sway/scratchpad", "custom/media"],
+    "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/window", "sway/mode","custom/media"],
     "modules-center": ["clock"],
     "modules-right": ["idle_inhibitor", "network", "pulseaudio", "cpu", "tray"],
     // Modules configuration
@@ -34,13 +34,15 @@
         }
     },
     "sway/window": {
+        "format": "{title}",
         "max-length": 80,
+        "all-outputs": false,
     },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
     "sway/scratchpad": {
-        "format": "{icon} {count}",
+        "format": "{icon}   {count}",
         "show-empty": false,
         "format-icons": ["", ""],
         "tooltip": true,
@@ -98,8 +100,8 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{icon}  {volume}% {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-bluetooth": " {volume}% {format_source}",
+        "format-bluetooth-muted": "{icon} {format_source}",
         "format-muted": " {format_source}",
         "format-source": "   {volume}%",
         "format-source-muted": "",

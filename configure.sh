@@ -102,6 +102,16 @@ ln -fv ~/Gitlab/.doom.d/* ~/.doom.d/ &&
 ~/.emacs.d/bin/doom sync
 }
 
+configureSway() {
+swayDir=~/Gitlab/.config/sway
+
+ln -fv $swayDir/config ~/.config/sway/config
+
+for script in $swayDir/scripts/*; do
+    ln -fv $script ~/.config/sway/scripts/
+done
+}
+
 
 ## CONFIGURATION ##
 
@@ -110,30 +120,34 @@ if [ -z $1 ]; then
 else
     case $1 in
         'help')
-            printf "'alacritty': Configure alacritty,\n'bash': Configure Bash,\n'fish': Configure fish,\n'vim': Configure vim,\n'nvim': Configure neovim,\n'doom': Configure doomemacs,\n'all': Configure all packs.\n\nPlease put arguments individually.\n"
+            printf "'alacritty': Configure alacritty,\n'bash': Configure Bash,\n'fish': Configure fish,\n'vim': Configure vim,\n'nvim': Configure neovim,\n'doom': Configure doomemacs,\n'sway': Configure sway, waybar and rofi,\n'all': Configure all packs.\n\nPlease put in arguments individually.\n"
             ;;
         alacritty)
-            configureAlacritty
+            configureAlacritty &&
             success
             ;;
         bash)
-            configureBash
+            configureBash &&
             success
             ;;
         fish)
-            configureFish
+            configureFish &&
             success
             ;;
         vim)
-            configureVim
+            configureVim &&
             success
             ;;
         nvim)
-            configureNeovim
+            configureNeovim &&
             success
             ;;
         doom)
-            configureDoom
+            configureDoom &&
+            success
+            ;;
+        sway)
+            configureSway &&
             success
             ;;
         all)

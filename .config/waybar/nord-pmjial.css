@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "";
+    font-family: "sans";
     font-weight: bold;
     font-size: 15px;
     min-height: 0;
@@ -10,13 +10,12 @@
 window#waybar {
     color: white;
     background: #2d333f;
-    opacity: 0.92;
+    opacity: 0.90;
 }
 
 #workspaces {
     background-color: #3b4252;
-    margin: 3px;
-    margin-left: 7px;
+    margin: 3px 0 3px 7px;
     border-radius: 5px;
 }
 
@@ -36,7 +35,7 @@ window#waybar {
     border-radius: 5px;
 }
 
-#idle_inhibitor, #custom-date, #cpu, #clock, #battery, #pulseaudio, #network, #tray {
+#scratchpad, #idle_inhibitor, #custom-date, #cpu, #clock, #battery, #pulseaudio, #network, #tray {
     background-color: #3b4252;
     padding: 2px 7px;
     margin: 3px 0px;
@@ -57,7 +56,7 @@ window#waybar {
 }
 
 #window {
-    color: #96989c;
+    color: #c7dfe0;
     padding: 2px 7px;
     margin: 3px 0px;
 }

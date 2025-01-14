@@ -19,7 +19,7 @@ exec_always bash $scriptsDir/redshift.sh
 xwayland enable
 default_orientation auto
 default_border pixel 2
-gaps inner 4
+gaps inner 0
 
 
 ## COLORS ##
@@ -43,9 +43,9 @@ input "6940:6980:Corsair_Corsair_STRAFE_Gaming_Keyboard" {
 
 ### IDLE CONFIGURATION ###
 exec swayidle -w \
+    timeout 120 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
     timeout 300 'swaylock -f' \
     timeout 600 'systemctl suspend' \
-#    timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
     before-sleep 'swaylock -f'
 
 
@@ -63,25 +63,14 @@ exec swayidle -w \
     bindsym $mod+p exec $menu
     bindsym $mod+d exec $menu
 
-    # Start wofi
-    # bindsym $mod+p exec wofi --show drun
-    # bindsym $mod+Shift+p exec wofi --show run
-
-    # Drag floating windows by holding down $mod and left mouse button.
-    # Resize them with right mouse button + $mod.
-    # Despite the name, also works for non-floating windows.
-    # Change normal to inverse to use left mouse button for resizing and right
-    # mouse button for dragging.
+    # Change normal to inverse to use left mouse button for resizing and right mouse button for dragging.
     floating_modifier $mod normal
 
     # Reload the configuration file
     bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+x exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-
-    # XF86 Keys
-    bindsym XF86AudioRaiseVolume $menu
+    bindsym $mod+Shift+x exec 'swaymsg exit'
 
 
 ### MOVEMENT ###
@@ -118,6 +107,7 @@ exec swayidle -w \
     bindsym $mod+8 workspace number 8
     bindsym $mod+9 workspace number 9
     bindsym $mod+0 workspace number 10
+
     # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace number 1
     bindsym $mod+Shift+2 move container to workspace number 2
@@ -129,8 +119,6 @@ exec swayidle -w \
     bindsym $mod+Shift+8 move container to workspace number 8
     bindsym $mod+Shift+9 move container to workspace number 9
     bindsym $mod+Shift+0 move container to workspace number 10
-    # Note: workspaces can have any name you want, not just numbers.
-    # We just use 1-10 as the default 
 
     # Splitting
     bindsym $mod+b splith
@@ -138,8 +126,23 @@ exec swayidle -w \
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
+    bindsym $mod+t layout tabbed
     bindsym $mod+e layout toggle split
+
+    # Switch and move whole workspaces
+    bindsym $mod+w exec $scriptsDir/workspaces-swap.sh
+    bindsym $mod+Ctrl+l move workspace output right
+    bindsym $mod+Ctrl+h move workspace output left
+    bindsym $mod+Ctrl+1 move workspace number 1; workspace 1
+    bindsym $mod+Ctrl+2 move workspace number 2; workspace 2
+    bindsym $mod+Ctrl+3 move workspace number 3; workspace 3
+    bindsym $mod+Ctrl+4 move workspace number 4; workspace 4
+    bindsym $mod+Ctrl+5 move workspace number 5; workspace 5
+    bindsym $mod+Ctrl+6 move workspace number 6; workspace 6
+    bindsym $mod+Ctrl+7 move workspace number 7; workspace 7
+    bindsym $mod+Ctrl+8 move workspace number 8; workspace 8
+    bindsym $mod+Ctrl+9 move workspace number 9; workspace 9
+    bindsym $mod+Ctrl+0 move workspace number 10; workspace 10
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
