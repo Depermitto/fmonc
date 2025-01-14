@@ -242,6 +242,19 @@ screens = [
                     padding=1
                 ),
 
+                # Battery
+                widget.TextBox(
+                    '',
+                    fontsize=17,
+                    padding=0,
+                ),
+                widget.Battery(
+                    format='{percent:2.0%}',
+                ),
+                widget.TextBox(
+                    padding=1
+                ),
+
                 # Wifi
                 widget.TextBox(
                     '',
@@ -249,7 +262,7 @@ screens = [
                     padding=0,
                 ),
                 widget.Wlan(
-                    max_chars=12,
+                    max_chars=6,
                     format='{essid}'
                 ),
                 widget.TextBox(
