@@ -1,0 +1,563 @@
+{
+   "NavTabLabelAccount": {
+      "message": "Konto"
+   },
+   "NavTabLabelCashback": {
+      "message": "Cashback"
+   },
+   "NavTabLabelCodes": {
+      "message": "Kody"
+   },
+   "NavTabLabelPriceTracking": {
+      "message": "Monitoring"
+   },
+   "NavTabLabelShare": {
+      "message": "Udostępnij"
+   },
+   "additionalInfoName_only_here": {
+      "message": "Bize özel"
+   },
+   "additionalInfoName_recommend": {
+      "message": "Önerilen"
+   },
+   "alertCartInfo_0": {
+      "message": "Sepetiniz için mevcut:"
+   },
+   "alertCartInfo_1": {
+      "message": "Sepetiniz için mevcut:"
+   },
+   "alertCartInfo_2": {
+      "message": "Sepetiniz için mevcut:"
+   },
+   "alertHeader": {
+      "message": "Kuponlar  \u003Cb>$URL$\u003C/b> adresinde mevcuttur",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "alertHeaderPromo": {
+      "message": "Kampanyalar \u003Cb>$URL$\u003C/b> adresinde mevcuttur",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "alertHeaderPromoPharmacy": {
+      "message": "Teklifler \u003Cb>$URL$\u003C/b> adresinde mevcuttur",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "alertUseButtonText": {
+      "message": "Kodları test edin"
+   },
+   "answerNo": {
+      "message": "Hayır"
+   },
+   "answerYes": {
+      "message": "Evet"
+   },
+   "appDesc": {
+      "message": "Bir daha asla indirim kodlarını aramayın - Sizin için biz yapacağız :)"
+   },
+   "appName": {
+      "message": "buykers | kuponlar ve indirim kodları"
+   },
+   "codePanelCopyHint": {
+      "message": "Kod kopyalandı"
+   },
+   "codePanelStoreHint": {
+      "message": "sepete yapıştır"
+   },
+   "copiedHint": {
+      "message": "kopyalandı"
+   },
+   "copyHint": {
+      "message": "kopyala "
+   },
+   "discountVouchersLabel_0": {
+      "message": "indirim kodu"
+   },
+   "discountVouchersLabel_1": {
+      "message": "indirim Kodları"
+   },
+   "discountVouchersLabel_2": {
+      "message": "indirim Kodları"
+   },
+   "extensionInfoBasePrice": {
+      "message": "4.799,00TL"
+   },
+   "extensionInfoFinalPrice": {
+      "message": "4.599,00TL"
+   },
+   "extensionInfoNuberOfCodes": {
+      "message": "9 indirim Kodları"
+   },
+   "extensionInfoSavings": {
+      "message": "200,00TL"
+   },
+   "manyDays": {
+      "message": "gün"
+   },
+   "manyHours": {
+      "message": "saat"
+   },
+   "manyMinutes": {
+      "message": "dakika"
+   },
+   "manyMonths": {
+      "message": "ay"
+   },
+   "manySeconds": {
+      "message": "saniye"
+   },
+   "manyWeeks": {
+      "message": "hafta"
+   },
+   "manyYears": {
+      "message": "yıl "
+   },
+   "noVouchersInfo": {
+      "message": "Şu anda herhangi bir indirim kodu mevcut değildir."
+   },
+   "offerTypeNamePharmacy": {
+      "message": "Teklif"
+   },
+   "offerTypeName_discount_code": {
+      "message": "İndirim kodu"
+   },
+   "offerTypeName_free_shipping": {
+      "message": "Ücretsiz Kargo"
+   },
+   "offerTypeName_offer": {
+      "message": "Kampanya"
+   },
+   "oneDay": {
+      "message": "gün"
+   },
+   "oneHour": {
+      "message": "saat"
+   },
+   "oneMinute": {
+      "message": "dakika"
+   },
+   "oneMonth": {
+      "message": "ay"
+   },
+   "oneSeconds": {
+      "message": "saniye"
+   },
+   "oneWeek": {
+      "message": "hafta"
+   },
+   "oneYear": {
+      "message": "yıl "
+   },
+   "promoPharmacyVouchersLabel_0": {
+      "message": "Teklif"
+   },
+   "promoPharmacyVouchersLabel_1": {
+      "message": "Teklifler"
+   },
+   "promoPharmacyVouchersLabel_2": {
+      "message": "Teklifler"
+   },
+   "promoVouchersLabel_0": {
+      "message": "Kampanya"
+   },
+   "promoVouchersLabel_1": {
+      "message": "kampanyalar"
+   },
+   "promoVouchersLabel_2": {
+      "message": "kampanyalar"
+   },
+   "showMoreButton": {
+      "message": "Daha fazla kodu kontrol edin"
+   },
+   "showVoucherDetailsDiscount": {
+      "message": "Kodu göster"
+   },
+   "showVoucherDetailsDiscountCopy": {
+      "message": "Kodu kopyalayın"
+   },
+   "showVoucherDetailsPharmacy": {
+      "message": "Teklife git"
+   },
+   "showVoucherDetailsPromo": {
+      "message": "Kampanyaya git"
+   },
+   "twoFourDays": {
+      "message": "gün"
+   },
+   "twoFourHours": {
+      "message": "saat"
+   },
+   "twoFourMinutes": {
+      "message": "dakika"
+   },
+   "twoFourMonths": {
+      "message": "ay"
+   },
+   "twoFourSeconds": {
+      "message": "saniye"
+   },
+   "twoFourWeeks": {
+      "message": "hafta"
+   },
+   "twoFourYears": {
+      "message": "yıl "
+   },
+   "useVouchersAlertLoginRequiredHeaderText": {
+      "message": "Bu mağazada sadece giriş yapmış kullanıcılar indirim kodlarını kullanabilir."
+   },
+   "useVouchersAlertLoginRequiredInfoText": {
+      "message": "Mevcut indirim kodlarını test etmek için lütfen  \u003Cstrong>$NAME$\u003C/strong> adresinden hesabınıza giriş yapın.",
+      "placeholders": {
+         "name": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersButtonFound": {
+      "message": "Bulundu"
+   },
+   "useVouchersButtonText": {
+      "message": "En iyisini seçin"
+   },
+   "useVouchersPopupAddFormDateFuture": {
+      "message": "Tarih gelecekte olmalıdır"
+   },
+   "useVouchersPopupAddFormFieldMaxLength": {
+      "message": "Bu alanda maksimum $MAXLENGTH$ karakter olabilir",
+      "placeholders": {
+         "maxlength": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersPopupAddFormFieldRequired": {
+      "message": "Gerekli alan "
+   },
+   "useVouchersPopupAddFormFieldsRequired": {
+      "message": "Gerekli alanlar"
+   },
+   "useVouchersPopupAddFormHeader": {
+      "message": "Elimizde olmayan bir kod mu buldunuz?"
+   },
+   "useVouchersPopupAddFormLabelCode": {
+      "message": "Kod"
+   },
+   "useVouchersPopupAddFormLabelCodeDesc": {
+      "message": "Kod açıklaması"
+   },
+   "useVouchersPopupAddFormLabelCodeValue": {
+      "message": "İndirim tutarı"
+   },
+   "useVouchersPopupAddFormLabelFinishDate": {
+      "message": "Son kullanma tarihi"
+   },
+   "useVouchersPopupAddFormLabelShopName": {
+      "message": "Mağaza ismi"
+   },
+   "useVouchersPopupAddFormNoShopsFound": {
+      "message": "Dükkan bulunamadı"
+   },
+   "useVouchersPopupAddFormPlaceholderCode": {
+      "message": "Örneğin BUYKERS15"
+   },
+   "useVouchersPopupAddFormPlaceholderCodeDesc": {
+      "message": "Örneğin ilk alışverişte geçerli %15 indirim kodu"
+   },
+   "useVouchersPopupAddFormPlaceholderCodeValue": {
+      "message": "Örneğin minimum 50 TL tutarındaki alışverişlerde %15 indirim"
+   },
+   "useVouchersPopupAddFormPlaceholderCodeValueAmount": {
+      "message": "miktar"
+   },
+   "useVouchersPopupAddFormPlaceholderCodeValueNone": {
+      "message": "veri yok"
+   },
+   "useVouchersPopupAddFormPlaceholderCodeValuePercent": {
+      "message": "yüzde"
+   },
+   "useVouchersPopupAddFormPlaceholderFinishDate": {
+      "message": "Örneğin: 12.06.2020"
+   },
+   "useVouchersPopupAddFormPlaceholderShopUrl": {
+      "message": "Örneğin  www.magazaismi.com"
+   },
+   "useVouchersPopupAddFormSubHeader": {
+      "message": "Topluluğumuzla paylaşın"
+   },
+   "useVouchersPopupAddFormSubmitText": {
+      "message": "İndirim kodu ekle"
+   },
+   "useVouchersPopupAddFormSubmitTextError": {
+      "message": "Bir hata oluştu, lütfen daha sonra tekrar deneyin"
+   },
+   "useVouchersPopupAddFormSubmitTextSent": {
+      "message": "Gönderildi"
+   },
+   "useVouchersPopupAddFormSubmitTextSubmitting": {
+      "message": "Gönderiliyor"
+   },
+   "useVouchersPopupAddThankYouHeader": {
+      "message": "Teşekkürler!"
+   },
+   "useVouchersPopupAddThankYouText": {
+      "message": "Kuponunuz doğrulama için gönderildi, mümkün olan en kısa sürede yerini alacaktır!"
+   },
+   "useVouchersPopupChartCouponUse": {
+      "message": "Kuponun verimliliği"
+   },
+   "useVouchersPopupChartCouponsUse": {
+      "message": "Kuponların verimliliği"
+   },
+   "useVouchersPopupChartDayPeriod_0": {
+      "message": "son  $TIME$ gün",
+      "placeholders": {
+         "time": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersPopupChartDayPeriod_1": {
+      "message": "son  $TIME$ gün",
+      "placeholders": {
+         "time": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersPopupChartDayPeriod_2": {
+      "message": "son  $TIME$ gün",
+      "placeholders": {
+         "time": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersPopupChartEffectivenessHigh": {
+      "message": "Yüksek"
+   },
+   "useVouchersPopupChartEffectivenessMedium": {
+      "message": "Orta"
+   },
+   "useVouchersPopupChartEffectivenessVeryHigh": {
+      "message": "Çok yüksek"
+   },
+   "useVouchersPopupChartHourPeriod": {
+      "message": "son 24 saat"
+   },
+   "useVouchersPopupChartMeanDiscount": {
+      "message": "Ortalama değer"
+   },
+   "useVouchersPopupChartMeanDiscountPercent": {
+      "message": "Ortalama indirim"
+   },
+   "useVouchersPopupListVoucherAddButtonText": {
+      "message": "Bir kod ekleyin"
+   },
+   "useVouchersPopupListVoucherAddInfo": {
+      "message": "Bizim  sahip olmadığımız bir kod mu \u003Cbr/> buldunuz?  \u003C/br> topluluğumuzla paylaşın"
+   },
+   "useVouchersPopupPageAddVoucher": {
+      "message": "Kupon ekle"
+   },
+   "useVouchersPopupPageExtensionInfo": {
+      "message": "Buykers'a hoş geldiniz"
+   },
+   "useVouchersPopupPageSearch": {
+      "message": "Ara"
+   },
+   "useVouchersPopupPageShare": {
+      "message": "Paylaş"
+   },
+   "useVouchersPopupPageVouchersDetails": {
+      "message": "Listeye dön"
+   },
+   "useVouchersPopupSearchNoResults": {
+      "message": "Sonuç yok"
+   },
+   "useVouchersPopupSearchPlaceholder": {
+      "message": "Mağaza arayın"
+   },
+   "useVouchersPopupSearchResults": {
+      "message": "Arama Sonuçları:"
+   },
+   "useVouchersPopupSearchResultsPopular": {
+      "message": "Popüler mağazalar"
+   },
+   "useVouchersPopupSeeDetails": {
+      "message": "ayrıntılara bakınız"
+   },
+   "useVouchersPopupShareHeader": {
+      "message": "Bağlantıyı arkadaşlarınızla paylaşın"
+   },
+   "useVouchersPopupShareMessage": {
+      "message": "buykers, siparişinize en uygun indirim kodunu otomatik olarak bulan ve ekleyen bir tarayıcı uzantısıdır. Hemen indirin ve kendiniz görün!"
+   },
+   "useVouchersPopupShareShare": {
+      "message": "Veya bilgileri sosyal medyanızda paylaşın. Teşekkürler!"
+   },
+   "useVouchersPopupShareSubHeader": {
+      "message": "Buykers'ı sevdiniz mi? Büyümemize yardımcı olun ve bağlantıyı arkadaşlarınıza gönderin"
+   },
+   "useVouchersPopupShareText": {
+      "message": "Buykers'ı sevdiniz mi? Büyümemize yardımcı olun ve bağlantıyı arkadaşlarınıza gönderin"
+   },
+   "useVouchersPopupShopMissingHeader": {
+      "message": "Buykers'a hoşgeldiniz"
+   },
+   "useVouchersPopupShopMissingSubHeader": {
+      "message": "Tek bir tıklama ile daha ucuza satın alırsınız. Gördünüz mü ne kadar da kolay"
+   },
+   "useVouchersPopupShopMissingText1": {
+      "message": "1. Her zamanki gibi alışveriş yapmaya devam edin, simgemiz tarayıcınızda bir sayı ile birlikte görünürse, bu, mağazanın indirim kodları sunduğu anlamına gelir."
+   },
+   "useVouchersPopupShopMissingText2": {
+      "message": "2. Sepetinize bir ürün eklediğinizde, kaç kodun mevcut olduğu hakkında bilgi içeren bir açılır pencere görünecektir, \u003Cspan class='popup_extension_info__text--bold'>„Kodları test edin”\u003C/span> sadece tıklayın, eklentimiz siparişiniz için en iyi kuponu bulacaktır."
+   },
+   "useVouchersPopupShopMissingText3": {
+      "message": "3. Bitti! Kod eklendi, kelimenin tam anlamıyla bir tıklama ile daha az ödeme! \u003Cbr />Fena değil, değil mi? 😎"
+   },
+   "useVouchersPopupUserSaved": {
+      "message": "Kullanıcı \u003Cspan>$VALUE$\u003C/span> kadar tasarruf etti",
+      "placeholders": {
+         "value": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersSearchBasePrice": {
+      "message": "Standart fiyat:"
+   },
+   "useVouchersSearchBest": {
+      "message": "En iyi kodu arıyor"
+   },
+   "useVouchersSearchErrorInstructions": {
+      "message": "Kopyalamak için koda tıklayın ve ardından sepetinize yapıştırın."
+   },
+   "useVouchersSearchErrorMessage": {
+      "message": "Hata, kod otomatik olarak yapıştırılamadı"
+   },
+   "useVouchersSearchFailButtonText": {
+      "message": "Alışverişe dön"
+   },
+   "useVouchersSearchFailHeader": {
+      "message": "Mümkün olan en iyi fiyata satın alıyorsunuz."
+   },
+   "useVouchersSearchFailMessage": {
+      "message": "Mevcut indirim kodlarından hiçbiri sepetinizdeki\u003Cbr/> ürünleri içermediğinden, \u003Cspan>$NAME$\u003C/span> mağazasında şu anda mümkün\u003Cbr/> olan en iyi fiyata sahip olduğunuzdan emin olarak alışverişe devam edebilirsiniz.",
+      "placeholders": {
+         "name": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersSearchFailMessageAlt": {
+      "message": "Mevcut indirim kodlarından hiçbiri sepetinizdeki ürünleri içermediğinden, \u003Cspan>$NAME$\u003C/span> mağazasında şu anda mümkün olan en iyi fiyata sahip olduğunuzdan emin olarak alışverişe devam edebilirsiniz.",
+      "placeholders": {
+         "name": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersSearchFinalPrice": {
+      "message": "İndirimden sonra fiyat:"
+   },
+   "useVouchersSearchRatingButtonText": {
+      "message": "Değerlendirme ekleyin"
+   },
+   "useVouchersSearchRatingText": {
+      "message": "Eklentimizi beğendin mi? Değerlendirin"
+   },
+   "useVouchersSearchSavings": {
+      "message": "Tebrikler! Az önce tasarruf ettiniz:"
+   },
+   "useVouchersSearchStatus": {
+      "message": "$FROM$ kodlarından $X$ kontrol ediliyor.",
+      "placeholders": {
+         "from": {
+            "content": "$2"
+         },
+         "x": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersSearchStatusSingle": {
+      "message": "1 kod kontrol ediliyor"
+   },
+   "useVouchersSearchSuccessButtonText": {
+      "message": "Alışverişe dön"
+   },
+   "useVouchersSearchSuccessHeader": {
+      "message": "Tamamdır 😉 İndirim kodu eklendi!"
+   },
+   "voucherArchived": {
+      "message": "Arşivlendi"
+   },
+   "voucherFinishDateInfinite": {
+      "message": "Sonraki bildirime kadar"
+   },
+   "voucherTermDiscountInfinite": {
+      "message": "teklif bir sonraki duyuruya kadar geçerlidir."
+   },
+   "voucherTermHeadline": {
+      "message": "Şartlar ve koşullar:"
+   },
+   "voucherTermLabelAcceptedBrands": {
+      "message": "Kampanyaya dahil olan markalar"
+   },
+   "voucherTermLabelAcceptedBrandsPharmacy": {
+      "message": "Teklife dahil olan markalar"
+   },
+   "voucherTermLabelConcernDiscounts": {
+      "message": "İndirimlerle birlikte de kullanılabilir mi?"
+   },
+   "voucherTermLabelConcernDiscountsText": {
+      "message": "İndirimlerle ilgili notlar:"
+   },
+   "voucherTermLabelDiscountFinishDate": {
+      "message": "Kupon geçerliliği:"
+   },
+   "voucherTermLabelExceptedBrands": {
+      "message": "Kampanyaya dahil olmauan markalar"
+   },
+   "voucherTermLabelExceptedBrandsPharmacy": {
+      "message": "Teklife dahil olmayan markalar"
+   },
+   "voucherTermLabelMinimumOrderAmount": {
+      "message": "Minimum sipariş miktarı:"
+   },
+   "voucherTermLabelOfferFinishDate": {
+      "message": "Kampanya geçerliliği"
+   },
+   "voucherTermLabelPharmacyFinishDate": {
+      "message": "Teklif geçerliliği"
+   },
+   "voucherTermLabelUnique": {
+      "message": "Kupon benzersiz mi?"
+   },
+   "voucherTermOfferInfinite": {
+      "message": "teklif bir sonraki duyuruya kadar geçerlidir."
+   },
+   "vouchersFilterAll": {
+      "message": "Hepsi"
+   },
+   "vouchersFilterDiscount": {
+      "message": "İndirim kodları"
+   },
+   "vouchersFilterPharmacy": {
+      "message": "Teklifler"
+   },
+   "vouchersFilterPromo": {
+      "message": "Kampanyalar"
+   }
+}

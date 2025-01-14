@@ -1,0 +1,1181 @@
+{
+   "AccountCreateNew": {
+      "message": "Załóż nowe konto"
+   },
+   "AccountDetailsChangePasswordTitleMissnigText": {
+      "message": "Zmień hasło"
+   },
+   "AccountDetailsDateOfBirtMonthLabelMissnigText": {
+      "message": "Miesiąc"
+   },
+   "AccountDetailsDateOfBirthDayLabelMissnigText": {
+      "message": "Dzień"
+   },
+   "AccountDetailsDateOfBirthTitleMissnigText": {
+      "message": "Data urodzenia (opcjonalnie)"
+   },
+   "AccountDetailsDateOfBirthYearLabelMissnigText": {
+      "message": "Rok"
+   },
+   "AccountDetailsEmailLabelMissnigText": {
+      "message": "Adres Email"
+   },
+   "AccountDetailsNameLabelMissnigText": {
+      "message": "Imię"
+   },
+   "AccountDetailsNewPasswordLabelMissnigText": {
+      "message": "Nowe hasło"
+   },
+   "AccountDetailsRepeatNewPasswordLabelMissnigText": {
+      "message": "Powtórz nowe hasło"
+   },
+   "AccountDetailsSexLabelMissnigText": {
+      "message": "Płeć (opcjonalnie)"
+   },
+   "AccountDetailsSubmitButtonMissnigText": {
+      "message": "Zaktualizuj swoje dane"
+   },
+   "AccountDetailsTitleMissnigText": {
+      "message": "Twoje dane"
+   },
+   "AccountHeader": {
+      "message": "Zaloguj się"
+   },
+   "AccountHeaderWithName": {
+      "message": "Cześć, $NAME$",
+      "placeholders": {
+         "name": {
+            "content": "$1"
+         }
+      }
+   },
+   "AccountLoggedText": {
+      "message": "Aby zarządzać swoim kontem, przejdź do strony \u003Cb>$URL$\u003C/b>",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "AccountLogin": {
+      "message": "Zaloguj się"
+   },
+   "AccountLoginButton": {
+      "message": "Zaloguj"
+   },
+   "AccountLoginText": {
+      "message": "Zaloguj się na swoje konto aby korzystać z usługi cashback oraz pełni możliwości jakie daje \u003Cb>$URL$\u003C/b>",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "AccountLogoutButton": {
+      "message": "Wyloguj się"
+   },
+   "AccountManageButton": {
+      "message": "Zarządzaj kontem"
+   },
+   "AccountRegisterButton": {
+      "message": "Załóż nowe konto"
+   },
+   "Activate": {
+      "message": "Aktywuj"
+   },
+   "Activated": {
+      "message": "Aktywowany"
+   },
+   "AlerabatInstructionHeading": {
+      "message": "Jak działa alerabat.com"
+   },
+   "AlerabatInstructionText1": {
+      "message": "Przetestujesz wszystkie kody rabatowe automatycznie podczas zakupów w koszyku sklepu"
+   },
+   "AlerabatInstructionText2": {
+      "message": "Będziesz mógł monitorować ceny produktów i otrzymasz powiadomienie kiedy cena spadnie"
+   },
+   "AlerabatInstructionText3": {
+      "message": "Otrzymuj Cashback za każde zrealizowane zamówienie w partnerskich sklepach "
+   },
+   "CashbackAccountBalanceLabel": {
+      "message": "Bilans konta"
+   },
+   "CashbackActivateCalloutHeading": {
+      "message": "Aktywuj również cashback $AMOUNT$",
+      "placeholders": {
+         "amount": {
+            "content": "$1"
+         }
+      }
+   },
+   "CashbackActivateText": {
+      "message": "Otrzymuj Cashback za każde zrealizowane zamówienie w partnerskich sklepach"
+   },
+   "CashbackActivatedCalloutHeading": {
+      "message": "Aktywowano również cashback $AMOUNT$",
+      "placeholders": {
+         "amount": {
+            "content": "$1"
+         }
+      }
+   },
+   "CashbackActivatedCalloutTimeToWithdrawn": {
+      "message": "Pojawi się on na Twoim koncie do $TIME$h od dokonania zakupu",
+      "placeholders": {
+         "time": {
+            "content": "$1"
+         }
+      }
+   },
+   "CashbackAmount": {
+      "message": "Cashback do $AMOUNT$",
+      "placeholders": {
+         "amount": {
+            "content": "$1"
+         }
+      }
+   },
+   "CashbackAmountGeneric": {
+      "message": "do $AMOUNT$",
+      "placeholders": {
+         "amount": {
+            "content": "$1"
+         }
+      }
+   },
+   "CashbackCashManagementButton": {
+      "message": "Zarządzanie środkami"
+   },
+   "CashbackCashWithdrawnButton": {
+      "message": "Wypłać środki"
+   },
+   "CashbackCashbackValue": {
+      "message": "Zwroty"
+   },
+   "CashbackConfirmationText1": {
+      "message": "Właśnie otrzymałeś 12,40zł zwrotu"
+   },
+   "CashbackConfirmationText2": {
+      "message": "za ostatnie zakupy"
+   },
+   "CashbackDate": {
+      "message": "Data"
+   },
+   "CashbackHowItWorksHeading": {
+      "message": "Jak to działa?"
+   },
+   "CashbackLoginRequired": {
+      "message": "Aby aktywować Cashback musisz się zalogować"
+   },
+   "CashbackMinimalAmountToWithdrawn": {
+      "message": "Minimalna kwota do wypłaty - 50 zł"
+   },
+   "CashbackNoCashbackInStoreText": {
+      "message": "W tym sklepie nie można aktywować Cashback"
+   },
+   "CashbackPurchaseHistoryHeading": {
+      "message": "Historia zakupów"
+   },
+   "CashbackShopName": {
+      "message": "Sklep"
+   },
+   "CashbackShowTermButton": {
+      "message": "Pokaż warunki cashback"
+   },
+   "CashbackStatusBadgeApproved": {
+      "message": "Status: Zaakceptowana"
+   },
+   "CashbackStatusBadgeConfirmed": {
+      "message": "Status: Potwierdzona"
+   },
+   "CashbackStatusBadgePayoff": {
+      "message": "Status: Wypłacona"
+   },
+   "CashbackStatusBadgePending": {
+      "message": "Status: Oczekująca"
+   },
+   "CashbackStatusBadgeRefunded": {
+      "message": "Status: Zwrócona"
+   },
+   "CashbackStatusBadgeRejected": {
+      "message": "Status: Odrzucona"
+   },
+   "CashbackStatusBadgeToPayoff": {
+      "message": "Status: Wypłata w trakcie"
+   },
+   "CashbackTermAcccptanceTime": {
+      "message": "Czas akceptacji cashback"
+   },
+   "CashbackTermExclusions": {
+      "message": "Wyłączenia"
+   },
+   "CashbackTermWaitTime": {
+      "message": "Ważne informacje"
+   },
+   "CashbackToWithdrawnLabel": {
+      "message": "Środki do wypłaty"
+   },
+   "CashbackTransactionValue": {
+      "message": "Wartość"
+   },
+   "CashbackVariablePercent": {
+      "message": "Cashback od $FROM$% do $TO$%",
+      "placeholders": {
+         "from": {
+            "content": "$1"
+         },
+         "to": {
+            "content": "$2"
+         }
+      }
+   },
+   "CashbackVariablePercentGeneric": {
+      "message": "od $FROM$% do $TO$%",
+      "placeholders": {
+         "from": {
+            "content": "$1"
+         },
+         "to": {
+            "content": "$2"
+         }
+      }
+   },
+   "CashbackVariablePercentTo": {
+      "message": "Cashback do $TO$%",
+      "placeholders": {
+         "to": {
+            "content": "$1"
+         }
+      }
+   },
+   "CashbackVariablePercentToGeneric": {
+      "message": "do $TO$%",
+      "placeholders": {
+         "to": {
+            "content": "$1"
+         }
+      }
+   },
+   "CashbackWaitingForApprovalLabel": {
+      "message": "Oczekujące na akceptację"
+   },
+   "CashbackWaitingForApprovalTermsLabel": {
+      "message": "Saldo kwot oczekujących na akceptację od reklamodawców, zwykle trwa to od 30 do 60 dni."
+   },
+   "CashbackWelcomeText": {
+      "message": "Witaj"
+   },
+   "GenericGoBack": {
+      "message": "wróć"
+   },
+   "GenericOr": {
+      "message": "lub"
+   },
+   "HowCashbackWorksStep1": {
+      "message": "Zapoznaj się z warunkami cashbacku i kliknij w przycisk „Aktywuj cashback” we wtyczce alerabat.com, aplikacji mobilnej lub na portalu alerabat.com."
+   },
+   "HowCashbackWorksStep2": {
+      "message": "Zaczekaj na potwierdzenie cashbacku. W terminie od 2 godzin do 4 dni na Twoim koncie użytkownika powinna pojawić się naliczona kwota cashback. Następnie każdy sklep ma od 30 do nawet 90 dni na potwierdzenie zakupu i akceptację bądź odrzucenie kwoty cashback."
+   },
+   "HowCashbackWorksStep3": {
+      "message": "Cashback został potwierdzony – Gratulujemy teraz możesz już wypłacić zarobioną kwotę."
+   },
+   "HowCashbackWorksStepLabel": {
+      "message": "Krok"
+   },
+   "HowCashbackWorksTitle": {
+      "message": "Jak działa Cashback?"
+   },
+   "NavTabLabelAccount": {
+      "message": "Konto"
+   },
+   "NavTabLabelCashback": {
+      "message": "Cashback"
+   },
+   "NavTabLabelCodes": {
+      "message": "Kody"
+   },
+   "NavTabLabelPriceTracking": {
+      "message": "Monitoring"
+   },
+   "NavTabLabelShare": {
+      "message": "Udostępnij"
+   },
+   "PriceTrackingAttribute_size": {
+      "message": "Rozmiar"
+   },
+   "PriceTrackingCurrentPriceMissingText": {
+      "message": "Aktualna cena"
+   },
+   "PriceTrackingGoToShopMissingText": {
+      "message": "Przejdź do sklepu"
+   },
+   "PriceTrackingInstructionMissingSubtitle": {
+      "message": "Jak to działa?"
+   },
+   "PriceTrackingInstructionMissingText1": {
+      "message": "Masz produkt który Cię interesuje? Monitoruj jego cenę dzięki nowej funkcji \u003Cspan class='price-tracing__text--bold'>„Price tracking”\u003C/span> w alerabat.com\u003Cbr />\u003Cbr />Od teraz możesz tworzyć listy zakupowe i&nbsp;przechowywać wszystkie produkty które Cię interesują z różnych sklepów w jednym miejscu, a my poinformujemy Cię kiedy ich cena spadnie. Czyż to nie piękne? ;)"
+   },
+   "PriceTrackingInstructionMissingText2": {
+      "message": "1. Dodaj wtyczkę alerabat.com do swojej przeglądarki -&nbsp;to w 100% darmowe i bezpieczne rozwiązanie."
+   },
+   "PriceTrackingInstructionMissingText3": {
+      "message": "2. W zintegrowanych sklepach na karcie produktu zobaczysz przycisk „Monitoruj cenę produktu”"
+   },
+   "PriceTrackingInstructionMissingText4": {
+      "message": "3. Wybierz okres w którym chcesz śledzić produkt oraz minimalną zmianę ceny o której mamy Cię powiadomić. Gotowe! Powiadomimy cię kiedy cena produktu spadnie."
+   },
+   "PriceTrackingInstructionMissingTitle": {
+      "message": "Polujesz na okazje? Dowiedz się kiedy cena produktu spadnie!"
+   },
+   "PriceTrackingItemBadgeNew": {
+      "message": "Nowy"
+   },
+   "PriceTrackingListAll": {
+      "message": "Wszystkie"
+   },
+   "PriceTrackingListEmptyButtonAdd": {
+      "message": "Dodaj swoją pierwszą listę"
+   },
+   "PriceTrackingListEmptyTitle": {
+      "message": "Nie dodałeś jeszcze\u003Cbr/>żadnej listy"
+   },
+   "PriceTrackingListHeaderButton0": {
+      "message": "Jak to działa"
+   },
+   "PriceTrackingListHeaderButton1": {
+      "message": "Wszystkie"
+   },
+   "PriceTrackingListHeaderButton2": {
+      "message": "Listy"
+   },
+   "PriceTrackingListRemoveConfirm": {
+      "message": "Czy na pewno chcesz usunąć listę $NAME$?",
+      "placeholders": {
+         "name": {
+            "content": "$1"
+         }
+      }
+   },
+   "PriceTrackingListTrackingEmptyButtonAdd": {
+      "message": "Dodaj swój pierwszy produkt"
+   },
+   "PriceTrackingListTrackingEmptyTitle": {
+      "message": "Nie dodałeś jeszcze żadnego produktu do monitorowania"
+   },
+   "PriceTrackingListsActionCancelMissingText": {
+      "message": "Anuluj"
+   },
+   "PriceTrackingListsActionsDeleteMissingText": {
+      "message": "Usuń listę"
+   },
+   "PriceTrackingListsActionsRenameMissingText": {
+      "message": "Zmień nazwę"
+   },
+   "PriceTrackingListsButtonAddMissingText": {
+      "message": "Dodaj listę"
+   },
+   "PriceTrackingListsButtonSaveMissingText": {
+      "message": "Zapisz"
+   },
+   "PriceTrackingMaximalPriceMissingText": {
+      "message": "Maksymalna cena"
+   },
+   "PriceTrackingMinimalPriceMissingText": {
+      "message": "Minimalna cena"
+   },
+   "PriceTrackingProductEditFormRemoveButton": {
+      "message": "Usuń z monitorowanych"
+   },
+   "PriceTrackingProductEditFormSubmitButton": {
+      "message": "Zmień parametry"
+   },
+   "PriceTrackingProductFormEmailCheckboxLabelMissnigText1": {
+      "message": "Akceptuję"
+   },
+   "PriceTrackingProductFormEmailCheckboxLabelMissnigText2": {
+      "message": "oraz"
+   },
+   "PriceTrackingProductFormEmailLabelMissnigText": {
+      "message": "Twój adres email"
+   },
+   "PriceTrackingProductFormLinkMissnigText1": {
+      "message": "zaloguj się"
+   },
+   "PriceTrackingProductFormLinkMissnigText2": {
+      "message": "Regulamin"
+   },
+   "PriceTrackingProductFormLinkMissnigText3": {
+      "message": "Politykę Prywatności"
+   },
+   "PriceTrackingProductFormListsLabel2MissnigText": {
+      "message": "Twoje listy"
+   },
+   "PriceTrackingProductFormListsLabelMissnigText": {
+      "message": "Dodaj do listy"
+   },
+   "PriceTrackingProductFormListsPlaceholderMissnigText1": {
+      "message": "np. Hobby"
+   },
+   "PriceTrackingProductFormListsPlaceholderMissnigText2": {
+      "message": "Szukaj lub dodaj listę"
+   },
+   "PriceTrackingProductFormMissnigText1": {
+      "message": "Podaj adres e-mail na który chcesz otrzymywać powiadomienia lub"
+   },
+   "PriceTrackingProductFormObservationPeriodDays_0": {
+      "message": "$TIME$ dni",
+      "placeholders": {
+         "time": {
+            "content": "$1"
+         }
+      }
+   },
+   "PriceTrackingProductFormObservationPeriodDays_1": {
+      "message": "$TIME$ dzień",
+      "placeholders": {
+         "time": {
+            "content": "$1"
+         }
+      }
+   },
+   "PriceTrackingProductFormObservationPeriodDays_2": {
+      "message": "$TIME$ dni",
+      "placeholders": {
+         "time": {
+            "content": "$1"
+         }
+      }
+   },
+   "PriceTrackingProductFormSelectLabelMissnigText1": {
+      "message": "Obserwuj przez:"
+   },
+   "PriceTrackingProductFormSelectLabelMissnigText2": {
+      "message": "Powiadomienia o cenie:"
+   },
+   "PriceTrackingProductFormSubmitButton": {
+      "message": "Monitoruj cenę produktu"
+   },
+   "PriceTrackingProductRemoveConfirm": {
+      "message": "Czy na pewno chcesz przestać obserwować produkt $NAME$?",
+      "placeholders": {
+         "name": {
+            "content": "$1"
+         }
+      }
+   },
+   "PriceTrackingReturnToListsView": {
+      "message": "Wróć do monitorowanych"
+   },
+   "ProductDetailsAvailableVouchersInShopLabel_0": {
+      "message": "W tym sklepie mamy dostepny:"
+   },
+   "ProductDetailsAvailableVouchersInShopLabel_1": {
+      "message": "W tym sklepie mamy dostępne:"
+   },
+   "ProductDetailsAvailableVouchersInShopLabel_2": {
+      "message": "W tym sklepie mamy dostępnych:"
+   },
+   "ProductDetailsCashback": {
+      "message": "Cashback"
+   },
+   "ProductDetailsCashbackFromTo": {
+      "message": "od $FROM$% do $TO$%",
+      "placeholders": {
+         "from": {
+            "content": "$1"
+         },
+         "to": {
+            "content": "$2"
+         }
+      }
+   },
+   "ProductDetailsCashbackSavings": {
+      "message": "Zyskaj aż do"
+   },
+   "ProductDetailsCashbackSavingsBold": {
+      "message": " $PRICE$ zwrotu gotówki.",
+      "placeholders": {
+         "price": {
+            "content": "$1"
+         }
+      }
+   },
+   "ProductDetailsCashbackTo": {
+      "message": "do $TO$%",
+      "placeholders": {
+         "to": {
+            "content": "$1"
+         }
+      }
+   },
+   "ProductDetailsCodes": {
+      "message": "Kody rabatowe"
+   },
+   "ProductDetailsMenuClose": {
+      "message": "Ukryj"
+   },
+   "ProductDetailsMenuHideFor24Hours": {
+      "message": "Nie pokazuj przez 24 godziny"
+   },
+   "ProductDetailsMenuHideForAllSites": {
+      "message": "Nie pokazuj na wszystkich stronach"
+   },
+   "ProductDetailsMenuHideForThisSite": {
+      "message": "Nie pokazuj na tej stronie"
+   },
+   "ProductDetailsTitle": {
+      "message": "Wskazówki"
+   },
+   "ProductDetailsTracking": {
+      "message": "Monitoring ceny"
+   },
+   "ProductDetailsTrackingText": {
+      "message": "Dodaj produkt do monitorowania a my powiadomimy Cię kiedy jego cena spadnie."
+   },
+   "SideNavText": {
+      "message": "Wskazówki"
+   },
+   "WhenCashbackEligibleHeading": {
+      "message": "Kiedy cashback zostanie naliczony?"
+   },
+   "WhenCashbackEligibleInfo": {
+      "message": "Cashback zostanie naliczony gdy sklep poinformuje nas o złożeniu przez Ciebie zamówienia. Więcej informacji znajdziesz na stronie konkretnego sklepu w alerabat.com w warunkach naliczania cashbacku."
+   },
+   "WhenCashbackEligibleInfo_1": {
+      "message": "Wybierz sklep który Cię interesuje. Kliknij przycisk \"aktywuj Cashback\" i rób zakupy tak jak zwykle. Cashback zostanie naliczony gdy sklep poinformuje nas o złożeniu przez Ciebie zamówienia. Masz pytania? Sprawdź naszą sekcję"
+   },
+   "WhenCashbackEligibleInfo_2": {
+      "message": "pomoc"
+   },
+   "WhenCashbackEligibleInfo_3": {
+      "message": "lub"
+   },
+   "WhenCashbackEligibleInfo_4": {
+      "message": "skontaktuj"
+   },
+   "WhenCashbackEligibleInfo_5": {
+      "message": "się za nami."
+   },
+   "additionalInfoName_only_here": {
+      "message": "Tylko u nas"
+   },
+   "additionalInfoName_recommend": {
+      "message": "Rekomendowany"
+   },
+   "alertCartInfoCashback": {
+      "message": "W sklepie $SHOP$",
+      "placeholders": {
+         "shop": {
+            "content": "$1"
+         }
+      }
+   },
+   "alertCartInfoCashbackSub": {
+      "message": "dostępny jest zwrot za zakupy"
+   },
+   "alertCartInfo_0": {
+      "message": "Dla Twojego koszyka dostępny jest:"
+   },
+   "alertCartInfo_1": {
+      "message": "Dla Twojego koszyka dostępne są:"
+   },
+   "alertCartInfo_2": {
+      "message": "Dla Twojego koszyka dostępnych jest:"
+   },
+   "alertCashbackLoginText": {
+      "message": "Aby aktywować Cashback musisz się zalogować"
+   },
+   "alertHeader": {
+      "message": "Dostępne kupony na \u003Cb>$URL$\u003C/b>",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "alertHeaderPromo": {
+      "message": "Dostępne promocje na \u003Cb>$URL$\u003C/b>",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "alertHeaderPromoPharmacy": {
+      "message": "Dostępne oferty na \u003Cb>$URL$\u003C/b>",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "alertUseButtonText": {
+      "message": "Przetestuj kody"
+   },
+   "alertUseButtonTextCashback": {
+      "message": "Aktywuj cashback"
+   },
+   "alertUseButtonTextMobile": {
+      "message": "Przetestuj kody i aktywuj cashback"
+   },
+   "answerNo": {
+      "message": "Nie"
+   },
+   "answerYes": {
+      "message": "Tak"
+   },
+   "appDesc": {
+      "message": "Nigdy więcej nie szukaj kodów rabatowych i cashback – My zrobimy to za Ciebie :)"
+   },
+   "appName": {
+      "message": "alerabat.com | kupony i cashback"
+   },
+   "appPrivacyPolicy": {
+      "message": "https://alerabat.com/polityka-prywatnosci-wtyczka"
+   },
+   "appTermsOfUse": {
+      "message": "https://alerabat.com/regulamin"
+   },
+   "codePanelCopyHint": {
+      "message": "Kod został skopiowany"
+   },
+   "codePanelStoreHint": {
+      "message": "wklej go w koszyku"
+   },
+   "copiedHint": {
+      "message": "skopiowano"
+   },
+   "copyHint": {
+      "message": "kopiuj"
+   },
+   "discountVouchersLabel_0": {
+      "message": "kod rabatowy"
+   },
+   "discountVouchersLabel_1": {
+      "message": "kody rabatowe"
+   },
+   "discountVouchersLabel_2": {
+      "message": "kodów rabatowych"
+   },
+   "extensionInfoBasePrice": {
+      "message": "859,99zł"
+   },
+   "extensionInfoFinalPrice": {
+      "message": "730,00zł"
+   },
+   "extensionInfoNuberOfCodes": {
+      "message": "3 kody rabatowe"
+   },
+   "extensionInfoSavings": {
+      "message": "129,99zł"
+   },
+   "manyDays": {
+      "message": "dni"
+   },
+   "manyHours": {
+      "message": "godzin"
+   },
+   "manyMinutes": {
+      "message": "minut"
+   },
+   "manyMonths": {
+      "message": "miesięcy"
+   },
+   "manySeconds": {
+      "message": "sekund"
+   },
+   "manyWeeks": {
+      "message": "tygodni"
+   },
+   "manyYears": {
+      "message": "lat"
+   },
+   "noVouchersInfo": {
+      "message": "Aktualnie nie udostępnia kodów rabatowych."
+   },
+   "offerTypeNamePharmacy": {
+      "message": "Oferta"
+   },
+   "offerTypeName_discount_code": {
+      "message": "Kod rabatowy"
+   },
+   "offerTypeName_free_shipping": {
+      "message": "Darmowa dostawa"
+   },
+   "offerTypeName_offer": {
+      "message": "Promocja"
+   },
+   "oneDay": {
+      "message": "dzień"
+   },
+   "oneHour": {
+      "message": "godzina"
+   },
+   "oneMinute": {
+      "message": "minuta"
+   },
+   "oneMonth": {
+      "message": "miesiąc"
+   },
+   "oneSeconds": {
+      "message": "sekunda"
+   },
+   "oneWeek": {
+      "message": "tydzień"
+   },
+   "oneYear": {
+      "message": "rok"
+   },
+   "promoPharmacyVouchersLabel_0": {
+      "message": "oferta"
+   },
+   "promoPharmacyVouchersLabel_1": {
+      "message": "oferty"
+   },
+   "promoPharmacyVouchersLabel_2": {
+      "message": "ofert"
+   },
+   "promoVouchersLabel_0": {
+      "message": "promocja"
+   },
+   "promoVouchersLabel_1": {
+      "message": "promocje"
+   },
+   "promoVouchersLabel_2": {
+      "message": "promocji"
+   },
+   "showMoreButton": {
+      "message": "Sprawdź więcej kodów"
+   },
+   "showVoucherDetailsDiscount": {
+      "message": "Pokaż kod"
+   },
+   "showVoucherDetailsDiscountCopy": {
+      "message": "Skopiuj kod"
+   },
+   "showVoucherDetailsPharmacy": {
+      "message": "Przejdź do oferty"
+   },
+   "showVoucherDetailsPromo": {
+      "message": "Przejdź do promocji"
+   },
+   "twoFourDays": {
+      "message": "dni"
+   },
+   "twoFourHours": {
+      "message": "godziny"
+   },
+   "twoFourMinutes": {
+      "message": "minuty"
+   },
+   "twoFourMonths": {
+      "message": "miesiące"
+   },
+   "twoFourSeconds": {
+      "message": "sekundy"
+   },
+   "twoFourWeeks": {
+      "message": "tygodnie"
+   },
+   "twoFourYears": {
+      "message": "lata"
+   },
+   "useVouchersAlertLoginRequiredHeaderText": {
+      "message": "W tym sklepie tylko użytkownicy zalogowani mogą korzystać z kodów rabatowych."
+   },
+   "useVouchersAlertLoginRequiredInfoText": {
+      "message": "Prosimy, zaloguj się na swoje konto w \u003Cstrong>$NAME$\u003C/strong> aby móc przetestować dostępne kody rabatowe.",
+      "placeholders": {
+         "name": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersButtonFound": {
+      "message": "Znaleziono"
+   },
+   "useVouchersButtonText": {
+      "message": "Dopasuj najlepszy"
+   },
+   "useVouchersPopupAddFormDateFuture": {
+      "message": "Data musi być przyszła"
+   },
+   "useVouchersPopupAddFormFieldMaxLength": {
+      "message": "Pole może mieć maksymalnie $MAXLENGTH$ znaków",
+      "placeholders": {
+         "maxlength": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersPopupAddFormFieldRequired": {
+      "message": "Pole wymagane"
+   },
+   "useVouchersPopupAddFormFieldsRequired": {
+      "message": "Pola wymagane"
+   },
+   "useVouchersPopupAddFormHeader": {
+      "message": "Znalazłeś kod, którego my nie mamy?"
+   },
+   "useVouchersPopupAddFormLabelCode": {
+      "message": "Kod"
+   },
+   "useVouchersPopupAddFormLabelCodeDesc": {
+      "message": "Opis kodu"
+   },
+   "useVouchersPopupAddFormLabelCodeValue": {
+      "message": "Wartość rabatu"
+   },
+   "useVouchersPopupAddFormLabelFinishDate": {
+      "message": "Data ważności"
+   },
+   "useVouchersPopupAddFormLabelShopName": {
+      "message": "Nazwa sklepu"
+   },
+   "useVouchersPopupAddFormNoShopsFound": {
+      "message": "Nie znaleziono sklepów"
+   },
+   "useVouchersPopupAddFormPlaceholderCode": {
+      "message": "np. ALERABAT15"
+   },
+   "useVouchersPopupAddFormPlaceholderCodeDesc": {
+      "message": "np. Kod rabatowy -15% na pierwsze zakupy"
+   },
+   "useVouchersPopupAddFormPlaceholderCodeValue": {
+      "message": "np. 15% przy zakupach za minimum 50zł"
+   },
+   "useVouchersPopupAddFormPlaceholderCodeValueAmount": {
+      "message": "kwota"
+   },
+   "useVouchersPopupAddFormPlaceholderCodeValueNone": {
+      "message": "brak danych"
+   },
+   "useVouchersPopupAddFormPlaceholderCodeValuePercent": {
+      "message": "procent"
+   },
+   "useVouchersPopupAddFormPlaceholderFinishDate": {
+      "message": "np. 12.06.2020"
+   },
+   "useVouchersPopupAddFormPlaceholderShopUrl": {
+      "message": "np. www.nazwasklepu.com"
+   },
+   "useVouchersPopupAddFormSubHeader": {
+      "message": "Podziel się z naszą społecznością"
+   },
+   "useVouchersPopupAddFormSubmitText": {
+      "message": "Dodaj kod rabatowy"
+   },
+   "useVouchersPopupAddFormSubmitTextError": {
+      "message": "Wystąpił błąd, spróbuj później"
+   },
+   "useVouchersPopupAddFormSubmitTextSent": {
+      "message": "Wysłano"
+   },
+   "useVouchersPopupAddFormSubmitTextSubmitting": {
+      "message": "Wysyłanie..."
+   },
+   "useVouchersPopupAddThankYouHeader": {
+      "message": "Dziękujemy!"
+   },
+   "useVouchersPopupAddThankYouText": {
+      "message": "Twój kupon został wysłany do weryfikacji, pojawi się najszybciej jak to możliwe."
+   },
+   "useVouchersPopupChartCouponUse": {
+      "message": "Skuteczność kuponu"
+   },
+   "useVouchersPopupChartCouponsUse": {
+      "message": "Skuteczność kuponów"
+   },
+   "useVouchersPopupChartDayPeriod_0": {
+      "message": "ostatnie $TIME$ dni",
+      "placeholders": {
+         "time": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersPopupChartDayPeriod_1": {
+      "message": "ostatnie $TIME$ dni",
+      "placeholders": {
+         "time": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersPopupChartDayPeriod_2": {
+      "message": "ostatnie $TIME$ dni",
+      "placeholders": {
+         "time": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersPopupChartEffectivenessHigh": {
+      "message": "Wysoka"
+   },
+   "useVouchersPopupChartEffectivenessMedium": {
+      "message": "Średnia"
+   },
+   "useVouchersPopupChartEffectivenessVeryHigh": {
+      "message": "Bardzo wysoka"
+   },
+   "useVouchersPopupChartHourPeriod": {
+      "message": "ostatnie 24h"
+   },
+   "useVouchersPopupChartMeanDiscount": {
+      "message": "Średnia kwota"
+   },
+   "useVouchersPopupChartMeanDiscountPercent": {
+      "message": "Średni rabat"
+   },
+   "useVouchersPopupListVoucherAddButtonText": {
+      "message": "Dodaj kod"
+   },
+   "useVouchersPopupListVoucherAddInfo": {
+      "message": "Znalazłeś kod, którego my nie\u003Cbr/>mamy? Podziel się z naszą\u003C/br>społecznością"
+   },
+   "useVouchersPopupPageAccountDetails": {
+      "message": "Twoje konto"
+   },
+   "useVouchersPopupPageAddVoucher": {
+      "message": "Dodaj kupon"
+   },
+   "useVouchersPopupPageCashbackDashboard": {
+      "message": "Cashback"
+   },
+   "useVouchersPopupPageCashbackManager": {
+      "message": "Cashback"
+   },
+   "useVouchersPopupPageExtensionInfo": {
+      "message": "Witaj w alerabat"
+   },
+   "useVouchersPopupPagePriceTracking": {
+      "message": "Produkty monitorowane"
+   },
+   "useVouchersPopupPageProductDetails": {
+      "message": "Wskazówki"
+   },
+   "useVouchersPopupPageSearch": {
+      "message": "Szukaj"
+   },
+   "useVouchersPopupPageShare": {
+      "message": "Udostępnij"
+   },
+   "useVouchersPopupPageVouchersDetails": {
+      "message": "Wróć do listy"
+   },
+   "useVouchersPopupSearchNoResults": {
+      "message": "Brak wyników"
+   },
+   "useVouchersPopupSearchPlaceholder": {
+      "message": "Szukaj sklepu"
+   },
+   "useVouchersPopupSearchResults": {
+      "message": "Wyniki wyszukiwania:"
+   },
+   "useVouchersPopupSearchResultsPopular": {
+      "message": "Popularne sklepy"
+   },
+   "useVouchersPopupSeeDetails": {
+      "message": "zobacz szczegóły"
+   },
+   "useVouchersPopupShareHeader": {
+      "message": "Udostępnij link swoim znajomym"
+   },
+   "useVouchersPopupShareMessage": {
+      "message": "alerabat.com to rozszerzenie do przeglądarki które automatycznie znajdzie i doda najlepszy kod rabatowy do Twojego zamówienia. Pobierz teraz i przekonaj się sam!"
+   },
+   "useVouchersPopupShareShare": {
+      "message": "Lub udostępnij informacje na swoich social mediach. Dziękujemy!"
+   },
+   "useVouchersPopupShareSubHeader": {
+      "message": "Podoba Ci się alerabat.com? Pomóż nam się rozwijać i wyślij link swoim znajomym."
+   },
+   "useVouchersPopupShareText": {
+      "message": "Podoba Ci się alerabat.com? Pomóż nam się rozwijać i wyślij link swoim znajomym."
+   },
+   "useVouchersPopupShopMissingHeader": {
+      "message": "Witaj w alerabat.com"
+   },
+   "useVouchersPopupShopMissingSubHeader": {
+      "message": "Jedno kliknięcie i kupujesz taniej. Sprawdź jakie to proste."
+   },
+   "useVouchersPopupShopMissingText1": {
+      "message": "1. Rób zakupy tak jak zwykle, jeśli w pasku przeglądarki wyświetla się nasza ikona wraz z cyfrą, oznacza to, że sklep oferuje kody rabatowe."
+   },
+   "useVouchersPopupShopMissingText2": {
+      "message": "2. Gdy dodasz produkt do koszyka, pojawi się pop-up z informacją ile kodów jest dostępnych, wystarczy że klikniesz \u003Cspan class='popup_extension_info__text--bold'>„przetestuj kody”\u003C/span> a nasz wtyczka sama znajdzie najlepszy kupon dla Twojego zamówienia."
+   },
+   "useVouchersPopupShopMissingText3": {
+      "message": "3. Gotowe! Kod został dodany, dosłownie jeden klik i płacisz mniej! \u003Cbr />Nieźle, prawda? 😎"
+   },
+   "useVouchersPopupUserSaved": {
+      "message": "Użytkownik zaoszczędził \u003Cspan>$VALUE$\u003C/span>",
+      "placeholders": {
+         "value": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersSearchBasePrice": {
+      "message": "Cena standardowa:"
+   },
+   "useVouchersSearchBest": {
+      "message": "Szukam najlepszego kodu"
+   },
+   "useVouchersSearchErrorInstructions": {
+      "message": "Kliknij w kod aby go skopiować i wklej go w koszyku"
+   },
+   "useVouchersSearchErrorMessage": {
+      "message": "Błąd, nie udało się wkleić kodu automatycznie"
+   },
+   "useVouchersSearchFailButtonText": {
+      "message": "Wróć do zakupów"
+   },
+   "useVouchersSearchFailCashbackBadNews": {
+      "message": "Niestety nie znaleźliśmy żadnych działających kodów rabatowych dla Twojego zamówienia."
+   },
+   "useVouchersSearchFailCashbackGoodNews": {
+      "message": "Dobra wiadomość jest taka że otrzymasz $AMOUNT$ cashback!",
+      "placeholders": {
+         "amount": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersSearchFailCashbackGoodNewsNotLoggedIn": {
+      "message": "Dobra wiadomość jest taka że możesz otrzymać $AMOUNT$ cashback, jeśli się zalogujesz lub założysz konto.",
+      "placeholders": {
+         "amount": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersSearchFailCashbackHeading": {
+      "message": "Gratulacje! Aktywowano $AMOUNT$ cashback!",
+      "placeholders": {
+         "amount": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersSearchFailCashbackHeadingNotLoggedIn": {
+      "message": "Możesz otrzymać $AMOUNT$ cashback!",
+      "placeholders": {
+         "amount": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersSearchFailCashbackSubheading": {
+      "message": "Pieniądze pojawią się na Twoim koncie do 48h od dokonania zakupu"
+   },
+   "useVouchersSearchFailCashbackSubheadingNotLoggedIn": {
+      "message": "Wystarczy że zalogujesz się lub założysz konto w alerabat.com"
+   },
+   "useVouchersSearchFailHeader": {
+      "message": "Kupujesz po najlepszej możliwej cenie."
+   },
+   "useVouchersSearchFailMessage": {
+      "message": "Żaden z dostępnych kodów rabatowych nie obejmował produktów\u003Cbr/>w Twoim koszyku, dlatego możesz kontynuować zakupy\u003Cbr/>ze świadomością, że masz\naktualnie najlepszą możliwą cenę w \u003Cspan>$NAME$\u003C/span>",
+      "placeholders": {
+         "name": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersSearchFinalPrice": {
+      "message": "Cena po rabacie:"
+   },
+   "useVouchersSearchRatingButtonText": {
+      "message": "Dodaj ocenę"
+   },
+   "useVouchersSearchRatingText": {
+      "message": "Podoba Ci się nasza wtyczka? Oceń ją"
+   },
+   "useVouchersSearchSavings": {
+      "message": "Gratulacje, właśnie zaoszczędziłeś:"
+   },
+   "useVouchersSearchStatus": {
+      "message": "Sprawdzam $X$ z $FROM$ kodów",
+      "placeholders": {
+         "from": {
+            "content": "$2"
+         },
+         "x": {
+            "content": "$1"
+         }
+      }
+   },
+   "useVouchersSearchStatusSingle": {
+      "message": "Sprawdzam 1 kod"
+   },
+   "useVouchersSearchSuccessButtonText": {
+      "message": "Wróć do zakupów"
+   },
+   "useVouchersSearchSuccessHeader": {
+      "message": "Mamy to 😉 Kod rabatowy został dodany!"
+   },
+   "voucherArchived": {
+      "message": "Archiwalny"
+   },
+   "voucherFinishDateInfinite": {
+      "message": "Do odwołania"
+   },
+   "voucherTermDiscountInfinite": {
+      "message": "oferta ważna do odwołania."
+   },
+   "voucherTermHeadline": {
+      "message": "Warunki:"
+   },
+   "voucherTermLabelAcceptedBrands": {
+      "message": "Marki objęte promocją:"
+   },
+   "voucherTermLabelAcceptedBrandsPharmacy": {
+      "message": "Marki objęte ofertą:"
+   },
+   "voucherTermLabelConcernDiscounts": {
+      "message": "Czy dotyczy także przecen?"
+   },
+   "voucherTermLabelConcernDiscountsText": {
+      "message": "Uwagi do przecen:"
+   },
+   "voucherTermLabelDiscountFinishDate": {
+      "message": "Ważność kuponu:"
+   },
+   "voucherTermLabelExceptedBrands": {
+      "message": "Marki wyłączone z promocji:"
+   },
+   "voucherTermLabelExceptedBrandsPharmacy": {
+      "message": "Marki wyłączone z oferty:"
+   },
+   "voucherTermLabelMinimumOrderAmount": {
+      "message": "Minimalna kwota zamówienia:"
+   },
+   "voucherTermLabelOfferFinishDate": {
+      "message": "Ważność promocji:"
+   },
+   "voucherTermLabelPharmacyFinishDate": {
+      "message": "Ważność oferty:"
+   },
+   "voucherTermLabelUnique": {
+      "message": "Czy kupon jest unikalny?"
+   },
+   "voucherTermOfferInfinite": {
+      "message": "oferta ważna do odwołania."
+   },
+   "vouchersFilterAll": {
+      "message": "Wszystkie"
+   },
+   "vouchersFilterDiscount": {
+      "message": "Kody rabatowe"
+   },
+   "vouchersFilterPharmacy": {
+      "message": "Oferty"
+   },
+   "vouchersFilterPromo": {
+      "message": "Promocje"
+   }
+}
