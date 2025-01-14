@@ -69,7 +69,11 @@ exec swayidle -w \
     bindsym $mod+Return exec $term
 
     # Start an emacs instance
+<<<<<<< HEAD
+    bindsym $mod+e exec 'emacsclient -ca emacs'
+=======
     bindsym $mod+e exec emacsclient -c -a emacs
+>>>>>>> refs/rewritten/Fixed-the-merge
 
     # Kill focused window
     bindsym $mod+q kill

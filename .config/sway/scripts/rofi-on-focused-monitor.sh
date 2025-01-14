@@ -9,4 +9,4 @@ else
 	rofiSpawn=0
 fi
 
-rofi -show drun -monitor $rofiSpawn
+XDG_CURRENT_DESKTOP=KDE rofi -show drun -monitor $rofiSpawn

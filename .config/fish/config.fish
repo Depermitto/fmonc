@@ -46,14 +46,19 @@ alias autorm='yay -R $(yay -Qdtq)'
 alias autoremove='autorm'
 alias diskhealth='k4dirstat'
 alias search='pacman -Qsq'
+alias pss='ps -e | grep'
+alias zzz='systemctl suspend'
+alias 6zz='shutdown now'
 
 # Config shortcuts
 alias vimrc='nvim ~/.vimrc'
 alias nvimrc='nvim ~/.config/nvim/init.vim'
+alias swayrc='nvim ~/.config/sway/config'
 alias bashrc='nvim ~/.bashrc'
 alias fishrc='nvim ~/.config/fish/config.fish'
 alias qtile='nvim ~/.config/qtile/config.py'
 alias logout='pkill -KILL -u $(whoami)'
+alias sourcefish='source ~/.config/fish/config.fish'
 
 # Exports
 export EDITOR=nvim
@@ -64,6 +69,7 @@ export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export HISTSIZE=10000
 export HISTFILESIZE=10000
+export XDG_CURRENT_DESKTOP=KDE
 
 # Starship
 starship init fish | source
