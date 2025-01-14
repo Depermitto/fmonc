@@ -25,11 +25,13 @@ end
 
 
 # Custom aliases
-alias lh='ls -lAh --color=auto'
-alias la='ls -A --color=auto'
+alias ls='exa'
+alias la='exa -al'
+#alias ls='ls --color=auto'
+#alias lh='ls -lAh --color=auto'
+#alias la='ls -A --color=auto'
 alias grep='rg'
 alias e='exit'
-alias ls='ls --color=auto'
 alias ':q'='exit'
 alias ':wq'='exit'
 alias mv='mv -i'

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 # Simple bash script to install all nessesary files for pmjial :)
 
 
@@ -98,7 +98,7 @@ apps() {
     sleep 2
 
 
-    APPS=("kotatogram-desktop-beta-dynamic-bin" "alacritty" "bitwarden" "emacs" "ungoogled-chromium-bin" "qbittorrent" "kdeconnect" "fish" "notepadqq" "nerd-fonts-complete" "pyenv-virtualenv" "pipewire" "pipewire-audio" "pipewire-docs" "pipewire-jack" "pipewire-pulse" "wireplumber" "dmenu" "networkmanager-dmenu-git" "azote" "python-iwlib" "ranger" "touchpad_config" "pamixer" "brightnessctl" "rofi" "xclip")
+    APPS=("kotatogram-desktop-beta-dynamic-bin" "alacritty" "bitwarden" "emacs" "ungoogled-chromium-bin" "qbittorrent" "kdeconnect" "fish" "notepadqq" "nerd-fonts-complete" "pyenv-virtualenv" "pipewire" "pipewire-audio" "pipewire-docs" "pipewire-jack" "pipewire-pulse" "wireplumber" "dmenu" "networkmanager-dmenu-git" "azote" "python-iwlib" "ranger" "touchpad_config" "pamixer" "brightnessctl" "rofi" "xclip" "exa" "starship")
 
     for app in ${APPS[@]}; do
         yes | yay -S $app &&

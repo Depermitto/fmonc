@@ -25,6 +25,9 @@ Plug 'sheerun/vim-polyglot'
 " LSP
 Plug 'neovim/nvim-lspconfig'
 
+" Rust
+Plug 'simrat39/rust-tools.nvim'
+
 
 call plug#end()
 
@@ -65,7 +68,11 @@ let g:coq_settings = { 'auto_start': v:true }
 set clipboard=unnamedplus
 
 
-" Nvim-cursorline config
+" Polybar
+set ft=dosini
+
+
+" Nvim-cursorline config "
 lua << CURSORLINE
 require('nvim-cursorline').setup {
   cursorline = {
@@ -80,3 +87,19 @@ require('nvim-cursorline').setup {
   }
 }
 CURSORLINE
+
+" Rust "
+lua << RUST
+local rt = require("rust-tools")
+
+rt.setup({
+  server = {
+    on_attach = function(_, bufnr)
+      -- Hover actions
+      vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+      -- Code action groups
+      vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+    end,
+  },
+})
+RUST
