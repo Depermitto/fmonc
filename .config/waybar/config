@@ -5,7 +5,7 @@
     "spacing": 6,
     "fixed-center": true,
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/window", "sway/mode","custom/media"],
+    "modules-left": ["sway/workspaces", "battery", "sway/scratchpad", "sway/window", "sway/mode","custom/media"],
     "modules-center": ["clock"],
     "modules-right": ["idle_inhibitor", "network", "pulseaudio", "cpu", "tray"],
     // Modules configuration
@@ -61,12 +61,12 @@
     },
     "clock": {
         "timezone": "Poland",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%d-%m-%Y}"
     },
     "cpu": {
         "format": "CPU: {usage}%",
-        "tooltip": false
+        "tooltip": true
     },
     "memory": {
         "format": "RAM: {used}GiB"
@@ -77,7 +77,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
+        "format": "{capacity}% {icon} ",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
@@ -85,26 +85,23 @@
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
     "network": {
         "interface": "wlan0",
         "format-wifi": "   {essid}",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon}  {volume}% {format_source}",
+        "format": "{icon} {volume}% {format_source}",
         "format-bluetooth": " {volume}% {format_source}",
         "format-bluetooth-muted": "{icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "   {volume}%",
-        "format-source-muted": "",
+        "format-muted": "M {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": " M",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -112,7 +109,7 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": ["", "", " "]
         },
         "on-click": "pavucontrol"
     },

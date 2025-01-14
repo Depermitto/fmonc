@@ -68,8 +68,12 @@ exec swayidle -w \
     # Start a terminal
     bindsym $mod+Return exec $term
 
+    # Start an emacs instance
+    bindsym $mod+e exec 'emacsclient -ca emacs'
+
     # Kill focused window
     bindsym $mod+q kill
+    bindsym Alt+f4 kill
 
     # Start $menu 
     bindsym $mod+p exec $menu
@@ -84,6 +88,16 @@ exec swayidle -w \
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+x exec 'swaymsg exit'
 
+    # XF86 Keys
+    bindsym XF86AudioMute exec 'pamixer -t'
+    bindsym XF86AudioLowerVolume exec 'pamixer -d 5'
+    bindsym XF86AudioRaiseVolume exec 'pamixer -i 5'
+    bindsym XF86MonBrightnessDown exec 'brightnessctl s 5%-'
+    bindsym XF86MonBrightnessUp exec 'brightnessctl s 5%+'
+    bindsym XF86Display exec 'sway layout toggle split'
+    bindsym XF86WLAN exec 'iwgtk'
+    bindsym XF86Tools exec 'alacritty -e nvim ~/.config/sway/config'
+    bindsym XF86Favorites exec 'emacsclient -ca emacs'
 
 ### MOVEMENT ###
     # Move your focus around
@@ -133,13 +147,13 @@ exec swayidle -w \
     bindsym $mod+Shift+0 move container to workspace number 10
 
     # Splitting
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
+    bindsym $mod+v splith
+    bindsym $mod+b splitv
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
     bindsym $mod+t layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+c layout toggle split
 
     # Switch and move whole workspaces
     bindsym $mod+Ctrl+l move workspace output right

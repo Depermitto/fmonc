@@ -42,6 +42,23 @@ window#waybar {
     border-radius: 5px;
 }
 
+#battery.discharging {
+    color: #91CEB2;
+}
+
+#battery.charging {
+    color: #43C78A;
+}
+
+#battery.critical:not(.charging) {
+    color: #CD4C4C;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 #tray {
     margin-right: 7px;
     padding: 2px 2px;
@@ -81,29 +98,11 @@ window#waybar {
     border-radius: 5px;
 }
 
-#battery {
-    color: #a3be8c;
-}
-
 @keyframes blink {
     to {
         background-color: #ffffff;
         color: black;
     }
-}
-
-#battery.charging {
-    color: #a3be8c;
-}
-
-#battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 
 #network {
