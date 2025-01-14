@@ -6,7 +6,7 @@
  *******************************************************************************/
 
 * {
-    font:   "IBM Plex Mono 12";
+    font:   "";
 
     nord0:     #2e3440;
     nord1:     #3b4252;
@@ -45,6 +45,11 @@ window {
     width:      480px;
     y-offset:   -160px;
     border:     1px;
+}
+
+entry {
+    spacing:    0;
+    text-color: @nord4;
 }
 
 inputbar {
@@ -99,8 +104,11 @@ element selected active {
 
 element-icon {
     size:   0.75em;
+    background-color: inherit;
+    text-color: inherit;
 }
 
 element-text {
+    background-color: inherit;
     text-color: inherit;
 }
