@@ -65,8 +65,11 @@ git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 ~/.emacs.d/bin/doom sync
 cp ~/Backup/Doom/* ~/.doom.d/
+<<<<<<< HEAD
 success
 
 # Qtile
 cp ~/Backup/qtile/* ~/.config/qtile &&
+=======
+>>>>>>> refs/rewritten/main
 success

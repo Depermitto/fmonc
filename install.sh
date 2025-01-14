@@ -99,7 +99,7 @@ apps() {
     sleep 2
 
 
-    APPS=("telegram-desktop" "alacritty" "bitwarden" "emacs" "chromium" "discord" "calibre" "qbittorrent" "kdeconnect")
+    APPS=("telegram-desktop" "alacritty" "bitwarden" "emacs" "chromium" "discord" "calibre" "qbittorrent" "kdeconnect" "qtile")
 
     for app in ${APPS[@]}; do
         yes | yay -S $app &&
@@ -107,7 +107,7 @@ apps() {
     done
 
 
-    APPS_NOCONFIRM=("corectrl" "openrgb" "virtualbox")
+    APPS_NOCONFIRM=("corectrl" "openrgb" "virtualbox" "diffmerge")
 
     for appc in ${APPS_NOCONFIRM[@]}; do
         yay -S --noconfirm $appc &&
@@ -115,7 +115,14 @@ apps() {
     done
 
 
-    APPS_FLATPAK=("com.valvesoftware.Steam" "com.interversehq.qView")
+    ## Enabling steam
+    sudo cp ~/Backup/pacman.conf /etc/
+    sudo pacman -Sy
+    sudo pacman -Sy steam
+    finish
+
+
+    APPS_FLATPAK=("com.interversehq.qView")
 
     for appf in ${APPS_FLATPAK[@]}; do
         flatpak -y install flathub $appf &&
