@@ -47,6 +47,7 @@ alias search='pacman -Qsq'
 
 # Config shortcuts
 alias vimrc='nvim ~/.vimrc'
+alias nvimrc='nvim ~/.config/nvim/init.vim'
 alias bashrc='nvim ~/.bashrc'
 alias fishrc='nvim ~/.config/fish/config.fish'
 alias qtile='nvim ~/.config/qtile/config.py'
@@ -58,6 +59,6 @@ export TERM=xterm-256color
 export HISTCONTROL=ignoreboth
 export TERM='xterm-256color'
 export LANG="en_US.UTF-8"
-export LC_ALL="C"
+export LC_ALL="en_US.UTF-8"
 export HISTSIZE=10000
 export HISTFILESIZE=10000
