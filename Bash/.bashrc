@@ -56,4 +56,4 @@ export HISTFILESIZE=10000
 
 # Starship
 eval "$(starship init bash)"
-neofetch
+#neofetch
