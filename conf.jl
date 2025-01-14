@@ -1,7 +1,7 @@
 using REPL.TerminalMenus
 using Base: AbstractCmd
 
-@enum Action zshrc bashrc fishconf dnfconf pacmanconf flathub sshaskpass
+@enum Action zshrc bashrc fishconf dnfconf pacmanconf flathub ssh_askpass
 
 """
 Construct a new `Cmd` object that wraps over `Base.Cmd` and `Base.pipeline`. This allows
@@ -46,14 +46,50 @@ function PkgManager()::Union{PkgManager,Nothing}
     nothing
 end
 
+function setup_zshrc()
+    # copy .zshrc
+    cmd = Cmd(`cp -vir .zshrc $(homedir())/.zshrc`)
+    if run(cmd).exitcode == 1
+        @warn "cancelled."
+        return
+    end
+
+    # install powerlevel10k
+    cmd = Cmd(`cp -vrf .local/share/powerlevel10k $(homedir())/.local/share/`)
+    if run(cmd).exitcode == 1
+        @warn "cancelled."
+        return
+    end
+
+    # copy .p10k.zsh
+    cmd = Cmd(`cp -v .p10k.zsh $(homedir())/`)
+    if run(cmd).exitcode == 1
+        @warn "cancelled."
+    end
+end
+
+function setup_bashrc()
+    # copy .bashrc
+    cmd = Cmd(`cp -vir .bashrc $(homedir())/.bashrc`)
+    if run(cmd).exitcode == 1
+        @warn "cancelled."
+    end
+end
+
+function setup_dnfconf()
+    cmd = Cmd(`cp -vir ./etc/dnf/dnf.conf /etc/dnf/dnf.conf`, sudo=true)
+    if run(cmd).exitcode == 1
+        @warn "cancelled."
+    end
+end
+
 function setup_flathub(man::PkgManager)
     # install flatpak
     cmd = Cmd(`which flatpak`, quiet=true)
     if run(cmd).exitcode == 0
         @info "flatpak already installed."
     else
-        cmd = Cmd(`$(man.install_cmd) flatpak`, sudo=true)
-        run(cmd).exitcode == 0 && println("flatpak installed.")
+        run(Cmd(`$(man.install_cmd) flatpak`, sudo=true))
     end
 
     # add flathub
@@ -69,47 +105,9 @@ function setup_flathub(man::PkgManager)
     end
 end
 
-function setup_zshrc()
-    # copy .zshrc
-    cmd = Cmd(`cp -vir .zshrc $(homedir())/.zshrc`)
-    if run(cmd).exitcode == 1
-        @warn "cancelled."
-        return
-    end
-    println("zsh configured.")
-
-    # install powerlevel10k
-    cmd = Cmd(`cp -vrf .local/share/powerlevel10k $(homedir())/.local/share/`)
-    if run(cmd).exitcode == 1
-        @warn "cancelled."
-        return
-    end
-
-    # copy .p10k.zsh
-    cmd = Cmd(`cp -v .p10k.zsh $(homedir())/`)
-    if run(cmd).exitcode == 1
-        @warn "cancelled."
-    end
-    println("powerlevel10k configured.")
-end
-
-function setup_bashrc()
-    # copy .bashrc
-    cmd = Cmd(`cp -vir .bashrc $(homedir())/.bashrc`)
-    if run(cmd).exitcode == 1
-        @warn "cancelled."
-        return
-    end
-    println("bashrc configured.")
-end
-
-function setup_dnfconf()
-    cmd = Cmd(`cp -vir ./etc/dnf/dnf.conf /etc/dnf/dnf.conf`, sudo=true)
-    if run(cmd).exitcode == 0
-        println("dnf.conf configured.")
-    else
-        @warn "cancelled."
-    end
+function setup_ssh_askpass()
+    run(Cmd(`cp -vir .config/environment.d/ $(homedir())/.config/`))
+    nothing
 end
 
 function main()
@@ -120,12 +118,16 @@ function main()
     pkg_manager = PkgManager()
 
     for a in getindex(actions, collect(indexes))
-        a == zshrc && setup_zshrc()
-        a == bashrc && setup_bashrc()
-        a == fishconf && @error "fishconf - not implemented yet."
-        a == dnfconf && setup_dnfconf()
-        a == pacmanconf && @error "pacmanconf - not implemented yet."
-        a == flathub && setup_flathub(pkg_manager)
-        a == sshaskpass && @error "sshaskpass - not implemented yet."
+        try
+            a == zshrc && setup_zshrc()
+            a == bashrc && setup_bashrc()
+            a == fishconf && @error "fishconf - not implemented yet."
+            a == dnfconf && setup_dnfconf()
+            a == pacmanconf && @error "pacmanconf - not implemented yet."
+            a == flathub && setup_flathub(pkg_manager)
+            a == ssh_askpass && setup_ssh_askpass()
+        catch
+            println()
+        end
     end
 end
