@@ -47,11 +47,11 @@ export PATH=/home/permito/.cargo/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/
 
 case ":$PATH:" in
     *:/home/permito/.juliaup/bin:*)
-        ;;
-
+    ;;
+    
     *)
         export PATH=/home/permito/.juliaup/bin${PATH:+:${PATH}}
-        ;;
+    ;;
 esac
 
 # <<< juliaup initialize <<<
