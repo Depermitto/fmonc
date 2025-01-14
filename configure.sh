@@ -41,18 +41,18 @@ if [ ! -d ~/.config/alacritty ]; then
     mkdir ~/.config/alacritty
 fi
 
-cp ~/Backup/Alacritty/alacritty.yml ~/.config/alacritty/ &&
+ln ~/Backup/Alacritty/alacritty.yml ~/.config/alacritty/ &&
 finish
 
 # Bash
-cp ~/Backup/Bash/.bashrc ~/.bashrc &&
+ln ~/Backup/Bash/.bashrc ~/.bashrc &&
 finish
 
 # Vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-cp ~/Backup/Vim/.vimrc ~/.vimrc &&
+ln ~/Backup/Vim/.vimrc ~/.vimrc &&
 
 vim +PlugInstall &&
 cd ~/.vim/plugged/youcompleteme/ &&
@@ -63,11 +63,11 @@ finish
 # Doom Emacs
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
-~/.emacs.d/bin/doom sync
-cp ~/Backup/Doom/* ~/.doom.d/
+~/.emacs.d/bin/doom
+ln ~/Backup/Doom/* ~/.doom.d/
 success
 
 # Qtile
-cp ~/Backup/qtile/* ~/.config/qtile &&
+ln ~/Backup/qtile/* ~/.config/qtile &&
 mkdir ~/.config/qtile &&
 success
