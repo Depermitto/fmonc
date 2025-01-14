@@ -115,7 +115,14 @@ apps() {
     done
 
 
-    APPS_FLATPAK=("com.valvesoftware.Steam" "com.interversehq.qView")
+    ## Enabling steam
+    sudo cp ~/Backup/pacman.conf /etc/
+    sudo pacman -Sy
+    sudo pacman -Sy steam
+    finish
+
+
+    APPS_FLATPAK=("com.interversehq.qView")
 
     for appf in ${APPS_FLATPAK[@]}; do
         flatpak -y install flathub $appf &&
