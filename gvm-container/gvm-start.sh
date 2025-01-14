@@ -1,3 +1,3 @@
 #! /usr/bin/bash
 
-docker-compose -f ~/Backup/gvm-container/docker-compose.yml -p greenbone-community-edition up -d
+docker-compose -f ~/Gitlab/gvm-container/docker-compose.yml -p greenbone-community-edition up -d
