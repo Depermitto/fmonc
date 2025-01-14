@@ -103,13 +103,16 @@ ln -fv ~/Gitlab/.doom.d/* ~/.doom.d/ &&
 }
 
 configureSway() {
-swayDir=~/Gitlab/.config/sway
+if ! /usr/bin/ls -A1q ~/.config/sway | grep -q . ; then
+    mkdir -p ~/.config/sway/scripts
+    mkdir -p ~/.config/waybar
+    mkdir -p ~/.config/rofi
+fi
 
-ln -fv $swayDir/config ~/.config/sway/config
-
-for script in $swayDir/scripts/*; do
-    ln -fv $script ~/.config/sway/scripts/
-done
+ln -fv ~/Gitlab/.config/sway/config ~/.config/sway/config
+ln -fv ~/Gitlab/.config/sway/scripts/* ~/.config/sway/scripts/
+ln -fv ~/Gitlab/.config/waybar/* ~/.config/waybar/
+ln -fv ~/Gitlab/.config/rofi/config.rasi ~/.config/rofi/
 }
 
 
