@@ -107,7 +107,7 @@ apps() {
     done
 
 
-    APPS_NOCONFIRM=("corectrl" "openrgb" "virtualbox")
+    APPS_NOCONFIRM=("corectrl" "openrgb" "virtualbox" "diffmerge")
 
     for appc in ${APPS_NOCONFIRM[@]}; do
         yay -S --noconfirm $appc &&
