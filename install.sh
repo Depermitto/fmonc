@@ -99,7 +99,7 @@ apps() {
     sleep 2
 
 
-    APPS=("telegram-desktop" "alacritty" "bitwarden" "emacs" "chromium" "discord" "calibre" "qbittorrent" "kdeconnect" "qtile" "jack2" "pulseaudio-jack" "heroic-games-launcher-bin" "man" "bat" "librewolf-bin")
+    APPS=("telegram-desktop" "alacritty" "bitwarden" "emacs" "ungoogled-chromium-bin" "qbittorrent" "kdeconnect")
 
     for app in ${APPS[@]}; do
         yes | yay -S $app &&
@@ -107,7 +107,7 @@ apps() {
     done
 
 
-    APPS_NOCONFIRM=("corectrl" "openrgb" "virtualbox" "diffmerge")
+    APPS_NOCONFIRM=("diffmerge" "man" "bat" "heroic-games-launcher-bin" "vim" "stacer")
 
     for appc in ${APPS_NOCONFIRM[@]}; do
         yay -S --noconfirm $appc &&
