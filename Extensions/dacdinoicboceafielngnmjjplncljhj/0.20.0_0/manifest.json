@@ -1,0 +1,36 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "lib/js/browser-polyfill.js", "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "img/icon/icon128.png",
+         "16": "img/icon/icon16.png",
+         "48": "img/icon/icon48.png",
+         "64": "img/icon/icon64.png"
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "lib/js/browser-polyfill.js", "content.js", "content_alert.js", "content_popup.js", "content_modal.js", "content_sidemenu.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
+   "default_locale": "pl",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "img/icon/icon128.png",
+      "16": "img/icon/icon16.png",
+      "48": "img/icon/icon48.png",
+      "64": "img/icon/icon64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsz7vfXA20Zh4DIRHq2JW4gVUTg3nHXr/WHqzJAsnpH31nXnSFtgfAN0RLnQaL8HKsMYKPovEfucCekVy0we0EKaZuI3LbrjOdSsZvB+gAqeVlU0mz8EPfnz4vOueGEg4cv6JWWq3BepXJcDNI78bBfRBc6M/tiDNBkFK8N1q+/hXQDjtQeJkBa5o06ZAQKVNWJpGyUXysIAR838/wjQ9Xtw3AmiTxDh8UqqdwQbd74CfChgQtDGxmLsAP3lbzvikFR/bMKz0JUcQllgkuf5YjMd6xnBkRwmqRwsxxXpYBzm9FAU+0rlAyvLJ20kB+PBJLan9muQuLWyKzSC5deoV3wIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "permissions": [ "activeTab", "webNavigation", "cookies", "*://*.alerabat.com/", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.20.0",
+   "web_accessible_resources": [ "img/*.png", "img/*.svg", "content.css", "fonts/*.woff2" ]
+}

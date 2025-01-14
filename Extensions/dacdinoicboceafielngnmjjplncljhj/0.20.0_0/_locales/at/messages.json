@@ -1,0 +1,563 @@
+{
+  "appName": {
+    "message": "buykers | Gutscheine und Rabattcodes"
+  },
+  "appDesc": {
+    "message": "Nie wieder nach Rabattcodes suchen - wir erledigen das für Sie :)"
+  },
+  "NavTabLabelCodes": {
+      "message": "Rabattcodes"
+  },
+  "NavTabLabelCashback": {
+      "message": "Cashback"
+  },
+  "NavTabLabelPriceTracking": {
+      "message": "Preis-Tracking"
+  },
+  "NavTabLabelShare": {
+      "message": "Teilen"
+  },
+  "NavTabLabelAccount": {
+      "message": "Konto"
+  },
+  "vouchersFilterAll": {
+    "message": "Alle"
+  },
+  "vouchersFilterDiscount": {
+    "message": "Gutscheine"
+  },
+  "vouchersFilterPromo": {
+    "message": "Rabatte"
+  },
+  "vouchersFilterPharmacy": {
+    "message": "Angebote"
+  },
+  "answerYes": {
+    "message": "Ja"
+  },
+  "answerNo": {
+    "message": "Nein"
+  },
+  "oneYear": {
+    "message": "Jahr"
+  },
+  "twoFourYears": {
+    "message": "Jahre"
+  },
+  "manyYears": {
+    "message": "Jahre"
+  },
+  "oneMonth": {
+    "message": "Monat"
+  },
+  "twoFourMonths": {
+    "message": "Monate"
+  },
+  "manyMonths": {
+    "message": "Monate"
+  },
+  "oneWeek": {
+    "message": "Woche"
+  },
+  "twoFourWeeks": {
+    "message": "Wochen"
+  },
+  "manyWeeks": {
+    "message": "Wochen"
+  },
+  "oneDay": {
+    "message": "Tag"
+  },
+  "twoFourDays": {
+    "message": "Tage"
+  },
+  "manyDays": {
+    "message": "Tage"
+  },
+  "oneHour": {
+    "message": "Stunde"
+  },
+  "twoFourHours": {
+    "message": "Stunden"
+  },
+  "manyHours": {
+    "message": "Stunden"
+  },
+  "oneMinute": {
+    "message": "Minute"
+  },
+  "twoFourMinutes": {
+    "message": "Minuten"
+  },
+  "manyMinutes": {
+    "message": "Minuten"
+  },
+  "oneSeconds": {
+    "message": "Sekunde"
+  },
+  "twoFourSeconds": {
+    "message": "Sekunden"
+  },
+  "manySeconds": {
+    "message": "Sekunden"
+  },
+  "voucherArchived": {
+    "message": "Achriv"
+  },
+  "noVouchersInfo": {
+    "message": "Derzeit sind keine Rabattcodes verfügbar."
+  },
+  "alertHeaderPromo": {
+    "message": "Verfügbare Rabatte auf <b>$URL$</b>",
+    "placeholders": {
+      "url": {
+        "content": "$1"
+      }
+    }
+  },
+  "alertHeaderPromoPharmacy": {
+    "message": "Verfügbare Sonderangebote auf <b>$URL$</b>",
+    "placeholders": {
+      "url": {
+        "content": "$1"
+      }
+    }
+  },
+  "alertHeader": {
+    "message": "Verfügbare Gutscheine auf <b>$URL$</b>",
+    "placeholders": {
+      "url": {
+        "content": "$1"
+      }
+    }
+  },
+  "alertCartInfo_0": {
+    "message": "Verfügbar für Ihren Warenkorb ist:"
+  },
+  "alertCartInfo_1": {
+    "message": "Verfügbar für Ihren Warenkorb sind:"
+  },
+  "alertCartInfo_2": {
+    "message": "Verfügbar für Ihren Warenkorb sind:"
+  },
+  "alertUseButtonText": {
+    "message": "Codes testen"
+  },
+  "discountVouchersLabel_2": {
+    "message": "Gutscheincodes"
+  },
+  "discountVouchersLabel_1": {
+    "message": "Gutscheincodes"
+  },
+  "discountVouchersLabel_0": {
+    "message": "Gutscheincode"
+  },
+  "promoVouchersLabel_2": {
+    "message": "Rabatte"
+  },
+  "promoVouchersLabel_1": {
+    "message": "Rabatte"
+  },
+  "promoVouchersLabel_0": {
+    "message": "Rabatte"
+  },
+  "promoPharmacyVouchersLabel_2": {
+    "message": "Sonderangebote"
+  },
+  "promoPharmacyVouchersLabel_1": {
+    "message": "Sonderangebote"
+  },
+  "promoPharmacyVouchersLabel_0": {
+    "message": "Sonderangebot"
+  },
+  "showMoreButton": {
+    "message": "Überprüfe mehr Codes"
+  },
+  "showVoucherDetailsDiscount": {
+    "message": "Code anzeigen"
+  },
+  "showVoucherDetailsDiscountCopy": {
+    "message": "Code kopieren"
+  },
+  "showVoucherDetailsPromo": {
+    "message": "Gehe zum Rabatt"
+  },
+  "showVoucherDetailsPharmacy": {
+    "message": "Gehe zum Sonderangebot"
+  },
+  "codePanelCopyHint": {
+    "message": "Code wurde kopiert"
+  },
+  "offerTypeName_discount_code": {
+    "message": "Gutscheincode"
+  },
+  "offerTypeName_offer": {
+    "message": "Rabatte"
+  },
+  "offerTypeName_free_shipping": {
+    "message": "Kostenloser Versand"
+  },
+  "offerTypeNamePharmacy": {
+    "message": "Sonderangebot"
+  },
+  "additionalInfoName_only_here": {
+    "message": "Nur bei uns"
+  },
+  "additionalInfoName_recommend": {
+    "message": "Empfohlen"
+  },
+  "voucherFinishDateInfinite": {
+    "message": "Bis Widerruf"
+  },
+  "voucherTermHeadline": {
+    "message": "Bedingungen:"
+  },
+  "voucherTermLabelDiscountFinishDate": {
+    "message": "Gültigkeit des Gutscheins:"
+  },
+  "voucherTermLabelOfferFinishDate": {
+    "message": "Gültigkeit des Rabatts:"
+  },
+  "voucherTermLabelPharmacyFinishDate": {
+    "message": "Gültigkeit des Sonderangebots:"
+  },
+  "voucherTermLabelUnique": {
+    "message": "Ist der Gutschein exklusiv?"
+  },
+  "voucherTermLabelMinimumOrderAmount": {
+    "message": "Mindestbestellwert"
+  },
+  "voucherTermLabelConcernDiscounts": {
+    "message": "Gilt das auch für bereit Reduziertes?"
+  },
+  "voucherTermLabelConcernDiscountsText": {
+    "message": "Rabattbedingungen"
+  },
+  "voucherTermLabelExceptedBrands": {
+    "message": "Von den Rabatt ausgeschlossene Marken"
+  },
+  "voucherTermLabelExceptedBrandsPharmacy": {
+    "message": "Von den Sonderangebot ausgeschlossene Marken"
+  },
+  "voucherTermLabelAcceptedBrands": {
+    "message": "Von den Rabatt erfasste Marken:"
+  },
+  "voucherTermLabelAcceptedBrandsPharmacy": {
+    "message": "Von den Sonderangebot erfasste Marken:"
+  },
+  "voucherTermDiscountInfinite": {
+    "message": "Angebot gültig bis Widerruf"
+  },
+  "voucherTermOfferInfinite": {
+    "message": "Angebot gültig bis Widerruf"
+  },
+  "codePanelStoreHint": {
+    "message": "Im Warenkorb hinzufügen"
+  },
+  "useVouchersButtonFound": {
+    "message": "Gefunden"
+  },
+  "useVouchersButtonText": {
+    "message": "Das Beste anpassen"
+  },
+  "useVouchersSearchBest": {
+    "message": "Ich suche den besten Code"
+  },
+  "useVouchersSearchStatusSingle": {
+    "message": "Ich überprüfe 1 Code"
+  },
+  "useVouchersSearchStatus": {
+    "message": "Ich überprüfe $X$ von $FROM$ Codes",
+    "placeholders": {
+      "x": {
+        "content": "$1"
+      },
+      "from": {
+        "content": "$2"
+      }
+    }
+  },
+  "useVouchersSearchFinalPrice": {
+    "message": "Preis nach Rabatt:"
+  },
+  "useVouchersSearchSavings": {
+    "message": "Glückwunsch! Sie sparen gerade:"
+  },
+  "useVouchersSearchBasePrice": {
+    "message": "Standartpreis:"
+  },
+  "useVouchersSearchSuccessButtonText": {
+    "message": "Zurück zum Einkaufen"
+  },
+  "useVouchersSearchRatingButtonText": {
+    "message": "Bewertung hinzufügen"
+  },
+  "useVouchersSearchRatingText": {
+    "message": "Gefällt dir unser Plugin? Bewerte ihn"
+  },
+  "useVouchersSearchSuccessHeader": {
+    "message": "Wir haben es 😉 Der Rabattcode wurde hinzugefügt!"
+  },
+  "useVouchersSearchFailHeader": {
+    "message": "Sie kaufen zum bestmöglichen Preis."
+  },
+  "useVouchersSearchFailMessage": {
+    "message": "Keiner der verfügbaren Rabattcodes gilt für die Artikel<br/> in Ihrem Warenkorb. Sie können also weiter einkaufen,<br/> da Sie wissen, dass Sie derzeit den bestmöglichen Preis für <span>$NAME$</span> haben",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      }
+    }
+  },
+  "useVouchersSearchFailMessageAlt": {
+    "message": "Keiner der verfügbaren Rabattcodes gilt für die Artikel in Ihrem Warenkorb. Sie können also weiter einkaufen, da Sie wissen, dass Sie derzeit den bestmöglichen Preis für <span>$NAME$</span> haben",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      }
+    }
+  },
+  "useVouchersSearchFailButtonText": {
+    "message": "Zurück zum Einkaufen"
+  },
+  "copyHint": {
+    "message": "kopieren"
+  },
+  "copiedHint": {
+    "message": "kopiert"
+  },
+  "useVouchersSearchErrorMessage": {
+    "message": "Fehler, der Code konnte nicht automatisch eingefügt werden"
+  },
+  "useVouchersSearchErrorInstructions": {
+    "message": "Klicken Sie auf den Code, um ihn zu kopieren und in den Warenkorb zu legen"
+  },
+  "useVouchersPopupSeeDetails": {
+    "message": "Siehe Einzelheiten"
+  },
+  "useVouchersPopupUserSaved": {
+    "message": "Benutzer hat <span>$VALUE$</span> gespart",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "useVouchersPopupShareHeader": {
+    "message": "Teile den Link mit deinen Freunden"
+  },
+  "useVouchersPopupShareSubHeader": {
+    "message": "Gefällt Ihnen buykers? Helfen Sie uns zu wachsen und senden Sie den Link an Ihre Freunde."
+  },
+  "useVouchersPopupShareText": {
+    "message": "Gefällt Ihnen buykers? Helfen Sie uns zu wachsen und senden Sie den Link an Ihre Freunde."
+  },
+  "useVouchersPopupShareShare": {
+    "message": "Oder teilen Sie Informationen in Ihren Social Media. Vielen Dank!"
+  },
+  "useVouchersPopupShareMessage": {
+    "message": "buykers ist eine Browser-Erweiterung, die automatisch den besten Rabattcode findet und zu Ihrer Bestellung hinzufügt. Laden Sie es jetzt herunter und überzeugen Sie sich selbst!"
+  },
+  "useVouchersPopupPageShare": {
+    "message": "Zur Verfügung stellen"
+  },
+  "useVouchersPopupPageSearch": {
+    "message": "Suchen"
+  },
+  "useVouchersPopupPageAddVoucher": {
+    "message": "Gutschein hinzufügen"
+  },
+  "useVouchersPopupPageExtensionInfo": {
+    "message": "Wilkommen bei buykers"
+  },
+  "useVouchersPopupPageVouchersDetails": {
+    "message": "Zur Liste zurückgehen"
+  },
+  "useVouchersPopupSearchPlaceholder": {
+    "message": "Shop suchen"
+  },
+  "useVouchersPopupSearchResults": {
+    "message": "Suchergebnis"
+  },
+  "useVouchersPopupSearchNoResults": {
+    "message": "Keine Ergebnisse"
+  },
+  "useVouchersPopupSearchResultsPopular": {
+    "message": "Beliebteste Shops"
+  },
+  "useVouchersPopupChartCouponsUse": {
+    "message": "Gutscheine-Wirksamkeit"
+  },
+  "useVouchersPopupChartCouponUse": {
+    "message": "Gutschein-Wirksamkeit"
+  },
+  "useVouchersPopupChartEffectivenessMedium": {
+    "message": "Durchschnittlich"
+  },
+  "useVouchersPopupChartEffectivenessHigh": {
+    "message": "Hoch"
+  },
+  "useVouchersPopupChartEffectivenessVeryHigh": {
+    "message": "Sehr Hoch"
+  },
+  "useVouchersPopupChartMeanDiscountPercent": {
+    "message": "Durchschnittlicher Rabatt"
+  },
+  "useVouchersPopupChartMeanDiscount": {
+    "message": "Durchschnittliche Menge"
+  },
+  "useVouchersPopupChartDayPeriod_0": {
+    "message": "Letzte $TIME$ Tage",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "useVouchersPopupChartDayPeriod_1": {
+    "message": "Letzte $TIME$ Tage",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "useVouchersPopupChartDayPeriod_2f": {
+    "message": "Letzte $TIME$ Tage",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "useVouchersPopupChartHourPeriod": {
+    "message": "Letzte 24 Stunden"
+  },
+  "useVouchersPopupListVoucherAddInfo": {
+    "message": "Haben Sie einen Code gefunden, den wir nicht<br/>haben? Teilen Sie mit unserer</br>Community"
+  },
+  "useVouchersPopupListVoucherAddButtonText": {
+    "message": "Code hinzufügen"
+  },
+  "useVouchersPopupAddFormHeader": {
+    "message": "Haben Sie einen Code gefunden, den wir nicht haben?"
+  },
+  "useVouchersPopupAddFormSubHeader": {
+    "message": "Teilen Sie mit unserer Community"
+  },
+  "useVouchersPopupAddFormLabelShopName": {
+    "message": "Shopname"
+  },
+  "useVouchersPopupAddFormPlaceholderShopUrl": {
+    "message": "z.B. www.shopname.com"
+  },
+  "useVouchersPopupAddFormLabelCode": {
+    "message": "Code"
+  },
+  "useVouchersPopupAddFormPlaceholderCode": {
+    "message": "z.B. BUYKERS15"
+  },
+  "useVouchersPopupAddFormLabelCodeDesc": {
+    "message": "Gutscheinbeschreibung"
+  },
+  "useVouchersPopupAddFormPlaceholderCodeDesc": {
+    "message": "z.B. -15% Gutschein auf Ihre erste Bestellung"
+  },
+  "useVouchersPopupAddFormLabelFinishDate": {
+    "message": "Dauer"
+  },
+  "useVouchersPopupAddFormPlaceholderFinishDate": {
+    "message": "z.B. 12.06.2021"
+  },
+  "useVouchersPopupAddFormLabelCodeValue": {
+    "message": "Rabattwert"
+  },
+  "useVouchersPopupAddFormPlaceholderCodeValue": {
+    "message": "z.B. 15% Rabatt ab 50€ Mindestbestellwert"
+  },
+  "useVouchersPopupAddFormPlaceholderCodeValueAmount": {
+    "message": "Menge"
+  },
+  "useVouchersPopupAddFormPlaceholderCodeValuePercent": {
+    "message": "Prozent"
+  },
+  "useVouchersPopupAddFormPlaceholderCodeValueNone": {
+    "message": "keine Daten"
+  },
+  "useVouchersPopupAddFormFieldsRequired": {
+    "message": "Benötigte Felder"
+  },
+  "useVouchersPopupAddFormFieldRequired": {
+    "message": "Benötigte Felder"
+  },
+  "useVouchersPopupAddFormFieldMaxLength": {
+    "message": "Das Feld kann bis zu $MAXLENGTH$ Zeichen enthalten",
+    "placeholders": {
+      "maxlength": {
+        "content": "$1"
+      }
+    }
+  },
+  "useVouchersPopupAddFormDateFuture": {
+    "message": "Das Datum muss in der Zukunft liegen"
+  },
+  "useVouchersPopupAddFormNoShopsFound": {
+    "message": "Shop nicht gefunden"
+  },
+  "useVouchersPopupAddFormSubmitText": {
+    "message": "Gutscheincode hinzufügen"
+  },
+  "useVouchersPopupAddFormSubmitTextSubmitting": {
+    "message": "Senden..."
+  },
+  "useVouchersPopupAddFormSubmitTextSent": {
+    "message": "Gesendet"
+  },
+  "useVouchersPopupAddFormSubmitTextError": {
+    "message": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut"
+  },
+  "useVouchersPopupAddThankYouHeader": {
+    "message": "Dankeschön!"
+  },
+  "useVouchersPopupAddThankYouText": {
+    "message": "Ihr Gutschein wurde zur Bestätigung gesendet. Er wird so schnell wie möglich hinzugefügt."
+  },
+  "useVouchersPopupShopMissingHeader": {
+    "message": "Wilkommen bei buykers"
+  },
+  "useVouchersPopupShopMissingSubHeader": {
+    "message": "Ein Klick und Sie kaufen günstiger. Überprüfen Sie, wie einfach es ist."
+  },
+  "useVouchersPopupShopMissingText1": {
+    "message": "1. Kaufen Sie wie gewohnt ein. Wenn unser Symbol in der Browserleiste mit einer Nummer angezeigt wird, bedeutet dies, dass das Geschäft Gutscheincodes anbietet."
+  },
+  "useVouchersPopupShopMissingText2": {
+    "message": "2. Wenn Sie das Produkt in den Warenkorb legen, wird ein Popup mit Informationen darüber angezeigt, wie viele Codes verfügbar sind. Klicken Sie einfach auf <span class='popup_extension_info__text--bold'>„Codes testen”</span>  und unser Plugin wird selbst den besten Gutschein für Ihre Bestellung finden."
+  },
+  "useVouchersPopupShopMissingText3": {
+    "message": "3. Fertig! Der Code wird hinzugefügt, buchstäblich ein Klick und Sie zahlen weniger! <br /> Nicht schlecht, oder? 😎"
+  },
+  "extensionInfoNuberOfCodes": {
+    "message": "2 Gutscheincodes"
+  },
+  "extensionInfoBasePrice": {
+    "message": "90,00€"
+  },
+  "extensionInfoSavings": {
+    "message": "18,00€"
+  },
+  "extensionInfoFinalPrice": {
+    "message": "72,00€"
+  },
+  "useVouchersAlertLoginRequiredHeaderText": {
+    "message": "In diesem Shop können nur angemeldete Benutzer Gutscheincodes verwenden."
+  },
+  "useVouchersAlertLoginRequiredInfoText": {
+    "message": "Bitte melden Sie sich unter <strong>$NAME$</strong> in Ihrem Konto an, um die verfügbaren Gutscheincodes zu testen.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      }
+    }
+  }
+}
