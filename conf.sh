@@ -57,19 +57,12 @@ function list () {
 
   Configuration packs:
 
-    [ONLY ON UBUNTU-BASED]
-    ubuntu-based    - installs nala and alacritty
-
     [ONLY ON FEDORA]
     fedora          - improves dnf (5 parallel downloads and fastest mirror)
 
     [CROSS-DISTRO]
-    lsp             - lsp for bash, python and rust
-    vim             - installs Packer and copies this repo's config file
-    neovim          - similar to 'vim'
     bash            - this repo's bashrc and set ups starship prompt
-    fish            - similar for bash
-    doom            - configures doom-emacs"
+    fish            - similar for bash"
 }
 
 function example () {
