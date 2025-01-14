@@ -1,7 +1,7 @@
 # Config files and backup storage
 
-Use 'sudo ./install.sh' to install all nessesary programs
-Use 'sudo ./configure.sh' to configure config files
+* './install.sh' to install all nessesary programs.
+* './configure.sh' to configure config files.
 
 1. Added Alacritty
 2. Added Git
@@ -10,3 +10,4 @@ Use 'sudo ./configure.sh' to configure config files
 5. Added qtile
 6. Added Pictures
 7. Added Bash
+8. Added the install.sh script
