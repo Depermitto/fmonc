@@ -12,9 +12,9 @@
 (global-display-line-numbers-mode)
 (setq inhibit-startup-screen t)
 
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
-(setq indent-line-function 'insert-tab)
+(setq-default indent-tabs-mode nil
+              tab-width 4
+              indent-line-function 'insert-tab)
 
 ;; ido
 (use-package smex

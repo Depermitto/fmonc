@@ -21,7 +21,8 @@
    '("j" . meow-next)
    '("k" . meow-prev)
    '("<escape>" . ignore)
-   '("\\" . other-window))
+   '("/" . other-window)
+   '("?" . mode-line-other-buffer))
   (meow-leader-define-key
    ;; SPC j/k will run the original command in MOTION state.
    '("j" . "H-j")
@@ -101,7 +102,9 @@
    '("z" . meow-pop-selection)
    '("'" . repeat)
    '("<escape>" . ignore)
-   '("\\" . other-window)
-   '("/" . comment-or-uncomment-region)
+   ;; custom
+   '("Z" . comment-or-uncomment-region)
    '("`" . downcase-region-or-char)
-   '("~" . upcase-region-or-char)))
+   '("~" . upcase-region-or-char)
+   '("/" . other-window)
+   '("?" . mode-line-other-buffer)))
