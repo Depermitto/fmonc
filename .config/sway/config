@@ -69,7 +69,7 @@ exec swayidle -w \
     bindsym $mod+Return exec $term
 
     # Start an emacs instance
-    bindsym $mod+e exec emacsclient -c -a emacs
+    bindsym $mod+e exec "emacsclient -ca emacs"
 
     # Kill focused window
     bindsym $mod+q kill

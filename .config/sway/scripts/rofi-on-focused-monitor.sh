@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-pkill rofi
 
 monitor=$(swaymsg -t get_workspaces | grep -C 5 '"focused": true' | grep output | cut -d '"' -f 4)
 
