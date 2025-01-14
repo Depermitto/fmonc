@@ -69,4 +69,5 @@ success
 
 # Qtile
 cp ~/Backup/qtile/* ~/.config/qtile &&
+mkdir ~/.config/qtile &&
 success
