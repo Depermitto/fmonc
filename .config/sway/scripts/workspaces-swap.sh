@@ -8,7 +8,6 @@ workspace2=$(swaymsg -t get_outputs --raw | jq '.[1].current_workspace' -r)
 
 
 # The meat the potatoes of the script. Move all $focusedContainers to the $secondScreenWorkspace and vice versa.
-
 swaymsg workspace $workspace1
 swaymsg move workspace to output $monitor2
 swaymsg workspace $workspace2
