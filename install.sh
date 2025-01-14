@@ -107,7 +107,7 @@ apps() {
     done
 
 
-    APPS_NOCONFIRM=("diffmerge" "man" "bat" "heroic-games-launcher-bin" "vim" "stacer" "geeqie-git" "alacritty-xwayland")
+    APPS_NOCONFIRM=("kdiff3-qt" "man" "bat" "heroic-games-launcher-bin" "vim" "stacer" "geeqie-git" "alacritty-xwayland")
 
     for appc in ${APPS_NOCONFIRM[@]}; do
         yay -S --noconfirm $appc &&
