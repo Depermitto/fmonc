@@ -4,6 +4,26 @@ end
 
 set -U fish_greeting ""
 
+# Functions
+
+
+function run
+    argparse --name=run 'h/help' -- $argv
+    or return
+
+    
+    if test $(count $argv) -eq 0; or set -q _flag_help
+        echo "usage: run [-h|--help] TIMES COMMAND"
+        return 0
+    end
+
+
+    for i in (seq 1 (math $argv[1]))
+        $argv[2..]
+    end
+end
+
+
 # Custom aliases
 alias lh='ls -lAh --color=auto'
 alias la='ls -A --color=auto'
@@ -11,13 +31,14 @@ alias grep='rg'
 alias e='exit'
 alias ls='ls --color=auto'
 alias ':q'='exit'
+alias ':wq'='exit'
 alias mv='mv -i'
 alias rm='rm -i'
 alias gs='git status'
 alias p='pkill'
-alias v='nvim'
-alias vim='nvim'
-alias yaf='yay; flatpak update'
+alias v='vim'
+alias n='nvim'
+alias yaf='yay; flatpak update; snap refresh'
 alias stcli='speedtest-cli'
 alias autorm='yay -R $(yay -Qdtq)'
 alias autoremove='autorm'
@@ -27,10 +48,11 @@ alias search='pacman -Qsq'
 # Config shortcuts
 alias vimrc='nvim ~/.vimrc'
 alias bashrc='nvim ~/.bashrc'
+alias fishrc='nvim ~/.config/fish/config.fish'
 alias qtile='nvim ~/.config/qtile/config.py'
 
 # Exports
-export EDITOR=vim
+export EDITOR=nvim
 export TERM=xterm-256color
 export HISTCONTROL=ignoreboth
 export TERM='xterm-256color'
