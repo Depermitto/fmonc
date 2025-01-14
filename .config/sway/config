@@ -5,12 +5,15 @@ set $down j
 set $up k
 set $right l
 set $term alacritty
+# Directory for scripts
 set $scriptsDir ~/.config/sway/scripts/
+# Take a screenshot and copy it to clipboard
 set $screenshot $scriptsDir/grim-screenshot.sh
+# Application launcher - rofi
 set $menu $scriptsDir/rofi-on-focused-monitor.sh
 
 
-### WAYBAR ###
+### WAYBAR AND REDSHIFT ###
 exec_always bash $scriptsDir/summon-waybar.sh
 exec_always bash $scriptsDir/redshift.sh
 
@@ -47,7 +50,7 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     xkb_layout "pl"
 }
 
-# "man 5 sway-output, sway-input" for more information about these sections
+# "man 5 sway-output / man 5 sway-input" for more information about these sections
 
 
 ### IDLE CONFIGURATION ###
@@ -68,7 +71,7 @@ exec swayidle -w \
     # Kill focused window
     bindsym $mod+q kill
 
-    # Start $menu
+    # Start $menu 
     bindsym $mod+p exec $menu
     bindsym $mod+d exec $menu
 
@@ -139,7 +142,6 @@ exec swayidle -w \
     bindsym $mod+e layout toggle split
 
     # Switch and move whole workspaces
-    bindsym $mod+w exec $scriptsDir/workspaces-swap.sh
     bindsym $mod+Ctrl+l move workspace output right
     bindsym $mod+Ctrl+h move workspace output left
     bindsym $mod+Ctrl+1 move workspace number 1; workspace 1
@@ -152,6 +154,8 @@ exec swayidle -w \
     bindsym $mod+Ctrl+8 move workspace number 8; workspace 8
     bindsym $mod+Ctrl+9 move workspace number 9; workspace 9
     bindsym $mod+Ctrl+0 move workspace number 10; workspace 10
+    # Swap workspaces on 2 monitors
+    bindsym $mod+w exec $scriptsDir/workspaces-swap.sh
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
@@ -180,10 +184,6 @@ exec swayidle -w \
 
 ### RESIZING CONTAINERS ###
 mode "resize" {
-    # left will shrink the containers width
-    # right will grow the containers width
-    # up will shrink the containers height
-    # down will grow the containers height
     bindsym $left resize shrink width 20px
     bindsym $down resize grow height 20px
     bindsym $up resize shrink height 20px
