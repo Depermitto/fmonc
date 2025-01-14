@@ -1,4 +1,5 @@
-using REPL.TerminalMenus
+# runnable config file gen. julia-v1.0
+using REPL.TerminalMenus: request, MultiSelectMenu
 using Base: AbstractCmd
 
 @enum Action zshrc bashrc fish dnfconf pacmanconf flathub ssh_askpass
@@ -123,24 +124,20 @@ function setup_ssh_askpass()
     nothing
 end
 
-function main()
-    actions = collect(instances(Action))
-    options = map(String ∘ Symbol, actions)
-    indexes = request("Select actions to perform:", MultiSelectMenu(options))
+# function main()
+actions = collect(instances(Action))
+options = map(String ∘ Symbol, actions)
+indexes = request("Select actions to perform:", MultiSelectMenu(options))
 
-    pkg_manager = PkgManager()
+pkg_manager = PkgManager()
 
-    for a in getindex(actions, collect(indexes))
-        try
-            a == zshrc && setup_zshrc()
-            a == bashrc && setup_bashrc()
-            a == fish && setup_fish()
-            a == dnfconf && setup_dnfconf()
-            a == pacmanconf && setup_pacmanconf()
-            a == flathub && setup_flathub(pkg_manager)
-            a == ssh_askpass && setup_ssh_askpass()
-        catch
-            println()
-        end
-    end
+for a in getindex(actions, collect(indexes))
+	a == zshrc && setup_zshrc()
+	a == bashrc && setup_bashrc()
+	a == fish && setup_fish()
+	a == dnfconf && setup_dnfconf()
+	a == pacmanconf && setup_pacmanconf()
+	a == flathub && setup_flathub(pkg_manager)
+	a == ssh_askpass && setup_ssh_askpass()
 end
+# end
