@@ -124,30 +124,32 @@ apps() {
 ## INSTALLING ##
 
 if [ -z $1 ]; then
-    gityay &&
-    flathub &&
-    drivers &&
-    apps
+    echo -e "Type 'help' to show help"
+else
+    case $1 in
+        'help')
+            printf "'Apps': install applications only,\n'Drivers': install drivers only,\n'AUR': install git and yay only,\n'Flatpak': enable flathub only,\n'All': install all packs.\n\nPlease put arguments individually.\n"
+            ;;
+        Flatpak)
+            flathub
+            ;;
+        Apps)
+            apps
+            ;;
+        Drivers)
+            drivers
+            ;;
+        AUR)
+            gityay
+            ;;
+        All)
+            gityay &&
+            flathub &&
+            drivers &&
+            apps
+            ;;
+        *)
+            echo -e "Script works! However, your output is '$1',\nwhich is not considered a correct argument.\n\nType 'help' to show help."
+            ;;
+    esac
 fi
-
-
-case $1 in
-    'help')
-        printf "'Apps': install applications only\n'Drivers': install drivers only\n'AUR': install git and yay only\n'Flatpak': install flatpak only\n\nPlease put arguments individually.\n"
-        ;;
-    Flatpak)
-        flathub
-        ;;
-    Apps)
-        apps
-        ;;
-    Drivers)
-        drivers
-        ;;
-    AUR)
-        gityay
-        ;;
-    *)
-        echo -e "Script works! Your output is '$1'\nType 'help' to show help"
-        ;;
-esac
