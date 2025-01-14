@@ -63,6 +63,16 @@ yes | rm ~/.vim/plugged/youcompleteme/plugin/youcompleteme.vim &&
 ln ~/Backup/Vim/youcompleteme.vim ~/.vim/plugged/youcompleteme/plugin/ &&
 finish
 
+# NeoVim
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+mkdir ~/.config/nvim/ &&
+ln ~/Backup/Nvim/init.vim ~/.config/nvim/ &&
+
+nvim +PlugInstall &&
+finish
+
 # Doom Emacs
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 ~/.emacs.d/bin/doom install

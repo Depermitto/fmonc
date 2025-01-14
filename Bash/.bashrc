@@ -16,7 +16,6 @@ function run {
     done
 }
 
-
 # Custom aliases
 alias lh='ls -lAh --color=auto'
 alias la='ls -A --color=auto'
@@ -35,6 +34,7 @@ alias autorm='yay -R $(yay -Qdtq)'
 alias autoremove='autorm'
 alias diskhealth='k4dirstat'
 alias search='pacman -Qsq'
+alias vim='nvim'
 
 # Config shortcuts
 alias vimrc='vim ~/.vimrc'

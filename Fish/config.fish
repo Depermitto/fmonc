@@ -15,7 +15,8 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias gs='git status'
 alias p='pkill'
-alias v='vim'
+alias v='nvim'
+alias vim='nvim'
 alias yaf='yay; flatpak update'
 alias stcli='speedtest-cli'
 alias autorm='yay -R $(yay -Qdtq)'
@@ -24,9 +25,9 @@ alias diskhealth='k4dirstat'
 alias search='pacman -Qsq'
 
 # Config shortcuts
-alias vimrc='vim ~/.vimrc'
-alias bashrc='vim ~/.bashrc'
-alias qtile='vim ~/.config/qtile/config.py'
+alias vimrc='nvim ~/.vimrc'
+alias bashrc='nvim ~/.bashrc'
+alias qtile='nvim ~/.config/qtile/config.py'
 
 # Exports
 export EDITOR=vim
