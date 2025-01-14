@@ -109,16 +109,16 @@ handle_key() {
         q) exit 0 ;;
         j)
             local limit=${#options[@]}
-            ((limit--)) # bash arrays start from index 0
+            ((limit--)) # bash arrays start at index 0
             if [[ $cursor -ge $limit ]]; then
-                ((cursor=limit))
+                cursor=$limit
             else
                 ((cursor++))
             fi
         ;;
         k)
             if [[ $cursor -le 0 ]]; then
-                ((cursor=0))
+                cursor=0
             else
                 ((cursor--))
             fi
@@ -155,7 +155,7 @@ handle_key() {
 
 cleanup() {
     printf '\e[?25h' # show cursor
-    printf '\e[%dB' "${#options[@]}" # move exactly ${#options[@]} lines up to render the next frame on top
+    printf '\e[%dB' "${#options[@]}" # move exactly ${#options[@]} lines up to render the next "frame" on top
 }
 
 main() {
