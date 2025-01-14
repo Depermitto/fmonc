@@ -38,6 +38,15 @@ input "6940:6980:Corsair_Corsair_STRAFE_Gaming_Keyboard" {
     xkb_layout "pl"
 }
 
+input "1267:35:Elan_Touchpad" {
+    natural_scroll "enabled"
+    tap "enabled"
+}
+
+input "1:1:AT_Translated_Set_2_keyboard" {
+    xkb_layout "pl"
+}
+
 # "man 5 sway-output, sway-input" for more information about these sections
 
 

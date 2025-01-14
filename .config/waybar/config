@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "top",
-    "width": 1920,
+//    "width": 1920,
     "spacing": 6,
     "fixed-center": true,
     // Choose the order of the modules

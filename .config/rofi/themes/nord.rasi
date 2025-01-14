@@ -43,7 +43,7 @@ window {
 
     location:   center;
     width:      480px;
-    y-offset:   -160px;
+    y-offset:   -0px;
     border:     1px;
 }
 
