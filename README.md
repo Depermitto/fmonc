@@ -21,15 +21,8 @@ bash ~/Gitlab/configure.sh sway
 ```
 
 # Screenshots
-<p align="center">
-    <img src="https://github.com/Depermitto/fmonc/screenshots/screenshot.png" width="1920" />
-    <h2 align="center"></h2>
-</p>
-
-<p align="center">
-    <img src="https://github.com/Depermitto/fmonc/screenshots/screenshot-wallpaper.png" width="1920" />
-    <h2 align="center"></h2>
-</p>
+![](screenshots/screenshot.png "Busy")
+![](screenshots/screenshot-wallpaper.png "Clean")
 
 # License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
