@@ -20,10 +20,6 @@ While this will hardlink config files from the **Gitlab** directory to the **~/.
 bash ~/Gitlab/configure.sh sway
 ```
 
-# Screenshots
-![](screenshots/screenshot.png "Busy")
-![](screenshots/screenshot-wallpaper.png "Clean")
-
 # License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
