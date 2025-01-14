@@ -41,18 +41,18 @@ if [ ! -d ~/.config/alacritty ]; then
     mkdir ~/.config/alacritty
 fi
 
-ln ~/Backup/Alacritty/alacritty.yml ~/.config/alacritty/ &&
+ln ~/Gitlab/Alacritty/alacritty.yml ~/.config/alacritty/ &&
 finish
 
 # Bash
-ln ~/Backup/Bash/.bashrc ~/.bashrc &&
+ln ~/Gitlab/Bash/.bashrc ~/.bashrc &&
 finish
 
 # Vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-ln ~/Backup/Vim/.vimrc ~/.vimrc &&
+ln ~/Gitlab/Vim/.vimrc ~/.vimrc &&
 
 vim +PlugInstall &&
 cd ~/.vim/plugged/youcompleteme/ &&
@@ -60,7 +60,7 @@ yes | yay -S cmake &&
 python3 install.py &&
 
 yes | rm ~/.vim/plugged/youcompleteme/plugin/youcompleteme.vim &&
-ln ~/Backup/Vim/youcompleteme.vim ~/.vim/plugged/youcompleteme/plugin/ &&
+ln ~/Gitlab/Vim/youcompleteme.vim ~/.vim/plugged/youcompleteme/plugin/ &&
 finish
 
 # NeoVim
@@ -68,7 +68,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 mkdir ~/.config/nvim/ &&
-ln ~/Backup/Nvim/init.vim ~/.config/nvim/ &&
+ln ~/Gitlab/Nvim/init.vim ~/.config/nvim/ &&
 
 nvim +PlugInstall &&
 finish
@@ -77,10 +77,10 @@ finish
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 ~/.emacs.d/bin/doom
-ln ~/Backup/Doom/* ~/.doom.d/
+ln ~/Gitlab/Doom/* ~/.doom.d/
 success
 
 # Qtile
-ln ~/Backup/qtile/* ~/.config/qtile &&
+ln ~/Gitlab/qtile/* ~/.config/qtile &&
 mkdir ~/.config/qtile &&
 success

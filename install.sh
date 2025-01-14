@@ -115,7 +115,7 @@ apps() {
 
 
     ## Enabling steam
-    sudo cp ~/Backup/pacman.conf /etc/
+    sudo cp ~/Gitlab/pacman.conf /etc/
     sudo pacman -Sy
     sudo pacman -Sy steam
     finish
