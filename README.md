@@ -1,7 +1,7 @@
 # Config files and backup storage
 
-Use 'sudo ./install.sh' to install all nessesary programs
-Use 'sudo ./configure.sh' to configure config files
+* './install.sh' to install all nessesary programs. Uses pacman and yay aur helper
+* './configure.sh' to configure config files.
 
 1. Added Alacritty
 2. Added Git
@@ -11,3 +11,4 @@ Use 'sudo ./configure.sh' to configure config files
 6. Added Pictures
 7. Added Bash
 8. Added the install.sh script
+9. Added the configure.sh script
