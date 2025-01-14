@@ -42,7 +42,7 @@ finish() {
 
 
 configureAlacritty() {
-mkdir ~/.config/alacritty
+mkdir ~/.config/alacritty 2> /dev/null
 ln -fv ~/Gitlab/.config/alacritty/alacritty.yml ~/.config/alacritty/
 }
 
@@ -58,39 +58,48 @@ ln -fv ~/Gitlab/.config/fish/config.fish ~/.config/fish/
 
 
 configureVim() {
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if ! /usr/bin/ls -A1q ~/.vim | grep -q . ; then
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-ln -fv ~/Gitlab/.vimrc ~/.vimrc &&
+    ln -fv ~/Gitlab/.vimrc ~/.vimrc &&
 
-vim +PlugInstall &&
-cd ~/.vim/plugged/youcompleteme/ &&
-yes | yay -S cmake &&
-python3 install.py &&
+    vim +PlugInstall &&
+    cd ~/.vim/plugged/youcompleteme/ &&
+    yes | yay -S cmake &&
+    python3 install.py 
+fi
 
 ln -fv ~/Gitlab/.vim/plugged/youcompleteme/plugin/youcompleteme.vim ~/.vim/plugged/youcompleteme/plugin/ 
 }
 
 
 configureNeovim() {
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+if ! /usr/bin/ls -A1q ~/.config/nvim | grep -q . ; then
+    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+           https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-mkdir ~/.config/nvim/
-ln -fv ~/Gitlab/.config/nvim/init.vim ~/.config/nvim/ &&
+    mkdir ~/.config/nvim/ 
 
-nvim +PlugInstall &&
-sudo npm i -g pyright &&
-sudo npm i -g bash-language-server &&
-sudo npm i -g vim-language-server 
+    nvim +PlugInstall &&
+    sudo npm i -g pyright &&
+    sudo npm i -g bash-language-server &&
+    sudo npm i -g vim-language-server
+fi
+
+ln -fv ~/Gitlab/.config/nvim/init.vim ~/.config/nvim/
 }
 
 
 configureDoom() {
-git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d &&
-~/.emacs.d/bin/doom install &&
-~/.emacs.d/bin/doom sync &&
-ln -fv ~/Gitlab/.doom.d/* ~/.doom.d/
+if ! /usr/bin/ls -A1q ~/.doom.d | grep -q . ; then
+    git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d &&
+    ~/.emacs.d/bin/doom install &&
+    ~/.emacs.d/bin/doom sync
+fi
+
+ln -fv ~/Gitlab/.doom.d/* ~/.doom.d/ &&
+~/.emacs.d/bin/doom sync
 }
 
 
