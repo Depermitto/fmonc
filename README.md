@@ -1,27 +1,8 @@
 # pmjial's Dotfiles
-This repo includes some of my dotfiles, as well as installation scripts to easily set everything up.
-
-# Getting Started
-Make sure to clone this repo into the directory called **Gitlab** located in the **/home/$USER/** like this:
-
-``` 
-git clone https://gitlab.com/Depermitto/fmonc ~/Gitlab/
-```
-
-Unfortunately this is the only directory name that works for the installation scripts. **If you do not wish to use them, clone this wherever**.
-
-## Use installation scripts to get all the nessecary software.
-This command will install all packages required to run my custom sway:
-```
-bash ~/Gitlab/install.sh sway
-```
-While this will hardlink config files from the **Gitlab** directory to the **~/.config/** in order to activate the configuration:
-```
-bash ~/Gitlab/configure.sh sway
-```
+This repo includes some of my dotfiles and a configuration script to set everything up.
 
 # License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the MIT License.
 
 # Acknowledgments
 * [Nord](https://www.nordtheme.com/)
