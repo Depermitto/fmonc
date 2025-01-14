@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # configure.sh GENERATION 3
 
-CONFIGURE_COMMAND="cp -rf"
+CONFIGURE_COMMAND="cp -vrf"
 
 function packageManagerFind () {
   # Assigning error codes to variables
@@ -53,7 +53,7 @@ function list () {
 
     [CROSS-DISTRO]
     flathub         - installs flatpak and setups flathub
-    better          - ripgrep, bat, exa, etc.
+    better          - ripgrep, starship, bat, exa, etc.
 
   Configuration packs:
 
@@ -115,6 +115,9 @@ function installBetter () {
 
   # Installing the apps
   sudo $PACKAGE_MANAGER $apps
+
+  # Installing starship
+  curl -sS https://starship.rs/install.sh | sh
 }
 
 function install () {
@@ -157,11 +160,24 @@ function configureFedora () {
 }
 
 function configureAlacritty () {
-  if not [ -d "$HOME/.config/alacritty/" ]; then
+  if ! [ -d "$HOME/.config/alacritty/" ]; then
     mkdir -vp "$HOME/.config/alacritty/"
   fi &&
 
   $CONFIGURE_COMMAND "./.config/alacritty/alacritty.yml" "$HOME/.config/alacritty/"
+}
+
+function configureFish () {
+  if ! [ -d "$HOME/.config/fish" ]; then
+    mkdir -vp "$HOME/.config/fish"
+  fi &&
+
+  $CONFIGURE_COMMAND "./.config/fish/config.fish" "$HOME/.config/fish"
+}
+
+
+function configureBash () {
+  $CONFIGURE_COMMAND ".bashrc" "$HOME/"
 }
 
 function configure () {
@@ -173,7 +189,11 @@ function configure () {
     case "${pack}" in
       "fedora")
         configureFedora ;;
-      "alacritty" | "ala")
+      "fish")
+        configureFish ;;
+      "bash")
+        configureBash ;;
+      "alacritty")
         configureAlacritty ;;
     *)
       echo "One or more packs is incorrect." &&
