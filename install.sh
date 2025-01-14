@@ -107,7 +107,7 @@ apps() {
     done
 
 
-    APPS_NOCONFIRM=("diffmerge" "man" "bat" "heroic-games-launcher-bin" "vim" "stacer")
+    APPS_NOCONFIRM=("diffmerge" "man" "bat" "heroic-games-launcher-bin" "vim" "stacer" "geeqie-git")
 
     for appc in ${APPS_NOCONFIRM[@]}; do
         yay -S --noconfirm $appc &&
@@ -168,3 +168,6 @@ else
             ;;
     esac
 fi
+
+yay -R $(yay -Qdtq) &&
+success
