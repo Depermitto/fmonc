@@ -3,7 +3,7 @@
 
 bold=$(tput bold)
 normal=$(tput sgr0)
-green='\033[0;32m'
+green='\033[0;31m'
 cyan='\033[0;36m'
 nocolor='\033[0m'
 
@@ -37,7 +37,10 @@ finish() {
 
 
 # Alacritty
-mkdir ~/.config/alacritty
+if [ ! -d ~/.config/alacritty ]; then
+    mkdir ~/.config/alacritty
+fi
+
 cp ~/Backup/Alacritty/alacritty.yml ~/.config/alacritty/ &&
 finish
 
@@ -61,3 +64,4 @@ finish
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 ~/.emacs.d/bin/doom sync
+success
