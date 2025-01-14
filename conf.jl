@@ -1,19 +1,20 @@
 using REPL.TerminalMenus
+using Base: AbstractCmd
 
-@enum Action zshrc bashrc fishconf dnfconf pacmanconf kittyconf flathub sshaskpass
+@enum Action zshrc bashrc fishconf dnfconf pacmanconf flathub sshaskpass
 
 """
 Construct a new `Cmd` object that wraps over `Base.Cmd` and `Base.pipeline`. This allows
 for conveniant silencing output, error throwing on non-zero exit or adding sudo.
 """
-function Base.Cmd(
-    cmd::Cmd;
+function Cmd(
+    cmd::Base.Cmd;
     throw_on_error::Bool=false, quiet::Bool=false, sudo::Bool=false
 )::AbstractCmd
     if sudo
         cmd = `sudo $cmd`
     end
-    cmd = Cmd(cmd, ignorestatus=!throw_on_error)
+    cmd = Base.Cmd(cmd, ignorestatus=!throw_on_error)
     if quiet
         cmd = pipeline(cmd, stdout=devnull, stderr=devnull)
     end
@@ -26,7 +27,7 @@ using the parameterless constructor.
 """
 struct PkgManager
     syspath::Symbol
-    install_cmd::Base.Cmd
+    install_cmd::AbstractCmd
 end
 
 # install(man::PkgManager, packages...) = `$(man.install_cmd) $(join(collect(packages), ","))`
@@ -70,7 +71,7 @@ end
 
 function setup_zshrc()
     # copy .zshrc
-    cmd = Cmd(`cp -vri .zshrc $(homedir())/.zshrc`)
+    cmd = Cmd(`cp -vir .zshrc $(homedir())/.zshrc`)
     if run(cmd).exitcode == 1
         @warn "cancelled."
         return
@@ -94,7 +95,7 @@ end
 
 function setup_bashrc()
     # copy .bashrc
-    cmd = Cmd(`cp -vri .bashrc $(homedir())/.bashrc`)
+    cmd = Cmd(`cp -vir .bashrc $(homedir())/.bashrc`)
     if run(cmd).exitcode == 1
         @warn "cancelled."
         return
@@ -103,7 +104,7 @@ function setup_bashrc()
 end
 
 function setup_dnfconf()
-    cmd = Cmd(`cp -vri ./etc/dnf/dnf.conf /etc/dnf/dnf.conf`, sudo=true)
+    cmd = Cmd(`cp -vir ./etc/dnf/dnf.conf /etc/dnf/dnf.conf`, sudo=true)
     if run(cmd).exitcode == 0
         println("dnf.conf configured.")
     else
@@ -112,6 +113,19 @@ function setup_dnfconf()
 end
 
 function main()
-    options = collect(map(a -> String(Symbol(a)), instances(Action)))
+    actions = collect(instances(Action))
+    options = map(String ∘ Symbol, actions)
     indexes = request("Select actions to perform:", MultiSelectMenu(options))
+
+    pkg_manager = PkgManager()
+
+    for a in getindex(actions, collect(indexes))
+        a == zshrc && setup_zshrc()
+        a == bashrc && setup_bashrc()
+        a == fishconf && @error "fishconf - not implemented yet."
+        a == dnfconf && setup_dnfconf()
+        a == pacmanconf && @error "pacmanconf - not implemented yet."
+        a == flathub && setup_flathub(pkg_manager)
+        a == sshaskpass && @error "sshaskpass - not implemented yet."
+    end
 end
