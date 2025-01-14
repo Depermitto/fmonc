@@ -10,7 +10,7 @@ nocolor='\033[0m'
 
 
 success() {
-    echo -e "${cyan}${bold}>>>  ------------------------"
+    echo -e "\n${cyan}${bold}>>>  ------------------------"
     echo -e ">>>  Installation successful!"
     echo -e ">>>  ------------------------${nocolor}"
     echo
@@ -42,8 +42,7 @@ finish() {
 
 ## GIT AND YAY ##
 
-
-gityay() {
+installGitYay() {
     printf "${bold}${cyan}>>>>>${nocolor}${bold} ************************ STARTING ON AUR HELPER AND GIT ************************ ${cyan}<<<<<${nocolor}"
     sleep 2
 
@@ -55,88 +54,60 @@ gityay() {
     yes | sudo pacman -S --needed git base-devel &&
     git clone https://aur.archlinux.org/yay.git &&
     cd yay &&
-    yes | makepkg -si &&
-    success
+    yes | makepkg -si
 }
 
 
-## ENABLING FLATPAK ##
+## ENABLING FLATHUB ##
 
-flathub() {
+enableFlathub() {
     printf "${bold}${cyan}>>>>>${nocolor}${bold} ************************ ENABLING FLATHUB REPOSITORY ************************ ${cyan}<<<<<${nocolor}"
     sleep 2
 
     # Installing flatpak
-    yes | yay -S flatpak
+    yes | pacman -S flatpak &&
     finish
 
-    # Actually enabling it
+    # Enabling flathub
     flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
     success
 }
 
 
+
 ## DRIVERS AND SUPPORT ##
 
-drivers() {
+installDrivers() {
+    # Installing ntfs drivers, packagekit for kde-discover, emojis and prerequisites for doom emacs
     printf "${bold}${cyan}>>>>>${nocolor}${bold} ************************ MOVING ON TO DRIVERS AND SUPPORT ************************ ${cyan}<<<<<${nocolor}"
     sleep 2
 
-    DRIVERS=("ntfs-3g" "packagekit-qt5" "noto-fonts-emoji" "ripgrep" "fd")
-    # Installing ntfs drivers, packagekit for kde-discover, emojis and prerequisites for doom emacs
-
-    for driver in ${DRIVERS[@]}; do
-        yes | yay -S $driver &&
-        if [[ "$driver" != "${DRIVERS[-1]}" ]]; then
-            finish
-        else
-            success
-        fi
-    done
-
+    yay -S ntfs-3g packagekit-qt5 noto-fonts-emoji nerd-fonts-complete fd
 }
+
+
 
 ## APPS ##
 
-apps() {
+installApps() {
     printf "${bold}${cyan}>>>>>${nocolor}${bold} ************************ MOVING ON TO APPLICATIONS ************************ ${cyan}<<<<<${nocolor}"
     sleep 2
 
-
-    APPS=("kotatogram-desktop-beta-dynamic-bin" "alacritty" "bitwarden" "emacs" "ungoogled-chromium-bin" "qbittorrent" "kdeconnect" "fish" "notepadqq" "nerd-fonts-complete" "pyenv-virtualenv" "pipewire" "pipewire-audio" "pipewire-docs" "pipewire-jack" "pipewire-pulse" "wireplumber" "dmenu" "networkmanager-dmenu-git" "azote" "python-iwlib" "ranger" "touchpad_config" "pamixer" "brightnessctl" "rofi" "xclip" "exa" "starship")
-
-    for app in ${APPS[@]}; do
-        yes | yay -S $app &&
-        finish
-    done
+    yay -S --noconfirm kotatogram-desktop-beta-dynamic-bin alacritty bitwarden emacs qbittorrent fish pyenv-virtualenv pipewire-audio pipewire-docs pipewire-jack pipewire-pulse wireplumber ranger pamixer rofi xclip exa starship ripgrep kdiff3 man bat heroic-games-launcher-bin vim nvim stacer-bin alacritty-xwayland
+}
 
 
-    APPS_NOCONFIRM=("kdiff3" "man" "bat" "heroic-games-launcher-bin" "vim" "nvim" "stacer-bin" "geeqie" "alacritty-xwayland")
+installSteam() {
+    # Enable steam mirrors
+    sudo cp ~/Gitlab/etc/pacman.conf /etc/
 
-    for appc in ${APPS_NOCONFIRM[@]}; do
-        yay -S --noconfirm $appc &&
-        finish
-    done
-
-
-    ## Enabling steam
-    sudo cp ~/Gitlab/pacman.conf /etc/
-    sudo pacman -Sy
+    # Install steam
     sudo pacman -Sy steam
-    finish
+}
 
 
-    APPS_FLATPAK=("com.interversehq.qView")
-
-    for appf in ${APPS_FLATPAK[@]}; do
-        flatpak -y install flathub $appf &&
-        if [[ "$appf" != "${APPS_FLATPAK[-1]}" ]]; then
-            finish
-        else
-            success
-        fi
-    done
-
+installAppsFlatpak() {
+    flatpak -y install flathub com.interversehq.qView
 }
 
 
@@ -147,25 +118,40 @@ if [ -z $1 ]; then
 else
     case $1 in
         'help')
-            printf "'apps': Install applications only,\n'drivers': Install drivers only,\n'aur': Install git and yay only,\n'flatpak': Enable flathub only,\n'all': Install all packs.\n\nPlease put arguments individually.\n"
+            printf "'apps': Install basic applications only,\n'apps-flatpak': Install flatpaks only,\n'steam': Install steam only,\n'drivers': Install drivers only,\n'aur': Install git and yay only,\n'flatpak': Enable flathub only,\n'all': Install all packs.\n\nPlease put arguments individually.\n"
             ;;
         flatpak)
-            flathub
+            enableFlathub &&
+            success
             ;;
         apps)
-            apps
+            installApps &&
+            success
+            ;;
+        apps-flatpak)
+            installAppsFlatpak &&
+            success
             ;;
         drivers)
-            drivers
+            installDrivers &&
+            success
+            ;;
+        steam)
+            installSteam &&
+            success
             ;;
         aur)
-            gityay
+            installGitYay &&
+            success
             ;;
         all)
-            gityay &&
-            flathub &&
-            drivers &&
-            apps
+            installGitYay && finish &&
+            installApps && finish &&
+            enableFlathub && finish &&
+            installAppsFlatpak && finish &&
+            installAppsNoConfirm && finish &&
+            installDrivers && finish &&
+            installSteam && success
             ;;
         *)
             echo -e "Script works! However, your output is '$1',\nwhich is not considered a correct argument.\n\nType 'help' to show help."
