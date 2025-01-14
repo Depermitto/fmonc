@@ -50,6 +50,7 @@ alias vimrc='nvim ~/.vimrc'
 alias bashrc='nvim ~/.bashrc'
 alias fishrc='nvim ~/.config/fish/config.fish'
 alias qtile='nvim ~/.config/qtile/config.py'
+alias logout='pkill -KILL -u $(whoami)'
 
 # Exports
 export EDITOR=nvim

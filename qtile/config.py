@@ -24,7 +24,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-import psutil
+import psutil, iwlib
 from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
@@ -36,10 +36,8 @@ terminal = guess_terminal()
 keys = [
     # My custom keybindings
     Key([mod], "d", lazy.spawn("dmenu_run")),
+    Key([mod, "shift"], "d", lazy.spawn("networkmanager_dmenu")),
     Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen on current window"),
-    # A list of available commands that can be bound to keys can be found
-    # at https://docs.qtile.org/en/latest/manual/config/lazy.html
-    # Switch between windows
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
@@ -80,7 +78,7 @@ keys = [
 ## CUSTOM WORKSPACE NAMES
 Workspaces = ['M1', 'M2', 'Dev', 'Sys', 'Net', 'Work']
 
-groups = [Group(str(i + 1), label=Workspaces[i]) for i in range(len(Workspaces))] 
+groups = [Group(str(i + 1), label=Workspaces[i]) for i in range(len(Workspaces))]
 
 for i in groups:
     keys.extend(
@@ -138,7 +136,6 @@ widget_defaults = dict(
     padding=3,
 )
 extension_defaults = widget_defaults.copy()
-
 screens = [
     Screen(
         bottom=bar.Bar(
@@ -171,6 +168,7 @@ screens = [
                 max_chars=20,
                 padding=10,
                 ),
+                # CPU
                 widget.TextBox(
                 '',
                 fontsize=17,
@@ -182,6 +180,7 @@ screens = [
                 widget.TextBox(
                 padding=2
                 ),
+                # RAM Memory Usage
                 widget.TextBox(
                 '',
                 fontsize=17,
@@ -194,6 +193,7 @@ screens = [
                 widget.TextBox(
                 padding=2
                 ),
+                # Calendar
                 widget.TextBox(
                 '',
                 fontsize=17,
@@ -205,6 +205,20 @@ screens = [
                 widget.TextBox(
                 padding=2
                 ),
+                # Wifi
+                widget.TextBox(
+                '',
+                fontsize=17,
+                padding=2,
+                ),
+                widget.Wlan(
+                max_chars=12,
+                format='{essid}'
+                ),
+                widget.TextBox(
+                padding=2
+                ),
+                # Clock
                 widget.TextBox(
                 '',
                 fontsize=17,
@@ -220,7 +234,7 @@ screens = [
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
-        wallpaper='/usr/share/wallpapers/Opal/contents/images/3840x2160.png',
+        wallpaper='~/Pictures/dark_planks.jpg',
         wallpaper_mode='stretch',
     ),
 ]
