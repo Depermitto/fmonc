@@ -43,12 +43,12 @@ function isearch
         end
     else if test $is_dnf -eq 0
         if test $argv
-            dnf list | grep $argv
+            dnf list --installed | grep $argv
         else
-            dnf list
+            dnf list --installed
         end
     else if test $is_pacman -eq 0
-        yay -Qsq $argv
+        paru -Qsq $argv
     end
 end
 
@@ -62,27 +62,30 @@ function autoremove
     else if test $is_dnf -eq 0
         sudo dnf autoremove
     else if test $is_pacman -eq 0
-        yay -R (yay -Qdtq)
+        paru -R (paru -Qdtq)
     end
 end
 
 function update
     if test $is_apt -eq 0
         if test $is_nala -eq 0
-            sudo nala upgrade; flatpak update; sudo snap refresh
+            sudo nala upgrade
         else
-            sudo apt update && sudo apt upgrade; flatpak update; sudo snap refresh
+            sudo apt update && sudo apt upgrade
         end
     else if test $is_dnf -eq 0
-        sudo dnf update; flatpak update
+        sudo dnf update
     else if test $is_pacman -eq 0
-        yay; flatpak update
+        paru
     end
+    flatpak update
+    sudo snap refresh
+    brew update
 end
 
 # Custom aliases
-alias ls='exa'
-alias la='exa -al'
+alias ls='eza'
+alias la='eza -al'
 alias grep='rg'
 alias e='exit'
 alias ':q'='exit'
@@ -90,13 +93,10 @@ alias ':wq'='exit'
 alias mv='mv -i'
 alias rm='rm -i'
 alias gs='git status'
-alias p='pkill'
-alias v='vim'
-alias n='nvim'
-alias diskhealth='k4dirstat'
-alias pss='ps -e | grep'
-alias zzz='systemctl suspend'
-alias 6zz='shutdown now'
+alias psearch='ps -e | grep'
+alias sleep='systemctl suspend'
+alias shut='shutdown now'
+alias purge_sync_conflicts="find . -iname '*sync-conflict*' -print0 2> /dev/null | xargs -0 rm"
 
 # Config shortcuts
 alias vimrc='nvim ~/.vimrc'

@@ -1,0 +1,41 @@
+[colors.normal]
+black = "#1d1f21"
+blue = "#81a2be"
+cyan = "#8abeb7"
+green = "#b5bd68"
+magenta = "#b294bb"
+red = "#cc6666"
+white = "#c5c8c6"
+yellow = "#f0c674"
+
+[font]
+size = 13.0
+
+[font.bold]
+style = "Bold"
+
+[font.bold_italic]
+style = "Bold Italic"
+
+[font.italic]
+style = "Italic"
+
+[font.normal]
+family = "monospace"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[shell]
+args = ["--login"]
+program = "/bin/fish"
+
+[window]
+opacity = 1.0
+startup_mode = "Windowed"
+
+[window.dimensions]
+columns = 84
+lines = 26
