@@ -48,8 +48,8 @@ function list () {
     [ONLY ON ARCH-BASED]
     arch-essentials - stuff like ntfs-3g
     arch-steam      - setups steam
-    arch-based      - installs yay AUR helper and Arch Tweak Tool
-    arch-fonts      - nerd-fonts-complete (requires yay)
+    arch-based      - installs git, base-devel and Arch Tweak Tool
+    arch-fonts      - nerd-fonts-complete (requires paru)
 
     [CROSS-DISTRO]
     flathub         - installs flatpak and setups flathub
@@ -82,16 +82,10 @@ function installSteam () {
 
 function installBased () {
   # Installing git
-  sudo pacman --needed -S git &&
-
-  # Installing yay
   sudo pacman --needed -S git base-devel &&
-  git clone https://aur.archlinux.org/yay.git &&
-  cd yay &&
-  makepkg -si &&
 
-  # Installing Arch Tweak Tool using yay
-  yay --needed -S archlinux-tweak-tool
+  # Installing Arch Tweak Tool using paru
+  paru --needed -S archlinux-tweak-tool
 }
 
 function installFlathub () {
@@ -121,7 +115,7 @@ function install () {
   for pack in $1; do
     case "${pack}" in
     "arch-essentials")
-      sudo pacman --needed -S ntfs-3g packagekit-qt5 noto-fonts-emoji fd ;;
+      sudo pacman --needed -S ntfs-3g packagekit-qt5 noto-fonts-emoji fd vulkan-radeon libva-mesa-driver lib32-vulkan-radeon xf86-video-amdgpu vulkan-tools ;;
     "arch-steam")
       installSteam ;;
     "arch-based")
