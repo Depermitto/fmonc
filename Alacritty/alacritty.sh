@@ -1,3 +1,4 @@
 #! /usr/bin/bash
 
-env -u WAYLAND_DISPLAY alacritty
+env -u WAYLAND_DISPLAY alacritty 
+exit
