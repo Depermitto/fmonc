@@ -1,15 +1,14 @@
 @enum Action zsh bash fish dnfconf flathub
 @enum PkgManager apt dnf pacman
 
-function Cmd(cmd::Base.Cmd; ignorestatus::Bool=false, quiet::Bool=false, sudo::Bool=false)
-    cmd = Base.Cmd(cmd, ignorestatus=ignorestatus)
+function Cmd(cmd::Base.Cmd; throw_on_error::Bool=false, quiet::Bool=false, sudo::Bool=false)
     if sudo
         cmd = `sudo $cmd`
     end
     if quiet
         cmd = pipeline(cmd, stdout=devnull, stderr=devnull)
     end
-    cmd
+    Base.Cmd(cmd, ignorestatus=!throw_on_error)
 end
 
 function install_cmd(pkg_manager::PkgManager, package)::Cmd
@@ -24,7 +23,7 @@ install_cmd(pkg_manager::PkgManager, packages...) = install_cmd(pkg_manager, joi
 
 function get_pkgmanager()::Union{PkgManager,Nothing}
     for p in instances(PkgManager)
-        cmd = Cmd(`which $p`, ignorestatus=true, quiet=true)
+        cmd = Cmd(`which $p`, quiet=true)
         run(cmd).exitcode == 0 && return p
     end
     nothing
@@ -32,11 +31,11 @@ end
 
 function setup_flathub(pkg_manager::PkgManager)
     # install flatpak
-    cmd = Cmd(`which flatpak`, ignorestatus=true, quiet=true)
+    cmd = Cmd(`which flatpak`, quiet=true)
     if run(cmd).exitcode == 0
         @info "flatpak already installed."
     else
-        cmd = Cmd(install_cmd(pkg_manager, "flatpak"), ignorestatus=true, sudo=true)
+        cmd = Cmd(install_cmd(pkg_manager, "flatpak"), sudo=true)
         run(cmd).exitcode == 0 && println("flatpak installed.")
     end
 
@@ -45,13 +44,13 @@ function setup_flathub(pkg_manager::PkgManager)
         run(pipeline(`flatpak remotes`, `grep -q flathub`))
         @info "remote flathub already exists."
     catch
-        cmd = Cmd(`flatpak --user remote-add flathub https://dl.flathub.org/repo/flathub.flatpakrepo`, ignorestatus=true, quiet=true)
+        cmd = Cmd(`flatpak --user remote-add flathub https://dl.flathub.org/repo/flathub.flatpakrepo`, quiet=true)
         run(cmd).exitcode == 0 && println("added flathub.")
     end
 end
 
 function setup_dnfconf()
-    cmd = Cmd(`cp -vir ./etc/dnf/dnf.conf /etc/dnf/`, ignorestatus=true, sudo=true)
+    cmd = Cmd(`cp -vir ./etc/dnf/dnf.conf /etc/dnf/dnf.conf`, sudo=true)
     if run(cmd).exitcode == 0
         println("dnf.conf configured.")
     else
@@ -61,7 +60,7 @@ end
 
 function setup_zsh()
     # setup .zshrc
-    cmd = Cmd(`cp -vir .zshrc $(homedir())/.zshrc`, ignorestatus=true)
+    cmd = Cmd(`cp -vir .zshrc $(homedir())/.zshrc`)
     if run(cmd).exitcode == 0
         println("zsh configured.")
     else
