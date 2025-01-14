@@ -29,6 +29,7 @@ call plug#end()
 " Python provider
 let g:python3_host_prog = '/usr/bin/python3'
 lua require'lspconfig'.pyright.setup{}
+lua require'lspconfig'.bashls.setup{}
 
 " NvimTree setup
 lua require("nvim-tree").setup()
