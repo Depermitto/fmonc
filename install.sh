@@ -74,17 +74,14 @@ drivers() {
     printf "${bold}${cyan}>>>>>${nocolor}${bold} ************************ MOVING ON TO DRIVERS AND SUPPORT ************************ ${cyan}<<<<<${nocolor}"
     sleep 2
 
-    # Installing ntfs drivers
-    yes | yay -S ntfs-3g &&
-    finish
+    DRIVERS=("ntfs-3g" "packagekit-qt5" "noto-fonts-emoji" "ripgrep" "fd" "find")
+    # Installing ntfs drivers, packagekit for kde-discover, emojis and prerequisites for doom emacs
 
-    # Installing packagekit for kde-discover
-    yes | yay -S packagekit-qt5 &&
-    finish
+    for driver in ${DRIVERS[@]}; do
+        yes | yay -S $driver &&
+        finish
+    done
 
-    # Enabling emojis
-    yes | yay -S noto-fonts-emoji &&
-    success
 }
 
 ## APPS ##
@@ -111,7 +108,7 @@ apps() {
     done
 
 
-    APPS_FLATPAK=("com.valvesoftware.Steam")
+    APPS_FLATPAK=("com.valvesoftware.Steam" "com.interversehq.qView")
 
     for appf in ${APPS_FLATPAK[@]}; do
         flatpak --user install flathub $appf &&

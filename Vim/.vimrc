@@ -1,3 +1,23 @@
+call plug#begin()
+
+Plug 'scrooloose/nerdtree'
+Plug 'valloric/youcompleteme'
+Plug 'sheerun/vim-polyglot'
+Plug 'sainnhe/sonokai'
+Plug 'tribela/vim-transparent'
+
+call plug#end() 
+
+
+" Colorscheme
+
+set termguicolors
+let g:sonokai_style = 'atlantis'
+let g:sonokai_better_performance = 1
+
+colorscheme sonokai
+
+
 " disable compatibility with vi which can cause unexpected issues.
 set nocompatible
 
@@ -17,7 +37,7 @@ syntax on
 " Add numbers to each line on the left-hand side.
 set number
 " Change number highlight color.
-highlight LineNr ctermfg=lightgray
+highlight LineNr ctermfg=gray
 
 " Show matching words during a search.
 set showmatch
@@ -28,21 +48,24 @@ set wildmenu
 " Make wildmenu behave like similar to Bash completion.
 set wildmode=list:longest
 
+" Make YCM working
+set encoding=utf-8
 
-" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-" https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-"
-" PLUGINS
-"
+" 4 spaces instead of tabs
+set expandtab
+set tabstop=4
 
+" Shiftwidth
+set shiftwidth=4
 
-call plug#begin('~/.vim/plugged')
+" Smartcase
+set smartcase
 
-Plug 'scrooloose/nerdtree'
+" For dark version.
+set background=dark
 
-call plug#end()
-
-" :PlugInstall
+" Set opacity to transparent
+hi! Normal guibg=NONE ctermbg=NONE
 
 
 " Make mouse working in alacritty
