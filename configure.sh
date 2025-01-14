@@ -58,6 +58,9 @@ vim +PlugInstall &&
 cd ~/.vim/plugged/youcompleteme/ &&
 yes | yay -S cmake &&
 python3 install.py &&
+
+yes | rm ~/.vim/plugged/youcompleteme/plugin/youcompleteme.vim &&
+ln ~/Backup/Vim/youcompleteme.vim ~/.vim/plugged/youcompleteme/plugin/ &&
 finish
 
 # Doom Emacs
