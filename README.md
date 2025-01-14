@@ -10,3 +10,4 @@ Use 'sudo ./configure.sh' to configure config files
 5. Added qtile
 6. Added Pictures
 7. Added Bash
+8. Added the install.sh script

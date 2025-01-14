@@ -16,6 +16,8 @@ syntax on
 
 " Add numbers to each line on the left-hand side.
 set number
+" Change number highlight color.
+highlight LineNr ctermfg=lightgray
 
 " Show matching words during a search.
 set showmatch
