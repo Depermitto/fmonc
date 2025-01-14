@@ -83,7 +83,7 @@ drivers() {
 
     for driver in ${DRIVERS[@]}; do
         yes | yay -S $driver &&
-        if [ $driver!=${DRIVERS[-1]} ]; then
+        if [[ "$driver" != "${DRIVERS[-1]}" ]]; then
             finish
         else
             success
@@ -119,7 +119,7 @@ apps() {
 
     for appf in ${APPS_FLATPAK[@]}; do
         flatpak -y install flathub $appf &&
-        if [ $appf!=${APPS_FLATPAK[-1]} ]; then
+        if [[ "$appf" != "${APPS_FLATPAK[-1]}" ]]; then
             finish
         else
             success
