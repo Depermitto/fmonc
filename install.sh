@@ -77,7 +77,7 @@ drivers() {
     printf "${bold}${cyan}>>>>>${nocolor}${bold} ************************ MOVING ON TO DRIVERS AND SUPPORT ************************ ${cyan}<<<<<${nocolor}"
     sleep 2
 
-    DRIVERS=("ntfs-3g" "packagekit-qt5" "noto-fonts-emoji" "ripgrep" "fd" "pulseaudio-bluetooth")
+    DRIVERS=("ntfs-3g" "packagekit-qt5" "noto-fonts-emoji" "ripgrep" "fd")
     # Installing ntfs drivers, packagekit for kde-discover, emojis and prerequisites for doom emacs
 
     for driver in ${DRIVERS[@]}; do
@@ -98,7 +98,7 @@ apps() {
     sleep 2
 
 
-    APPS=("kotatogram-desktop-beta-dynamic-bin" "alacritty" "bitwarden" "emacs" "ungoogled-chromium-bin" "qbittorrent" "kdeconnect" "fish" "notepadqq" "nvim" "nerd-fonts-complete" "pyenv-virtualenv")
+    APPS=("kotatogram-desktop-beta-dynamic-bin" "alacritty" "bitwarden" "emacs" "ungoogled-chromium-bin" "qbittorrent" "kdeconnect" "fish" "notepadqq" "nerd-fonts-complete" "pyenv-virtualenv" "pipewire" "pipewire-audio" "pipewire-docs" "pipewire-jack" "pipewire-pulse" "wireplumber")
 
     for app in ${APPS[@]}; do
         yes | yay -S $app &&
@@ -106,7 +106,7 @@ apps() {
     done
 
 
-    APPS_NOCONFIRM=("kdiff3" "man" "bat" "heroic-games-launcher-bin" "vim" "stacer-bin" "geeqie" "alacritty-xwayland")
+    APPS_NOCONFIRM=("kdiff3" "man" "bat" "heroic-games-launcher-bin" "vim" "nvim" "stacer-bin" "geeqie" "alacritty-xwayland")
 
     for appc in ${APPS_NOCONFIRM[@]}; do
         yay -S --noconfirm $appc &&
