@@ -1,0 +1,30 @@
+[Alacritty.desktop][Global Shortcuts]
+New=
+_launch=Meta+Return; Ctrl+Alt+T
+
+[emacs.desktop][Global Shortcuts]
+_launch=Meta+E
+
+[librewolf.desktop][Global Shortcuts]
+_launch=Meta+B
+new-private-window=
+new-window=
+profile-manager=
+
+[org.kde.dolphin.desktop][Global Shortcuts]
+_launch=Meta+F
+
+[org.kde.plasma.emojier.desktop][Global Shortcuts]
+_launch=Meta+.
+
+[org.kde.spectacle.desktop][Global Shortcuts]
+ActiveWindowScreenShot=Meta+Print
+CurrentMonitorScreenShot=
+FullScreenScreenShot=Shift+Print
+OpenWithoutScreenshot=
+RectangularRegionScreenShot=Meta+Shift+Print
+WindowUnderCursorScreenShot=Meta+Ctrl+Print
+_launch=Print
+
+[qalculate-gtk.desktop][Global Shortcuts]
+_launch=Meta+C

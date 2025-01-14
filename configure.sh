@@ -71,6 +71,7 @@ mkdir ~/.config/nvim/ &&
 ln ~/Gitlab/Nvim/init.vim ~/.config/nvim/ &&
 
 nvim +PlugInstall &&
+sudo npm i -g pyright &&
 finish
 
 # Doom Emacs

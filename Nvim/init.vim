@@ -21,13 +21,20 @@ Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
 " Polygot
 Plug 'sheerun/vim-polyglot'
 
+" LSP
+Plug 'neovim/nvim-lspconfig'
+
 call plug#end()
+
+" Python provider
+let g:python3_host_prog = '/usr/bin/python3'
+lua require'lspconfig'.pyright.setup{}
 
 " NvimTree setup
 lua require("nvim-tree").setup()
 
 " Numbers on the left side
-set relativenumber
+set number relativenumber
 " Change number highlight color
 highlight LineNr ctermfg=238
 
