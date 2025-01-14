@@ -36,9 +36,17 @@ end
 
 function isearch
     if test $is_apt -eq 0
-        sudo apt list --installed | grep $argv
+        if test $argv
+            apt list --installed | grep $argv
+        else
+            apt list --installed
+        end
     else if test $is_dnf -eq 0
-        sudo dnf list | grep $argv
+        if test $argv
+            dnf list | grep $argv
+        else
+            dnf list
+        end
     else if test $is_pacman -eq 0
         yay -Qsq $argv
     end
