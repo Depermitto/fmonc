@@ -98,7 +98,7 @@ apps() {
     sleep 2
 
 
-    APPS=("telegram-desktop" "alacritty" "bitwarden" "emacs" "ungoogled-chromium-bin" "qbittorrent" "kdeconnect" "fish" "notepadqq")
+    APPS=("kotatogram-desktop-beta-dynamic-bin" "alacritty" "bitwarden" "emacs" "ungoogled-chromium-bin" "qbittorrent" "kdeconnect" "fish" "notepadqq")
 
     for app in ${APPS[@]}; do
         yes | yay -S $app &&
