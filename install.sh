@@ -112,6 +112,10 @@ installAppsFlatpak() {
     flatpak -y install flathub com.interversehq.qView
 }
 
+installSway() {
+    yay -S --needed sway swaybg swayidle swaylock waybar redshift-wayland-git rofi grim slurp
+}
+
 
 ## INSTALLING ##
 
@@ -120,7 +124,7 @@ if [ -z $1 ]; then
 else
     case $1 in
         'help')
-            printf "'apps': Install basic applications only,\n'apps-flatpak': Install flatpaks only,\n'steam': Install steam only,\n'drivers': Install drivers only,\n'aur': Install git and yay only,\n'flatpak': Enable flathub only,\n'all': Install all packs.\n\nPlease put arguments individually.\n"
+            printf "'apps': Install basic applications only,\n'apps-flatpak': Install flatpaks only,\n'sway': Install sway, waybar and rofi,\n'steam': Install steam only,\n'drivers': Install drivers only,\n'aur': Install git and yay only,\n'flatpak': Enable flathub only,\n'all': Install all packs.\n\nPlease put arguments individually.\n"
             ;;
         flatpak)
             enableFlathub &&
@@ -132,6 +136,10 @@ else
             ;;
         apps-flatpak)
             installAppsFlatpak &&
+            success
+            ;;
+        sway)
+            installSway &&
             success
             ;;
         drivers)
