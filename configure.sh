@@ -72,6 +72,7 @@ ln ~/Gitlab/Nvim/init.vim ~/.config/nvim/ &&
 
 nvim +PlugInstall &&
 sudo npm i -g pyright &&
+sudo npm i -g bash-language-server &&
 finish
 
 # Doom Emacs
