@@ -53,7 +53,6 @@ export LANG="en_US.UTF-8"
 export LC_ALL="C"
 export HISTSIZE=10000
 export HISTFILESIZE=10000
-export XDG_CURRENT_DESKTOP=KDE
 
 # Starship
 eval "$(starship init bash)"
