@@ -71,7 +71,3 @@ success
 cp ~/Backup/qtile/* ~/.config/qtile &&
 mkdir ~/.config/qtile &&
 success
-
-# Git pushing and pulling
-cp ~/Backup/id_ed25519* ~/.ssh/ &&
-success
