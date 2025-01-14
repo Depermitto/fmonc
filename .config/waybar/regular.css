@@ -76,9 +76,6 @@ window#waybar {
     border-radius: 5px;
 }
 
-#battery {
-}
-
 @keyframes blink {
     to {
         background-color: #ffffff;
@@ -90,9 +87,16 @@ window#waybar {
     color: #a3be8c;
 }
 
+#batter.good {
+    color: #79eb57;
+}
+
+#battery.warning {
+    color: #edbf4a;
+}
+
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
+    color: #eb6857;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
