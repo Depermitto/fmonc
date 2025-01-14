@@ -18,6 +18,10 @@ alias gs='git status'
 alias p='pkill'
 alias v='vim'
 alias yaf='yay; flatpak update'
+alias stcli='speedtest-cli'
+alias autorm='yay -R $(yay -Qdtq)'
+alias autoremove='autorm'
+alias diskhealth='k4dirstat'
 
 # Config shortcuts
 alias vimrc='vim ~/.vimrc'
