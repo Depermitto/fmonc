@@ -62,11 +62,11 @@ flathub() {
     printf "${bold}${cyan}>>>>>${nocolor}${bold} ************************ ENABLING FLATHUB REPOSITORY ************************ ${cyan}<<<<<${nocolor}"
     sleep 2
 
-    # installing flatpak
+    # Installing flatpak
     yes | yay -S flatpak
     finish
 
-    # actually enabling it
+    # Actually enabling it
     flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
     success
 }
@@ -78,15 +78,14 @@ drivers() {
     printf "${bold}${cyan}>>>>>${nocolor}${bold} ************************ MOVING ON TO DRIVERS AND SUPPORT ************************ ${cyan}<<<<<${nocolor}"
     sleep 2
 
-    DRIVERS=("ntfs-3g" "packagekit-qt5" "noto-fonts-emoji" "ripgrep" "fd")
+    DRIVERS=("ntfs-3g" "packagekit-qt5" "noto-fonts-emoji" "ripgrep" "fd" "pulseaudio-bluetooth")
     # Installing ntfs drivers, packagekit for kde-discover, emojis and prerequisites for doom emacs
 
     for driver in ${DRIVERS[@]}; do
+        yes | yay -S $driver &&
         if [ $driver!=${DRIVERS[-1]} ]; then
-            yes | yay -S $driver &&
             finish
         else
-            yes | yay -S $driver &&
             success
         fi
     done
@@ -100,7 +99,7 @@ apps() {
     sleep 2
 
 
-    APPS=("telegram-desktop" "alacritty" "bitwarden" "emacs" "chromium" "discord" "calibre" "qbittorrent")
+    APPS=("telegram-desktop" "alacritty" "bitwarden" "emacs" "chromium" "discord" "calibre" "qbittorrent" "kdeconnect")
 
     for app in ${APPS[@]}; do
         yes | yay -S $app &&
@@ -119,11 +118,10 @@ apps() {
     APPS_FLATPAK=("com.valvesoftware.Steam" "com.interversehq.qView")
 
     for appf in ${APPS_FLATPAK[@]}; do
+        flatpak -y install flathub $appf &&
         if [ $appf!=${APPS_FLATPAK[-1]} ]; then
-            flatpak -y install flathub $appf &&
             finish
         else
-            flatpak -y install flathub $appf &&
             success
         fi
     done
