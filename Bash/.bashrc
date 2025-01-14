@@ -5,6 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Custom aliases
 alias lh='ls -lAh --color=auto'
 alias la='ls -A --color=auto'
 alias grep='rg'
@@ -16,6 +17,7 @@ alias rm='rm -i'
 alias gs='git status'
 alias p='pkill'
 alias v='vim'
+alias yaf='yay; flatpak update'
 
 # Config shortcuts
 alias vimrc='vim ~/.vimrc'
