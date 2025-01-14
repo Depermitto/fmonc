@@ -83,3 +83,4 @@
 
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
+(doom/set-indent-width 4)

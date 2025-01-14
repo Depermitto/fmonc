@@ -13,7 +13,7 @@ set $screenshot $scriptsDir/grim-screenshot.sh
 set $menu $scriptsDir/rofi-on-focused-monitor.sh
 
 
-### WAYBAR AND REDSHIFT ###
+### STARTUP SCIPTS ###
 exec_always bash $scriptsDir/summon-waybar.sh
 exec_always bash $scriptsDir/redshift.sh
 
@@ -31,7 +31,7 @@ client.focused      #81a1c1     #88c0d0     #ffffff
 
 
 ### OUTPUT CONFIGURATION ###
-output * bg /usr/share/wallpapers/SafeLanding/contents/images/5120x2880.jpg fill
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 output DP-2 mode 1920x1080@144Hz position 1920,0 adaptive_sync on
 output DVI-D-1 mode 1920x1080@60Hz position 0,0 
 
@@ -67,6 +67,9 @@ exec swayidle -w \
 
     # Start a terminal
     bindsym $mod+Return exec $term
+
+    # Start an emacs instance
+    bindsym $mod+e exec emacsclient -c -a emacs
 
     # Kill focused window
     bindsym $mod+q kill
@@ -133,13 +136,13 @@ exec swayidle -w \
     bindsym $mod+Shift+0 move container to workspace number 10
 
     # Splitting
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
+    bindsym $mod+v splith
+    bindsym $mod+b splitv
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
     bindsym $mod+t layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+c layout toggle split
 
     # Switch and move whole workspaces
     bindsym $mod+Ctrl+l move workspace output right
@@ -202,3 +205,6 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 include /etc/sway/config.d/*
+
+
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
