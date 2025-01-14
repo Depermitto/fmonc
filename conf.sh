@@ -42,35 +42,35 @@ perform_action() {
                 echo "p10k.zsh - cancelled."
                 return 1
             }
-        ;;
+            ;;
         bashrc)
             cp -vi .bashrc ~/.bashrc
             [[ $? -eq 1 ]] && {
                 echo "bashrc - cancelled."
                 return 1
             }
-        ;;
+            ;;
         fish)
             cp -vri .config/fish/ ~/.config/
             [[ $? -eq 1 ]] && {
                 echo "fish - cancelled."
                 return 1
             }
-        ;;
+            ;;
         dnfconf)
             sudo cp -vi ./etc/dnf/dnf.conf /etc/dnf/dnf.conf
             [[ $? -eq 1 ]] && {
                 echo "dnfconf - cancelled."
                 return 1
             }
-        ;;
+            ;;
         pacmanconf)
             sudo cp -vi ./etc/pacman.conf /etc/pacman.conf
             [[ $? -eq 1 ]] && {
                 echo "pacmanconf - cancelled."
                 return 1
             }
-        ;;
+            ;;
         flathub)
             if which flatpak 1> /dev/null 2> /dev/null; then
                 echo "flatpak already installed."
@@ -90,17 +90,25 @@ perform_action() {
             if flatpak --user remote-add flathub https://dl.flathub.org/repo/flathub.flatpakrepo 2> /dev/null 1> /dev/null; then
                 echo "added flathub."
             fi
-        ;;
+            ;;
         ssh_askpass)
             cp -vir .config/environment.d/ ~/.config/
             [[ $? -eq 1 ]] && {
                 echo "cancelled."
                 return 1
             }
-        ;;
+            ;;
+        emacs)
+            cp -vi .emacs ~/
+            cp -vir .emacs.local/ ~/
+            [[ $? -eq 1 ]] && {
+                echo "cancelled."
+                return 1
+            }
+            ;;
         *)
             echo "$1 - not implemented yet!"
-        ;;
+            ;;
     esac
 }
 
@@ -167,7 +175,7 @@ main() {
 	move_cursor_on_cleanup=true
 
 	cursor=0
-    options=("zshrc" "bashrc" "fish" "dnfconf" "pacmanconf" "flathub" "ssh_askpass")
+    options=("zshrc" "bashrc" "fish" "dnfconf" "pacmanconf" "flathub" "ssh_askpass" "emacs")
     for ((i = 0; i < "${#options[@]}"; i++)); { selected+=(false); }
     
     # finding the package manager
