@@ -18,7 +18,7 @@ alias gs='git status'
 alias psearch='ps -e | grep'
 alias sleep='systemctl suspend'
 alias shut='shutdown now'
-alias purge_sync_conflicts="find . -iname '*sync-conflict*' -print0 2> /dev/null | xargs -0 rm"
+alias purge_sync_conflicts="find ~ -name '*sync-conflict*' 2> /dev/null -exec rm -f {} \;"
 
 # Config shortcuts
 alias vimrc='nvim ~/.vimrc'

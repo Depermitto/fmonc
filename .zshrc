@@ -38,7 +38,7 @@ alias ':wq'='exit'
 alias mv='mv -i'
 alias rm='rm -i'
 alias gs='git status'
-alias purge_sync_conflicts="find . -iname '*sync-conflict*' -print0 2> /dev/null | xargs -0 rm"
+alias purge_sync_conflicts="find ~ -name '*sync-conflict*' 2> /dev/null -exec rm -f {} \;"
 alias logout='pkill -KILL -u $(whoami)'
 
 # Exports
