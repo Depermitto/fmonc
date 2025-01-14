@@ -53,3 +53,6 @@ export LANG="en_US.UTF-8"
 export LC_ALL="C"
 export HISTSIZE=10000
 export HISTFILESIZE=10000
+
+# Starship
+eval "$(starship init bash)"
