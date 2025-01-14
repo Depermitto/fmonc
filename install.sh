@@ -8,6 +8,7 @@ green='\033[0;33m'
 cyan='\033[0;36m'
 nocolor='\033[0m'
 
+
 success() {
     echo -e "${cyan}${bold}>>>  ------------------------"
     echo -e ">>>  Installation successful!"
@@ -15,6 +16,7 @@ success() {
     echo
     sleep 1
 }
+
 
 starting() {
     for i in {3..1}
@@ -24,10 +26,12 @@ starting() {
     done
 }
 
+
 next() {
     echo -e "${green}>>>${nocolor}        Next entry...     "
     echo sleep 0.5
 }
+
 
 finish() {
     success &&
@@ -37,6 +41,7 @@ finish() {
 
 
 ## GIT AND YAY ##
+
 
 gityay() {
     printf "${bold}${cyan}>>>>>${nocolor}${bold} ************************ STARTING ON AUR HELPER AND GIT ************************ ${cyan}<<<<<${nocolor}"
@@ -142,21 +147,21 @@ if [ -z $1 ]; then
 else
     case $1 in
         'help')
-            printf "'Apps': install applications only,\n'Drivers': install drivers only,\n'AUR': install git and yay only,\n'Flatpak': enable flathub only,\n'All': install all packs.\n\nPlease put arguments individually.\n"
+            printf "'apps': Install applications only,\n'drivers': Install drivers only,\n'aur': Install git and yay only,\n'flatpak': Enable flathub only,\n'all': Install all packs.\n\nPlease put arguments individually.\n"
             ;;
-        Flatpak)
+        flatpak)
             flathub
             ;;
-        Apps)
+        apps)
             apps
             ;;
-        Drivers)
+        drivers)
             drivers
             ;;
-        AUR)
+        aur)
             gityay
             ;;
-        All)
+        all)
             gityay &&
             flathub &&
             drivers &&
@@ -167,6 +172,3 @@ else
             ;;
     esac
 fi
-
-yay -R $(yay -Qdtq) &&
-success

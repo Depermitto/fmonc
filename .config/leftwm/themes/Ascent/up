@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-xrandr --output DisplayPort-1 --mode 1920x1080 --rate 144 --right-of DVI-D-0
-
 export $(dbus-launch)
 SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P)"
 
