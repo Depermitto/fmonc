@@ -26,8 +26,7 @@ starting() {
 
 next() {
     echo -e "${green}>>>${nocolor}        Next entry...     "
-    echo
-    sleep 0.5
+    echo sleep 0.5
 }
 
 finish() {
@@ -99,7 +98,7 @@ apps() {
     sleep 2
 
 
-    APPS=("telegram-desktop" "alacritty" "bitwarden" "emacs" "ungoogled-chromium-bin" "qbittorrent" "kdeconnect")
+    APPS=("telegram-desktop" "alacritty" "bitwarden" "emacs" "ungoogled-chromium-bin" "qbittorrent" "kdeconnect" "fish" "notepadqq")
 
     for app in ${APPS[@]}; do
         yes | yay -S $app &&

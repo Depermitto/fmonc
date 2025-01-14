@@ -110,16 +110,16 @@ window:
 # Font configuration
 font:
   normal:
-   family: 'JetBrains Mono Light' 
+   family: 'Hack'
    style: Regular
   bold:
-    family: 'JetBrains Mono'
+    family: 'Hack Bold'
     style: Bold
   italic:
-    family: 'JetBrains Mono Light' 
+    family: 'Hack' 
     style: Italic
   bold_italic:
-    family: 'JetBrains Mono'
+    family: 'Hack Bold'
     style: Bold Italic
   size: 14.0
 
