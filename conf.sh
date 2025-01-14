@@ -1,5 +1,5 @@
 #!/bin/bash
-# Copyright   2024 Jabłoński "Permito" Piotr
+# Copyright (C) 2024 Jabłoński "Permito" Piotr
 
 render_menu() {
     for ((i = 0; i < "${#options[@]}"; i++)); {
