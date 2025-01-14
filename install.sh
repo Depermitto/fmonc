@@ -40,10 +40,11 @@ finish() {
 }
 
 
+
 ## GIT AND YAY ##
 
 installGitYay() {
-    printf "${bold}${cyan}>>>>>${nocolor}${bold} ************************ STARTING ON AUR HELPER AND GIT ************************ ${cyan}<<<<<${nocolor}"
+    printf "${bold}${cyan}>>>>>${nocolor}${bold} ************************ STARTING ON AUR HELPER AND GIT ************************ ${cyan}<<<<<${nocolor}\n"
     sleep 2
 
     # Installing git
@@ -58,10 +59,11 @@ installGitYay() {
 }
 
 
+
 ## ENABLING FLATHUB ##
 
 enableFlathub() {
-    printf "${bold}${cyan}>>>>>${nocolor}${bold} ************************ ENABLING FLATHUB REPOSITORY ************************ ${cyan}<<<<<${nocolor}"
+    printf "${bold}${cyan}>>>>>${nocolor}${bold} ************************ ENABLING FLATHUB REPOSITORY ************************ ${cyan}<<<<<${nocolor}\n"
     sleep 2
 
     # Installing flatpak
@@ -79,7 +81,7 @@ enableFlathub() {
 
 installDrivers() {
     # Installing ntfs drivers, packagekit for kde-discover, emojis and prerequisites for doom emacs
-    printf "${bold}${cyan}>>>>>${nocolor}${bold} ************************ MOVING ON TO DRIVERS AND SUPPORT ************************ ${cyan}<<<<<${nocolor}"
+    printf "${bold}${cyan}>>>>>${nocolor}${bold} ************************ MOVING ON TO DRIVERS AND SUPPORT ************************ ${cyan}<<<<<${nocolor}\n"
     sleep 2
 
     yay -S ntfs-3g packagekit-qt5 noto-fonts-emoji nerd-fonts-complete fd
@@ -90,10 +92,10 @@ installDrivers() {
 ## APPS ##
 
 installApps() {
-    printf "${bold}${cyan}>>>>>${nocolor}${bold} ************************ MOVING ON TO APPLICATIONS ************************ ${cyan}<<<<<${nocolor}"
+    printf "${bold}${cyan}>>>>>${nocolor}${bold} ************************ MOVING ON TO APPLICATIONS ************************ ${cyan}<<<<<${nocolor}\n"
     sleep 2
 
-    yay -S --noconfirm kotatogram-desktop-beta-dynamic-bin alacritty bitwarden emacs qbittorrent fish pyenv-virtualenv pipewire-audio pipewire-docs pipewire-jack pipewire-pulse wireplumber ranger pamixer rofi xclip exa starship ripgrep kdiff3 man bat heroic-games-launcher-bin vim nvim stacer-bin alacritty-xwayland
+    yay -S --needed kotatogram-desktop-beta-dynamic-bin alacritty bitwarden emacs qbittorrent fish pyenv-virtualenv pipewire-audio pipewire-docs pipewire-jack pipewire-pulse wireplumber plasma-pa ranger pamixer rofi xclip exa starship ripgrep kdiff3 man bat heroic-games-launcher-bin vim neovim stacer-bin alacritty-xwayland
 }
 
 
