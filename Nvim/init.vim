@@ -66,7 +66,7 @@ set clipboard=unnamedplus
 
 
 " Nvim-cursorline config
-lua << EOF
+lua << CURSORLINE
 require('nvim-cursorline').setup {
   cursorline = {
     enable = true,
@@ -79,4 +79,4 @@ require('nvim-cursorline').setup {
     hl = { underline = true },
   }
 }
-EOF
+CURSORLINE
