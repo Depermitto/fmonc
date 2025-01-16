@@ -9,8 +9,10 @@
 (tool-bar-mode 0)
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
-(global-display-line-numbers-mode)
-(setq inhibit-startup-screen t)
+(global-display-line-numbers-mode 1)
+(setq inhibit-startup-screen t
+      backup-directory-alist
+      `(("." . ,(concat user-emacs-directory "backups"))))
 
 (setq-default indent-tabs-mode nil
               tab-width 4
@@ -21,8 +23,8 @@
   :ensure t
   :config
   (global-set-key (kbd "M-x") 'smex)
-  (ido-mode)
-  (ido-everywhere))
+  (ido-mode 1)
+  (ido-everywhere 1))
 
 ;; modal editing
 (use-package meow
@@ -30,7 +32,7 @@
   :config
   (load-file "~/.emacs.local/meow.el")
   (meow-setup)
-  (meow-global-mode))
+  (meow-global-mode 1))
 
 ;; theme
 (use-package modus-themes
@@ -59,11 +61,17 @@
     :config
     (exec-path-from-shell-initialize)))
 
-;; company
-(use-package company
+;; coding
+(setq eglot-report-progress nil) ; eglot, please stop spamming
+(global-unset-key (kbd "C-x C-p")) ; lessen friction with meow's god-mode
+
+(use-package corfu
   :ensure t
-  :init
-  (add-hook 'after-init-hook 'global-company-mode))
+  :custom
+  (corfu-auto t)
+  (corfu-cycle t)
+  :config
+  (global-corfu-mode 1))
 
 (use-package go-mode
   :ensure t
