@@ -11,8 +11,8 @@
 (scroll-bar-mode 0)
 (global-display-line-numbers-mode 1)
 (setq inhibit-startup-screen t
-      backup-directory-alist
-      `(("." . ,(concat user-emacs-directory "backups"))))
+      backup-directory-alist `(("." . ,(concat user-emacs-directory "backups")))
+      auto-save-file-name-transforms `((".*" ,(concat user-emacs-directory "auto-saves") t)))
 
 (setq-default indent-tabs-mode nil
               tab-width 4
@@ -80,3 +80,7 @@
 (use-package rust-mode
   :ensure t
   :mode "\\.rs\\'")
+
+;; ansi-colors in compilation buffer
+(use-package ansi-color
+  :hook (compilation-filter . ansi-color-compilation-filter))
