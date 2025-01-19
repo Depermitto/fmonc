@@ -10,6 +10,7 @@
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
 (global-display-line-numbers-mode 1)
+
 (setq inhibit-startup-screen t
       backup-directory-alist `(("." . ,(concat user-emacs-directory "backups")))
       auto-save-file-name-transforms `((".*" ,(concat user-emacs-directory "auto-saves") t)))
@@ -41,7 +42,7 @@
   (load-theme 'modus-vivendi))
 
 ;; font
-(set-face-attribute 'default nil :family "Firacode Nerd Font" :height 160 :weight 'regular)
+(set-face-attribute 'default nil :family "JetBrainsMono Nerd Font" :height 160 :weight 'regular)
 
 ;; load maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
@@ -62,8 +63,9 @@
     (exec-path-from-shell-initialize)))
 
 ;; coding
-(setq eglot-report-progress nil) ; eglot, please stop spamming
-(global-unset-key (kbd "C-x C-p")) ; lessen friction with meow's god-mode
+(setq eglot-report-progress nil ; eglot, please stop spamming
+      compilation-ask-about-save nil) ; automatically save buffers before compiling
+(global-auto-revert-mode 1) ; automatically reload files from disk
 
 (use-package corfu
   :ensure t
@@ -73,13 +75,20 @@
   :config
   (global-corfu-mode 1))
 
+(use-package treesit-auto
+  :ensure t
+  :custom
+  (treesit-auto-install t)
+  :config
+  (global-treesit-auto-mode))
+
 (use-package go-mode
   :ensure t
-  :mode "\\.go\\'")
+  :config
+  (setq go-ts-mode-indent-offset tab-width))
 
 (use-package rust-mode
-  :ensure t
-  :mode "\\.rs\\'")
+  :ensure t)
 
 ;; ansi-colors in compilation buffer
 (use-package ansi-color

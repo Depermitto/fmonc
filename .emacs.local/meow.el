@@ -27,6 +27,9 @@
    ;; SPC j/k will run the original command in MOTION state.
    '("j" . "H-j")
    '("k" . "H-k")
+   '("p" . "C-x p") ; project management
+   '("r" . "C-x r") ; bookmarks
+   '("b" . switch-to-buffer)
    ;; Use SPC (0-9) for digit arguments.
    '("1" . meow-digit-argument)
    '("2" . meow-digit-argument)
