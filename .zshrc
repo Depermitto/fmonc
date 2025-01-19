@@ -9,8 +9,8 @@ fi
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=2000
-SAVEHIST=2000
+HISTSIZE=100000
+SAVEHIST=100000
 setopt autocd extendedglob nomatch notify
 bindkey -e
 # End of lines configured by zsh-newuser-install
@@ -30,11 +30,8 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Custom aliases
 alias ls='eza'
-alias la='eza -al'
-alias grep='rg'
-alias e='exit'
-alias ':q'='exit'
-alias ':wq'='exit'
+alias la='eza -lah'
+alias ll='eza -lh'
 alias mv='mv -i'
 alias rm='rm -i'
 alias gs='git status'
@@ -42,17 +39,17 @@ alias purge_sync_conflicts="find ~ -name '*sync-conflict*' 2> /dev/null -exec rm
 alias logout='pkill -KILL -u $(whoami)'
 
 # Exports
-export EDITOR=nvim
+export EDITOR=vim
 export TERM=xterm-256color
 export TERM='xterm-256color'
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
-# >>> juliaup initialize >>>
+# Completions for pipx
+eval "$(register-python-argcomplete pipx)"
 
-# !! Contents within this block are managed by juliaup !!
+# .local binaries
+path=('/home/permito/.local/bin' $path)
 
-path=('/home/permito/.juliaup/bin' $path)
-export PATH
-
-# <<< juliaup initialize <<<
+# Golang binaries
+path=('/home/permito/go/bin' $path)
