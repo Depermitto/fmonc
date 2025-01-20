@@ -16,7 +16,8 @@
       (insert (downcase char)))))
 
 (defun meow-setup ()
-  (setq meow-cheatsheet-layout meow-cheatsheet-layout-qwerty)
+  (setq meow-cheatsheet-layout meow-cheatsheet-layout-qwerty
+        meow-use-clipboard t)
   (meow-motion-overwrite-define-key
    '("j" . meow-next)
    '("k" . meow-prev)
@@ -27,9 +28,16 @@
    ;; SPC j/k will run the original command in MOTION state.
    '("j" . "H-j")
    '("k" . "H-k")
-   '("p" . "C-x p") ; project management
-   '("r" . "C-x r") ; bookmarks
+   ;; project management
+   '("p" . "C-x p")
+   ;; jesus god why SPC x SPC b
    '("b" . switch-to-buffer)
+   ;; eglot
+   '("e e" . eglot)
+   '("e a" . eglot-code-actions)
+   '("e r" . eglot-rename)
+   '("e f" . eglot-format)
+   '("e d" . eldoc)
    ;; Use SPC (0-9) for digit arguments.
    '("1" . meow-digit-argument)
    '("2" . meow-digit-argument)
