@@ -15,7 +15,7 @@
       backup-directory-alist `(("." . ,(concat user-emacs-directory "backups")))
       auto-save-file-name-transforms `((".*" ,(concat user-emacs-directory "auto-saves") t)))
 
-(setq-default indent-tabs-mode nil
+(setq-default indent-tabs-mode 0
               tab-width 4
               indent-line-function 'insert-tab)
 
@@ -24,16 +24,24 @@
   :init
   (savehist-mode)
 
+  ;; completion UI
   (use-package vertico
     :ensure t
-    :config
+    :init
     (vertico-mode))
 
   ;; rich annotations
   (use-package marginalia
     :ensure t
-    :config
-    (marginalia-mode)))
+    :init
+    (marginalia-mode))
+
+  ;; completion style
+  (use-package orderless
+    :ensure t
+    :custom
+    (completion-styles '(orderless basic))
+    (completion-category-overrides '((file (styles basic partial-completion))))))
 
 ;; modal editing
 (use-package meow
@@ -46,7 +54,7 @@
 ;; theme
 (use-package modus-themes
   :ensure t
-  :config
+  :init
   (load-theme 'modus-vivendi))
 
 ;; font
@@ -70,19 +78,25 @@
 (when (eq system-type 'gnu/linux)
   (use-package exec-path-from-shell
     :ensure t
-    :config
+    :init
     (exec-path-from-shell-initialize)))
 
 ;; popup completions
 (use-package corfu
   :ensure t
   :custom
-  (corfu-auto t)
-  :config
-  (add-hook 'corfu-mode-hook (lambda()
-                               (setq-local completion-styles '(basic)
-                                           completion-category-overrides nil
-                                           completion-category-defaults nil)))
+  (corfu-cycle t)
+  (corfu-preselect 'prompt)
+  (tab-always-indent 'complete)
+
+  :bind
+  (:map corfu-map
+        ("TAB" . corfu-next)
+        ([tab] . corfu-next)
+        ("S-TAB" . corfu-previous)
+        ([backtab] . corfu-previous))
+  
+  :init
   (global-corfu-mode 1))
 
 ;; coding
