@@ -58,7 +58,7 @@
   (load-theme 'modus-vivendi))
 
 ;; font
-(set-face-attribute 'default nil :family "JetBrainsMono Nerd Font" :height 160 :weight 'regular)
+(set-face-attribute 'default nil :family "JetBrainsMono Nerd Font" :height 170 :weight 'regular)
 
 ;; load maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
@@ -102,7 +102,12 @@
 ;; coding
 (setq compilation-ask-about-save nil) ;; automatically save buffers before compiling
 (global-auto-revert-mode 1) ;; automatically reload files from disk
-(electric-pair-mode 1)
+
+(use-package elec-pair
+  :init
+  (setq electric-pair-preserve-balance nil
+		electric-pair-delete-adjacent-pairs t)
+  (electric-pair-mode 1))
 
 ;; finding diagnostics
 (add-hook 'flymake-mode-hook (lambda()
