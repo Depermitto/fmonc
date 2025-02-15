@@ -130,3 +130,16 @@
 ;; ansi-colors in compilation buffer
 (use-package ansi-color
   :hook (compilation-filter . ansi-color-compilation-filter))
+
+;; note taking and scientific papers
+(use-package org
+  :init
+  (setq org-adapt-indentation t
+      org-hide-leading-stars t
+      org-hide-emphasis-markers t
+      org-pretty-entities t
+	  
+	  org-src-fontify-natively t
+	  org-src-tab-acts-natively t
+      org-edit-src-content-indentation 0))
+
