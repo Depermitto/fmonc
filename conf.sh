@@ -179,7 +179,7 @@ main() {
     for ((i = 0; i < "${#options[@]}"; i++)); { selected+=(false); }
     
     # finding the package manager
-    for p in "apt" "dnf" "pacman"; {
+    for p in "apt" "dnf" "pacman" "xbps-install"; {
         if which $p 1> /dev/null 2> /dev/null; then
             case $p in
                 apt | dnf)
@@ -187,6 +187,9 @@ main() {
                 ;;
                 pacman)
                     install_cmd="$p -Sy"
+                ;;
+                xbps-install)
+                    install_cmd="$p"
                 ;;
             esac
         fi
