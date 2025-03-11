@@ -141,5 +141,8 @@
 	  
 	  org-src-fontify-natively t
 	  org-src-tab-acts-natively t
-      org-edit-src-content-indentation 0))
+      org-edit-src-content-indentation 0)
+
+  :hook ((org-mode . toggle-word-wrap)
+		 (org-mode . toggle-truncate-lines)))
 
