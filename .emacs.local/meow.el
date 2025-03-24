@@ -129,5 +129,10 @@ Version: 2024-06-17"
    '("\\" . comment-line)
    '("`" . toggle-letter-case)
    '("/" . other-window)
-   '("?" . mode-line-other-buffer)))
+   '("?" . mode-line-other-buffer))
+  (setq meow-expand-hint-counts '((word . 0)
+								  (line . 0)
+								  (block . 0)
+								  (find . 0)
+								  (till . 0))))
 
