@@ -13,10 +13,12 @@
 (setq inhibit-startup-screen t ;; remove splash screen
 	  backup-directory-alist `(("." . ,(concat user-emacs-directory "backups")))
 	  auto-save-file-name-transforms `((".*" ,(concat user-emacs-directory "auto-saves") t))
-	  dired-dwim-target t)
+	  dired-dwim-target t ;; copy/move between dired panes
+	  dired-listing-switches "-alh")
 
 (setq-default indent-tabs-mode 0
 			  tab-width 4
+			  c-basic-offset 4
 			  indent-line-function 'insert-tab)
 
 ;; completions
@@ -72,11 +74,16 @@
 ;; theme
 (use-package modus-themes
   :ensure t
-  :init
-  (load-theme 'modus-vivendi))
+  :config
+  (use-package circadian
+	:ensure t
+	:config
+	(setq circadian-themes '(("6:00" . modus-operandi)
+							 ("18:00"  . modus-vivendi)))
+	(circadian-setup)))
 
 ;; font
-(set-face-attribute 'default nil :family "JetBrainsMono Nerd Font" :height 170 :weight 'regular)
+(set-face-attribute 'default nil :family "0xProto Nerd Font" :height 150 :weight 'regular)
 
 ;; load maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
@@ -114,19 +121,6 @@
 							   (define-key flymake-mode-map (kbd "M-n") 'flymake-goto-next-error)
 							   (define-key flymake-mode-map (kbd "M-p") 'flymake-goto-prev-error)))
 
-(use-package treesit-auto
-  :ensure t
-  :custom
-  (treesit-auto-install t)
-  :config
-  (global-treesit-auto-mode))
-
-(use-package go-mode
-  :ensure t
-  :after treesit-auto
-  :config
-  (setq go-ts-mode-indent-offset tab-width))
-
 (use-package eglot
   :ensure t
   :config
@@ -152,3 +146,10 @@
 
   :hook ((org-mode . toggle-word-wrap)
 		 (org-mode . toggle-truncate-lines)))
+
+;; pdf viewing
+(use-package pdf-tools
+  :ensure t
+  :config
+  (pdf-tools-install-noverify)
+  :hook (pdf-view-mode . (lambda () (display-line-numbers-mode 0))))
