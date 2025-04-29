@@ -42,10 +42,14 @@ Version: 2024-06-17"
    '("k" . "H-k")
    ;; project management
    '("p" . "C-x p")
-   ;; jesus god why SPC x SPC b
-   '("b" . switch-to-buffer)
+   ;; bookmarks
+   '("r" . "C-x r")
+   ;; buffers
+   '("b" . "C-x b")
+   '("k" . "C-x k")
    ;; eglot
    '("e e" . eglot)
+   '("e s" . eglot-shutdown)
    '("e a" . eglot-code-actions)
    '("e r" . eglot-rename)
    '("e f" . eglot-format)

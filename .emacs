@@ -79,7 +79,7 @@
 	:ensure t
 	:config
 	(setq circadian-themes '(("6:00" . modus-operandi)
-							 ("18:00"  . modus-vivendi)))
+							 ("19:00"  . modus-vivendi)))
 	(circadian-setup)))
 
 ;; font
@@ -99,7 +99,7 @@
 
 (global-set-key (kbd "M-l") 'lazygit)
 
-;; path
+;; PATH
 (when (eq system-type 'gnu/linux)
   (use-package exec-path-from-shell
 	:ensure t
@@ -120,13 +120,6 @@
 (add-hook 'flymake-mode-hook (lambda()
 							   (define-key flymake-mode-map (kbd "M-n") 'flymake-goto-next-error)
 							   (define-key flymake-mode-map (kbd "M-p") 'flymake-goto-prev-error)))
-
-(use-package eglot
-  :ensure t
-  :config
-  ;; D
-  (add-hook 'd-mode-hook 'eglot-ensure)
-  (add-to-list 'eglot-server-programs `(d-mode . ("serve-d"))))
 
 ;; ansi-colors in compilation buffer
 (use-package ansi-color
