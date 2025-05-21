@@ -10,16 +10,26 @@
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
 (global-display-line-numbers-mode 1)
+(delete-selection-mode 1)
+(which-key-mode 1)
+
 (setq inhibit-startup-screen t ;; remove splash screen
 	  backup-directory-alist `(("." . ,(concat user-emacs-directory "backups")))
-	  auto-save-file-name-transforms `((".*" ,(concat user-emacs-directory "auto-saves") t))
-	  dired-dwim-target t ;; copy/move between dired panes
-	  dired-listing-switches "-alh")
+	  auto-save-file-name-transforms `((".*" ,(concat user-emacs-directory "auto-saves") t)))
 
 (setq-default indent-tabs-mode 0
 			  tab-width 4
-			  c-basic-offset 4
-			  indent-line-function 'insert-tab)
+			  indent-line-function 'insert-tab
+			  isearch-lazy-count t)
+
+;; dired
+(setq dired-dwim-target t ;; copy/move between dired panes
+	  dired-listing-switches "-alh")
+(global-set-key (kbd "C-c C-w") 'wdired-change-to-wdired-mode)
+
+;; changing buffers/windows
+(global-set-key (kbd "C-;") 'other-window)
+(global-set-key (kbd "C-:") 'mode-line-other-buffer)
 
 ;; completions
 (use-package savehist
@@ -32,7 +42,6 @@
 	:custom
 	(corfu-cycle t)
 	(corfu-preselect 'prompt)
-	(tab-always-indent 'complete)
 
 	:bind
 	(:map corfu-map
@@ -63,33 +72,34 @@
 	(completion-styles '(orderless basic))
 	(completion-category-overrides '((file (styles basic partial-completion))))))
 
-;; modal editing
-(use-package meow
-  :ensure t
-  :config
-  (load-file "~/.emacs.local/meow.el")
-  (meow-setup)
-  (meow-global-mode 1))
-
 ;; theme
 (use-package modus-themes
   :ensure t
   :config
-  (use-package circadian
-	:ensure t
-	:config
-	(setq circadian-themes '(("6:00" . modus-operandi)
-							 ("19:00"  . modus-vivendi)))
-	(circadian-setup)))
+  (set-face-attribute 'default nil :family "0xProto Nerd Font" :height 150 :weight 'regular)
+  (add-to-list 'default-frame-alist '(fullscreen . maximized)))
 
-;; font
-(set-face-attribute 'default nil :family "0xProto Nerd Font" :height 150 :weight 'regular)
+;; editing
+(use-package expand-region
+  :ensure t
+  :bind ("C-=" . er/expand-region))
 
-;; load maximized
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
+(use-package multiple-cursors
+  :ensure t
+  :bind
+  ("C-." . mc/mark-next-like-this)
+  ("C-," . mc/mark-previous-like-this)
+  ("C-M-," . mc/mark-all-like-this)
+  ("C-M-." . mc/edit-lines))
+
+(use-package move-text
+  :ensure t
+  :bind
+  ("M-n" . 'move-text-down)
+  ("M-p" . 'move-text-up))
 
 ;; lazygit
-(defun lazygit ()
+(defun my/lazygit ()
   "Open lazygit in new kitty terminal window."
   (interactive)
   (if (project-current)
@@ -97,7 +107,7 @@
 		(start-process "kitty" nil "kitty" "--start-as" "maximized" "-e" "lazygit"))
 	(message "No active project, cannot start lazygit")))
 
-(global-set-key (kbd "M-l") 'lazygit)
+(global-set-key (kbd "C-x p l") 'my/lazygit)
 
 ;; PATH
 (when (eq system-type 'gnu/linux)
@@ -110,16 +120,16 @@
 (setq compilation-ask-about-save nil) ;; automatically save buffers before compiling
 (global-auto-revert-mode 1) ;; automatically reload files from disk
 
+(use-package vterm
+  :ensure t
+  :init
+  (setq vterm-shell (getenv "SHELL")))
+
 (use-package elec-pair
   :init
   (setq electric-pair-preserve-balance nil
 		electric-pair-delete-adjacent-pairs t)
   (electric-pair-mode 1))
-
-;; finding diagnostics
-(add-hook 'flymake-mode-hook (lambda()
-							   (define-key flymake-mode-map (kbd "M-n") 'flymake-goto-next-error)
-							   (define-key flymake-mode-map (kbd "M-p") 'flymake-goto-prev-error)))
 
 ;; ansi-colors in compilation buffer
 (use-package ansi-color
@@ -131,7 +141,6 @@
   (setq org-adapt-indentation t
 		org-hide-leading-stars t
 		org-hide-emphasis-markers t
-		org-pretty-entities t
 
 		org-src-fontify-natively t
 		org-src-tab-acts-natively t
