@@ -27,9 +27,8 @@
 	  dired-listing-switches "-alh")
 (global-set-key (kbd "C-c C-w") 'wdired-change-to-wdired-mode)
 
-;; changing buffers/windows
-(global-set-key (kbd "C-;") 'other-window)
-(global-set-key (kbd "C-:") 'mode-line-other-buffer)
+;; changing buffers
+(global-set-key (kbd "C-.") 'other-window)
 
 ;; completions
 (use-package savehist
@@ -87,10 +86,9 @@
 (use-package multiple-cursors
   :ensure t
   :bind
-  ("C-." . mc/mark-next-like-this)
-  ("C-," . mc/mark-previous-like-this)
-  ("C-M-," . mc/mark-all-like-this)
-  ("C-M-." . mc/edit-lines))
+  ("C->" . mc/mark-next-like-this)
+  ("C-<" . mc/mark-previous-like-this)
+  ("C-S-m" . mc/mark-all-like-this))
 
 (use-package move-text
   :ensure t
