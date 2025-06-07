@@ -28,9 +28,10 @@
 (global-set-key (kbd "C-c C-w") 'wdired-change-to-wdired-mode)
 
 ;; changing buffers
-(global-set-key (kbd "C-.") 'other-window)
+(global-set-key (kbd "C-;") 'other-window)
+(global-set-key (kbd "C-.") 'copy-from-above-command)
 
-;; completions
+;; Completions
 (use-package savehist
   :init
   (savehist-mode)
@@ -72,9 +73,17 @@
 	(completion-category-overrides '((file (styles basic partial-completion))))))
 
 ;; theme
-(use-package modus-themes
+(use-package ef-themes
   :ensure t
   :config
+  (setq ef-themes-to-toggle '(ef-spring ef-dark)
+		ef-themes-headings
+		'((0 regular 1.5)
+          (1 regular 1.4)
+          (2 regular 1.3)
+          (3 regular 1.2)
+          (4 regular 1.1)))
+  
   (set-face-attribute 'default nil :family "0xProto Nerd Font" :height 150 :weight 'regular)
   (add-to-list 'default-frame-alist '(fullscreen . maximized)))
 
