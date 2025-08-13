@@ -15,7 +15,7 @@ setopt autocd extendedglob nomatch notify
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/permito/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit
@@ -30,8 +30,6 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Custom aliases
 alias ls='eza'
-alias la='eza -lah'
-alias ll='eza -lh'
 alias mv='mv -i'
 alias rm='rm -i'
 alias gs='git status'
@@ -42,14 +40,12 @@ alias logout='pkill -KILL -u $(whoami)'
 export EDITOR=vim
 export TERM=xterm-256color
 export TERM='xterm-256color'
-export LANG="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
 
 # Completions for pipx
 eval "$(register-python-argcomplete pipx)"
 
 # .local binaries
-path=('/home/permito/.local/bin' $path)
+path=("$HOME/.local/bin" $path)
 
 # Golang binaries
-path=('/home/permito/go/bin' $path)
+path=("$HOME/go/bin" $path)
