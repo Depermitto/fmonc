@@ -106,6 +106,25 @@ perform_action() {
                 return 1
             }
             ;;
+        niri)
+            cp -vir .config/niri/ ~/.config/
+            [[ $? -eq 1 ]] && {
+                echo "niri config - cancelled."
+                return 1
+            }
+
+            cp -vir .config/waybar/ ~/.config/
+            [[ $? -eq 1 ]] && {
+                echo "waybar config - cancelled."
+                return 1
+            }
+
+            cp -vir .config/fuzzel/ ~/.config/
+            [[ $? -eq 1 ]] && {
+                echo "fuzzel config - cancelled."
+                return 1
+            }
+            ;;
         *)
             echo "$1 - not implemented yet!"
             ;;
@@ -175,7 +194,7 @@ main() {
 	move_cursor_on_cleanup=true
 
 	cursor=0
-    options=("zshrc" "bashrc" "fish" "dnfconf" "pacmanconf" "flathub" "ssh_askpass" "emacs")
+    options=("zshrc" "bashrc" "fish" "dnfconf" "pacmanconf" "flathub" "ssh_askpass" "emacs" "niri")
     for ((i = 0; i < "${#options[@]}"; i++)); { selected+=(false); }
     
     # finding the package manager
